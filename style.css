@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300&display=swap');
+
+/*General */
+
+:root {
+    --fs-hometitle: 7.5rem;
+    --fs-homesubtitle: 3rem;
+    --fs-intro: 1.5rem;
+    --fs-homebody: 1.4rem;
+
+    --fs-abouttitle: 3rem;
+    --fs-aboutbody: 1.4rem;
+
+    --fs-interesthead: 1.7rem;
+    --fs-interestbody: 1.2rem;
+
+
+    --abt-padding: clamp(0rem, 5vw - 1rem, 6rem);
+    --int-padding: clamp(0rem, 5vw - 1rem, 5rem);
+
+    --fs-ptext: 1.5rem;
+    --fs-pbutton: 1rem;
+    --ps-gamelogo: 4rem;
+
+    --p-outlnmrgn: clamp(0rem, 12vw - 2rem, 15rem);
+    --fs-pdethead: 8rem;
+    --fs-pdet: 2rem;
+    --ps-gamelogo2: 25rem;
+
+    --p-rolemrgn: clamp(0rem, 2vw - 0.5rem, 2rem);
+    --fs-rolehead: 1.8rem;
+    --fs-roletext: 1.2rem;
+}
+
+
+
+
+#navcontainer {
+    background-color: black;
+    /* border: solid 1px; */
+    width: 100%;
+    min-height: 3.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+#footbar {
+    background-color: black;
+    /* border: solid 1px; */
+    min-width: 100%;
+    min-height: 3.5rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+}
+
+
+body {
+    margin: 0;
+    background: rgb(13, 23, 45);
+    background: linear-gradient(90deg, rgba(13, 23, 60, 1) 0%, rgba(13, 23, 45, 1) 10%, rgba(13, 23, 45, 1) 90%, rgba(13, 22, 60, 1) 100%);
+}
+
+/* .container {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    min-height: 80%;
+} */
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding-top: 4rem;
+}
+
+.regtext {
+    font-family: Roboto, sans-serif;
+}
+
+.noverflowy {
+    overflow: hidden;
+}
+
+.noverflowx {
+    overflow-x: hidden;
+}
+
+/* Navigation Menu */
+#topnavigation {
+    color: rgb(255, 255, 255);
+    /* border: solid 3px; */
+    list-style: none;
+    max-height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
+    z-index: 21;
+}
+
+.navitem {
+    font-family: "Quantico", sans-serif;
+    margin-right: 1rem;
+}
+
+.navitem:first-child {
+    margin-right: auto;
+}
+
+.navitem:hover {
+    color: white;
+}
+
+#link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#link:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+#link:visited {
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+#dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-links {
+    float: none;
+    color: black;
+    padding: 1em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-links:hover {
+    background-color: aqua;
+}
+
+
+/* Home Page */
+@media(max-width: 58em) {
+    :root {
+        --fs-hometitle: 6rem;
+        --fs-homesubtitle: 2.5rem;
+        --fs-homebody: 1.2rem;
+    }
+}
+
+@media(max-width: 48em) {
+    :root {
+        --fs-hometitle: 5rem;
+        --fs-homesubtitle: 2rem;
+    }
+}
+
+@media(max-width: 40em) {
+    :root {
+        --fs-hometitle: 4rem;
+        --fs-homesubtitle: 1.5rem;
+        --fs-intro: 1.2rem;
+        --fs-homebody: 1rem;
+    }
+}
+
+#homemain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home-text {
+    font-family: Quantico, sans-serif;
+    color: #bfd7f5;
+    max-width: 100%;
+    max-height: 50%;
+    border: solid 1px;
+}
+
+#home-text h1 {
+    font-size: var(--fs-hometitle);
+    max-height: 350px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#home-text h3 {
+    font-size: var(--fs-intro);
+}
+
+#home-text h2 {
+    font-style: italic;
+    font-size: var(--fs-homesubtitle);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#home-text p {
+    font-size: 1.4rem;
+    font-size: var(--fs-homebody);
+    max-height: 100px;
+}
+
+
+/*About Me Page */
+
+@media(max-width: 60em) {
+    :root {
+        --fs-abouttitle: 3rem;
+        --fs-aboutbody: 1.2rem;
+    }
+}
+
+@media(max-width: 45em) {
+    :root {
+        --fs-abouttitle: 3rem;
+        --fs-aboutbody: 1.1rem;
+    }
+}
+
+#aboutmemain {
+    color: #bfd7f5;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aboutmetext {
+    text-align: left;
+    padding-left: var(--abt-padding);
+    padding-right: var(--abt-padding);
+    max-width: 65rem;
+    max-height: 40rem;
+    border: solid 1px;
+}
+
+#abouttitle h1 {
+    text-align: left;
+    font-size: var(--fs-abouttitle);
+    font-family: Quantico, sans-serif;
+}
+
+#aboutmetext p {
+    font-size: var(--fs-aboutbody);
+}
+
+
+#interests {
+    display: flex;
+    width: 100%;
+    border: solid 1px;
+    justify-content: space-evenly
+}
+
+/* @media(max-width: 100em) {
+    :root {
+        --fs-interesthead: 1.4rem;
+        --fs-interestbody: 1.1rem;
+    }
+}
+
+@media(max-width: 45em) {
+    :root {
+        --fs-interesthead: 1.1rem;
+        --fs-interestbody: 0.8rem;
+    }
+} */
+
+#Iitem {
+    min-width: 33%;
+    border: solid 1px;
+    max-height: 25rem;
+}
+
+#Iitemtext {
+    font-family: Quantico, sans-serif;
+    padding-left: var(--int-padding);
+    padding-right: var(--int-padding);
+}
+
+#Iitemtext h2 {
+    text-align: center;
+    font-size: var(--fs-interesthead);
+}
+
+#Iitemtext p {
+    font-size: var(--fs-interestbody);
+}
+
+
+/*Projects Page */
+@media(max-width: 42em) {
+    :root {
+        --fs-ptext: 1rem;
+        --fs-pbutton: 0.8rem;
+        --ps-gamelogo: 3.5rem;
+    }
+}
+
+@media(max-width: 90em) {
+    :root {
+        --fs-pdethead: 7rem;
+        --fs-pdet: 1.5rem;
+        --ps-gamelogo2: 20rem
+    }
+}
+
+@media(max-width: 75em) {
+    :root {
+        --fs-pdethead: 6.5rem;
+        --fs-pdet: 1rem;
+        --ps-gamelogo2: 15rem
+    }
+}
+
+@media(max-width: 80em) {
+    :root {
+        --fs-rolehead: 1.6rem;
+        --fs-roletext: 1rem;
+    }
+}
+
+@media(max-width: 60em) {
+    :root {
+        --fs-rolehead: 1.2rem;
+        --fs-roletext: 0.8rem;
+    }
+}
+
+@media(max-width: 50em) {
+    :root {
+        --fs-rolehead: 0.7rem;
+        --fs-roletext: 0.7rem;
+    }
+}
+
+
+
+#projectsmain {
+    /* border-top: solid 2px; */
+    font-family: Quantico, sans-serif;
+    color: #bfd7f5;
+}
+
+#projecttititlebox {
+    text-align: center;
+    max-width: 100%;
+}
+
+#projecttititlebox h1 {
+    font-size: 4rem;
+}
+
+#projecttititlebox p {
+    font-size: var(--fs-ptext)
+}
+
+#pbuttonlist {
+    display: flex;
+    width: 100%;
+    ;
+    gap: 2em;
+    overflow: hidden;
+    justify-content: center;
+    border-bottom: solid 1px;
+    font-size: var(--fs-pbutton);
+    max-width: 100%;
+}
+
+.buttonimg {
+    border: solid 1px;
+    width: var(--ps-gamelogo);
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+#projectdescription {
+    width: 100%;
+}
+
+#pdcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#pdlist {
+    padding-left: 0;
+    list-style: none;
+}
+
+#plistitem {}
+
+#projectheader {
+    border: solid 1px;
+    text-align: center;
+}
+
+.studiotag {
+    border: solid 3px;
+    height: 7.5rem;
+    margin-top: 30px;
+    left: 0;
+    width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: grey
+}
+
+.studioimg {
+    height: 6rem;
+    width: 100px;
+    border: solid 3px;
+    border-radius: 5px;
+    margin-right: 1rem;
+    background-color: black;
+    cursor: pointer;
+}
+
+.studioimg img {
+    width: 100%;
+}
+
+#projectdetails {
+    text-align: left;
+    margin-right: 5rem;
+    margin-top: 5rem;
+}
+
+#projectdetails h2 {
+    font-size: var(--fs-pdethead);
+    margin-bottom: 2rem;
+}
+
+#projectdetails h3 {
+    font-size: var(--fs-pdet);
+}
+
+#gamelogo {
+    margin-top: 13rem;
+}
+
+#gamelogo img {
+    width: var(--ps-gamelogo2);
+}
+
+#projectoutline {
+    padding-left: var(--p-outlnmrgn);
+    padding-right: var(--p-outlnmrgn);
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+#projectoutline p {
+    font-size: 1.4rem;
+}
+
+#projectroles {
+    width: 100%;
+    border: solid 1px;
+    text-align: center;
+}
+
+#projectroles h2 {
+    font-size: 2.5rem;
+}
+
+#prcontainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.roles {
+    border: solid 1px;
+}
+
+#roletitle {
+    font-size: var(--fs-rolehead);
+    font-style: italic;
+}
+
+
+#rolestext {
+    padding-left: var(--p-rolemrgn);
+    padding-right: var(--p-rolemrgn);
+}
+
+#rolestext p {
+    font-size: var(--fs-roletext);
+}
+
+#pccontainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+}
+
+#pccontainerbsc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+}
+
+#projectcontributions {
+    border-top: solid 1px;
+    border-right: solid 1px;
+    border-left: solid 1px;
+    text-align: center;
+}
+
+#projectcontributions h2 {
+    font-size: 2.5rem;
+}
+
+#contributionlist {
+    padding: 0;
+    list-style: none;
+}
+
+#contributionlist li {
+    max-width: 45%;
+}
+
+.contribution-media {
+    border: solid 1px;
+}
+
+video {
+    width: 100%;
+}
+
+#m {
+    margin-left: 270px;
+    border-bottom: none;
+}
+
+.contribution-text {
+    border: solid 1px;
+    margin-top: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.contribution-text h3 {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.contribution-text p {
+    font-size: 1.3rem;
+}
+
+.buffer {
+    height: 20rem;
+    border-left: solid 1px;
+    border-right: solid 1px;
+}
+
+
+
+
+/* Work Experience Page
+#work-experiencemain {
+    position: relative;
+    padding: 50px;
+    padding-top: 0;
+    font-family: Quantico, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15;
+}
+
+#LSFW {
+    padding-top: 10;
+    border: solid 1px;
+    position: absolute;
+}
+
+#G27 {
+    border: solid 1px;
+    position: absolute;
+    top: 300px;
+} */
+
+
+
+/*Contact Page */
+/* #contactmain { */
+/* border-top: solid 2px; */
+/* flex-wrap: wrap;
+    justify-content: center;
+    font-family: Quantico, sans-serif;
+    color: #bfd7f5;
+    font-size: 15;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-column-end: 11;
+    grid-row-end: 10;
+}
+
+#contactoptionslist {
+    display: flex;
+    height: 15%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    justify-content: space-evenly;
+    border: solid 1px;
+}
+
+.contactimage {
+    border: solid 1px;
+    width: 10%;
+} */
