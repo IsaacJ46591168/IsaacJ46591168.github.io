@@ -30,6 +30,10 @@
     --p-rolemrgn: clamp(0rem, 2vw - 0.5rem, 2rem);
     --fs-rolehead: 1.8rem;
     --fs-roletext: 1.2rem;
+
+    --p-contmrgn: clamp(0rem, 2vw - 0.5rem, 2rem);
+    --fs-conthead: 2rem;
+    --fs-conttext: 1.3rem;
 }
 
 
@@ -318,7 +322,7 @@ body {
 @media(max-width: 90em) {
     :root {
         --fs-pdethead: 7rem;
-        --fs-pdet: 1.5rem;
+        --fs-pdet: 1.7rem;
         --ps-gamelogo2: 20rem
     }
 }
@@ -326,7 +330,7 @@ body {
 @media(max-width: 75em) {
     :root {
         --fs-pdethead: 6.5rem;
-        --fs-pdet: 1rem;
+        --fs-pdet: 1.3rem;
         --ps-gamelogo2: 15rem
     }
 }
@@ -351,6 +355,14 @@ body {
         --fs-roletext: 0.7rem;
     }
 }
+
+@media(max-width: 70em) {
+    :root {
+        --fs-conthead: 1.5rem;
+        --fs-conttext: 1rem;
+    }
+}
+
 
 
 
@@ -560,17 +572,17 @@ video {
 .contribution-text {
     border: solid 1px;
     margin-top: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: var(--p-contmrgn);
+    padding-right: var(--p-contmrgn);
 }
 
 .contribution-text h3 {
-    font-size: 2rem;
+    font-size: var(--fs-conthead);
     font-style: italic;
 }
 
 .contribution-text p {
-    font-size: 1.3rem;
+    font-size: var(--fs-conttext);
 }
 
 .buffer {
