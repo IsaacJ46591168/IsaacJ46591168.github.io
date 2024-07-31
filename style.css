@@ -3,6 +3,8 @@
 /*General */
 
 :root {
+    --fs-nav: 1.2rem;
+
     --fs-hometitle: 7.5rem;
     --fs-homesubtitle: 3rem;
     --fs-intro: 1.5rem;
@@ -92,6 +94,13 @@ body {
 }
 
 /* Navigation Menu */
+
+@media(max-width: 38em) {
+    :root {
+        --fs-nav: 1rem;
+    }
+}
+
 #topnavigation {
     color: rgb(255, 255, 255);
     /* border: solid 3px; */
@@ -99,7 +108,7 @@ body {
     max-height: 100%;
     backface-visibility: hidden;
     display: flex;
-    font-size: 1.2rem;
+    font-size: var(--fs-nav);
     justify-content: flex-end;
     gap: 2rem;
     align-items: center;
@@ -176,12 +185,16 @@ body {
     }
 }
 
-@media(max-width: 40em) {
+@media (max-width: 40em) {
     :root {
-        --fs-hometitle: 4rem;
-        --fs-homesubtitle: 1.5rem;
-        --fs-intro: 1.2rem;
-        --fs-homebody: 1rem;
+        --fs-hometitle: 6.5rem;
+        --fs-homesubtitle: 2rem;
+        --fs-intro: 1.65rem;
+        --fs-homebody: 1.3rem;
+    }
+
+    #home-text {
+        height: 100%;
     }
 }
 
@@ -190,13 +203,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 #home-text {
     font-family: Quantico, sans-serif;
     color: #bfd7f5;
     max-width: 100%;
-    max-height: 50%;
     border: solid 1px;
 }
 
@@ -226,7 +239,6 @@ body {
 
 
 /*About Me Page */
-
 @media(max-width: 60em) {
     :root {
         --fs-abouttitle: 3rem;
@@ -244,7 +256,6 @@ body {
 #aboutmemain {
     color: #bfd7f5;
     display: flex;
-    flex-wrap: wrap;
 }
 
 #aboutmetext {
@@ -266,10 +277,19 @@ body {
     font-size: var(--fs-aboutbody);
 }
 
+#proc {
+    display: flex;
+    max-width: 50rem;
+    border: solid 1px;
+    justify-content: space-evenly
+}
+
+
+
 
 #interests {
     display: flex;
-    width: 100%;
+    max-width: 50rem;
     border: solid 1px;
     justify-content: space-evenly
 }
@@ -356,10 +376,17 @@ body {
     }
 }
 
+@media(max-width: 90em) {
+    :root {
+        --fs-conthead: 1.7rem;
+        --fs-conttext: 1.1rem;
+    }
+}
+
 @media(max-width: 70em) {
     :root {
-        --fs-conthead: 1.5rem;
-        --fs-conttext: 1rem;
+        --fs-conthead: 1.2rem;
+        --fs-conttext: 0.9rem;
     }
 }
 
@@ -590,60 +617,3 @@ video {
     border-left: solid 1px;
     border-right: solid 1px;
 }
-
-
-
-
-/* Work Experience Page
-#work-experiencemain {
-    position: relative;
-    padding: 50px;
-    padding-top: 0;
-    font-family: Quantico, sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 15;
-}
-
-#LSFW {
-    padding-top: 10;
-    border: solid 1px;
-    position: absolute;
-}
-
-#G27 {
-    border: solid 1px;
-    position: absolute;
-    top: 300px;
-} */
-
-
-
-/*Contact Page */
-/* #contactmain { */
-/* border-top: solid 2px; */
-/* flex-wrap: wrap;
-    justify-content: center;
-    font-family: Quantico, sans-serif;
-    color: #bfd7f5;
-    font-size: 15;
-    grid-column-start: 1;
-    grid-row-start: 2;
-    grid-column-end: 11;
-    grid-row-end: 10;
-}
-
-#contactoptionslist {
-    display: flex;
-    height: 15%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-    justify-content: space-evenly;
-    border: solid 1px;
-}
-
-.contactimage {
-    border: solid 1px;
-    width: 10%;
-} */
