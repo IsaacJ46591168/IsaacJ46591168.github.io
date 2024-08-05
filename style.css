@@ -43,6 +43,30 @@
     --fs-conttext: 1.3rem;
 }
 
+.wrapper {
+    padding-top: 4rem;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    border: solid white 1px;
+}
+
+
+.overflow {
+    overflow-y: auto;
+}
+
+
+/* @media (max-width: 376px) {
+    .overflow {
+        overflow-y: scroll;
+    }
+} */
+
 
 
 
@@ -80,32 +104,12 @@ body {
     min-height: 80%;
 } */
 
-.container {
-    width: 100%;
-    height: 100%;
-    padding-top: 4rem;
-}
 
 .regtext {
     font-family: Roboto, sans-serif;
 }
 
-.noverflowy {
-    overflow: hidden;
-}
-
-.noverflowx {
-    overflow-x: hidden;
-}
-
 /* Navigation Menu */
-
-@media(max-width: 38em) {
-    :root {
-        --fs-nav: 1rem;
-    }
-}
-
 #topnavigation {
     color: rgb(255, 255, 255);
     /* border: solid 3px; */
@@ -118,11 +122,13 @@ body {
     gap: 2rem;
     align-items: center;
     z-index: 21;
+    border: 1px solid;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .navitem {
     font-family: "Quantico", sans-serif;
-    margin-right: 1rem;
 }
 
 .navitem:first-child {
@@ -175,40 +181,16 @@ body {
 
 
 /* Home Page */
-@media(max-width: 58em) {
-    :root {
-        --fs-hometitle: 6rem;
-        --fs-homesubtitle: 2.5rem;
-        --fs-homebody: 1.2rem;
-    }
-}
-
-@media(max-width: 48em) {
-    :root {
-        --fs-hometitle: 5rem;
-        --fs-homesubtitle: 2rem;
-    }
-}
-
-@media (max-width: 40em) {
-    :root {
-        --fs-hometitle: 6.5rem;
-        --fs-homesubtitle: 2rem;
-        --fs-intro: 1.65rem;
-        --fs-homebody: 1.3rem;
-    }
-
-    #home-text {
-        height: 100%;
-    }
-}
-
 #homemain {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    padding: 0;
+}
+
+#homecontainer {
+    width: 1536px;
 }
 
 #home-text {
@@ -376,7 +358,6 @@ body {
 #statitemtext p {
     font-size: var(--fs-interestbody);
 }
-
 
 /*Projects Page */
 @media(max-width: 42em) {
@@ -706,9 +687,7 @@ video {
     border-right: solid 1px;
 }
 
-/*Mobile Layout Switches*/
-
-/*Projects Page*/
+/*Projects Page Media*/
 @media(max-width: 60em) {
     .studiotag {
         justify-content: center;
@@ -780,6 +759,88 @@ video {
     }
     
     video {
+    }
+}
+
+
+/*Responsive Layout Switches*/
+
+/*2xl*/
+@media (max-width: 1536px) {
+    #homecontainer {
+        width: 1280px;
+    }
+}
+
+/*xl*/
+@media (max-width: 1280px) {
+    #homecontainer {
+        width: 1024px;
+    }
+}
+
+/*lg*/
+@media (max-width: 1024px) {
+    #homecontainer {
+        width: 768px;
+    }
+}
+
+/*md*/
+@media (max-width: 768px) {
+    #homecontainer {
+        width: 640px;
+    }
+}
+
+/*sm*/
+@media (max-width: 640px) {
+    #homecontainer {
+        width: 475px;
+    }
+}
+
+/*xs*/
+@media (max-width: 475px) {
+
+    :root {
+        --fs-hometitle: 3.5rem;
+        --fs-homesubtitle: 1.4rem;
+        --fs-intro: 1.2rem;
+        --fs-homebody: 1.1rem;
+        --fs-nav: 1rem
+    }
+    
+    #home-text {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    #home-text h1 {
+        font-size: var(--fs-hometitle);
+    }
+    
+    #home-text h3 {
+        font-size: var(--fs-intro);
+    }
+    
+    #home-text h2 {
+        font-size: var(--fs-homesubtitle);
+    }
+    
+    #home-text p {
+        font-size: var(--fs-homebody);
+    }
+
+    #topnavigation {
+        font-size: var(--fs-nav);
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navitem:first-child {
+        margin-right: 0;
     }
 }
 
