@@ -894,6 +894,16 @@ video {
         --fs-conttext: 1rem;
     }
 
+    #footbar {
+        background-color: black;
+        /* border: solid 1px; */
+        min-width: 0%;
+        min-height: 0;
+        position: fixed;
+        bottom: 0;
+        z-index: 20;
+    }
+
     #homecontainer {
         width: 475px;
     }
