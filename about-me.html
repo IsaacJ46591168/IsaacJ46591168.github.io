@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
@@ -11,7 +12,7 @@
 </head>
 
 
-<body id="noverflowx">
+<body class="overflow">
     <div id="navcontainer">
         <nav>
             <ul id="topnavigation">
@@ -29,8 +30,8 @@
         </nav>
     </div>
 
-    <div class="container" id="aboutmemain">
-        <div id="about">
+    <main class="wrapper" id="aboutmemain">
+        <section class="container" id="aboutcontainer">
             <div id="aboutmetext">
                 <div id="abouttitle">
                     <h1>About Me</h1>
@@ -41,9 +42,7 @@
                 <p class="regtext">When I'm not at my computer making stuff, you can pretty much count on me watching Football, watching F1, playing Guitar or playing something made by Nintendo!</p>
                 <p class="regtext">Thanks for visiting my Portfolio!</p>
             </div>
-            <h1 id="a">Interesting Stats</h1>
             <div id="stats">
-                
                 <div id="statitem">
                     <div id="statitemtext">
                         <h2>Favourite Games right now:</h2>
@@ -78,9 +77,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="skills">
+        <section class="container" id="skillscontainer">
             <h1>Skills and Experience</h1>
             <div id="SItem">
                 <div id="SItemtext">
@@ -99,7 +98,7 @@
                     <p class="regtext">- <b>Python</b>: 1 year of experience at a novice/beginner level for personal projects and other past-times.</p>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <div id="footbar"></div>
 </body>

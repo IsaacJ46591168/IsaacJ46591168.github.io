@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
@@ -15,7 +16,7 @@
     </script>
 </head>
 
-<body class="noverflowx">
+<body class="overflow">
     <div id="navcontainer">
         <nav>
             <ul id="topnavigation">
@@ -33,26 +34,28 @@
         </nav>
     </div>
 
-    <div class="container" id="projectsmain">
-        <div id="projecttititlebox">
-            <div>
-                <h1>Projects</h1>
+    <main class="wrapper" id="projectsmain">
+        <section class="container" id="projectscontainer">
+            <div id="projecttititlebox">
+                <div>
+                    <h1>Projects</h1>
+                </div>
+                <div>
+                    <p>Check out all the things I've been a part of developing!</p>
+                </div>
             </div>
-            <div>
-                <p>Check out all the things I've been a part of developing!</p>
-            </div>
-        </div>
-        <section id="pbuttonlist">
-            <div class="button">
-                <img src="images/p1logo.png" class="buttonimg" id="p1img">
-                <p>Phoenix One</p>
-            </div>
-            <div class="button" id="bscimg">
-                <img class="buttonimg">
-                <p>Beachside Campfire</p>
+            <div id="pbuttonlist">
+                <div class="button">
+                    <img src="images/p1logo.png" class="buttonimg" id="p1img">
+                    <p>Phoenix One</p>
+                </div>
+                <div class="button" id="bscimg">
+                    <img class="buttonimg">
+                    <p>Beachside Campfire</p>
+                </div>
             </div>
         </section>
-    </div>
+    </main>
 
     <!-- <section id="projectdescription">
                 <div id="projectheader">

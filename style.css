@@ -18,8 +18,10 @@
     --fs-abouttitle: 3rem;
     --fs-aboutbody: 1.4rem;
 
-    --fs-interesthead: 1.7rem;
-    --fs-interestbody: 1.2rem;
+    --fs-stathead: 1.7rem;
+    --fs-statbody: 1.2rem;
+    --fs-skillhead: 1.2rem;
+    --fs-skillbody: 1.2rem;
 
 
     --abt-padding: clamp(0rem, 5vw - 1rem, 6rem);
@@ -52,7 +54,6 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    border: solid white 1px;
 }
 
 
@@ -122,7 +123,6 @@ body {
     gap: 2rem;
     align-items: center;
     z-index: 21;
-    border: 1px solid;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -226,37 +226,16 @@ body {
 
 
 /*About Me Page */
-@media(max-width: 85em){
-    #aboutmemain {
-        flex-wrap: wrap;
-    }
-
-    :root {
-        --ds-abouttext: 100%;
-        --ds-interests: 100%;
-        --ds-skills: 100%;
-    }
-}
-
-@media(max-width: 60em) {
-    :root {
-        --fs-abouttitle: 3rem;
-        --fs-aboutbody: 1.2rem;
-    }
-}
-
-@media(max-width: 45em) {
-    :root {
-        --fs-abouttitle: 3rem;
-        --fs-aboutbody: 1.1rem;
-    }
-
-}
 
 #aboutmemain {
     color: #bfd7f5;
     display: flex;
-    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#aboutcontainer {
+    width: 70%;
 }
 
 #aboutmetext {
@@ -278,19 +257,18 @@ body {
     font-size: var(--fs-aboutbody);
 }
 
-#skills {
-    flex-grow: 1;
+#skillscontainer {
+    width: 30%;
     border: solid 1px;
 }
 
-#skills h1 {
+#skillscontainer h1 {
     text-align: center;
     font-size: var(--fs-abouttitle);
     font-family: Quantico, sans-serif;
 }
 
 #SItem {
-    border: solid 1px;
     max-width: var(--ds-skills);
 }
 
@@ -309,38 +287,19 @@ body {
     font-family: Quantico, sans-serif;
 }
 
-
+#SItemtext p {
+    font-size: var(--fs-skillbody);
+}
 
 #stats {
     display: flex;
-    border: solid 1px;
     justify-content: space-evenly;
     max-width: var(--ds-interests);
-}
-
-/* @media(max-width: 100em) {
-    :root {
-        --fs-interesthead: 1.4rem;
-        --fs-interestbody: 1.1rem;
-    }
-}
-
-@media(max-width: 45em) {
-    :root {
-        --fs-interesthead: 1.1rem;
-        --fs-interestbody: 0.8rem;
-    }
-} */
-
-#a {
-    text-align: center;
-    font-size: var(--fs-abouttitle);
-    font-family: Quantico, sans-serif;
+    border: solid 1px;
 }
 
 #statitem {
     max-width: 25%;
-    border: solid 1px;
     max-height: 27.1rem;
 }
 
@@ -352,123 +311,21 @@ body {
 
 #statitemtext h2 {
     text-align: center;
-    font-size: var(--fs-interesthead);
+    font-size: var(--fs-stathead);
 }
 
 #statitemtext p {
-    font-size: var(--fs-interestbody);
+    font-size: var(--fs-statbody);
 }
 
 /*Projects Page */
-@media(max-width: 42em) {
-    :root {
-        --fs-ptext: 1rem;
-        --fs-pbutton: 0.8rem;
-        --ps-gamelogo: 3.5rem;
-    }
-}
-
-@media(max-width: 90em) {
-    :root {
-        --fs-pdethead: 7rem;
-        --fs-pdet: 1.7rem;
-        --ps-gamelogo2: 20rem
-    }
-}
-
-@media(max-width: 75em) {
-    :root {
-        --fs-pdethead: 6.5rem;
-        --fs-pdet: 1.3rem;
-        --ps-gamelogo2: 15rem
-    }
-}
-
-@media(max-width: 60em) {
-    :root {
-        --fs-pdethead: 7rem;
-        --fs-pdet: 1.3rem;
-        --ps-gamelogo2: 15rem
-    }
-}
-
-@media(max-width: 45em) {
-    :root {
-        --fs-pdethead: 5rem;
-        --fs-pdet: 1.3rem;
-        --ps-gamelogo2: 15rem
-    }
-}
-
-@media(max-width: 38em) {
-    :root {
-        --fs-pdethead: 4.5rem;
-        --fs-pdet: 1.3rem;
-        --ps-gamelogo2: 15rem
-    }
-}
-
-
-
-
-@media (max-width: 80em) {
-    :root {
-        --fs-rolehead: 1.6rem;
-        --fs-roletext: 1rem;
-    }
-}
-
-@media(max-width: 60em) {
-    :root {
-        --fs-rolehead: 1.7rem;
-        --fs-roletext: 1.1rem;
-    }
-}
-
-@media(max-width: 40em) {
-    :root {
-        --fs-rolehead: 1.5rem;
-        --fs-roletext: 0.9rem;
-    }
-}
-
-
-
-@media(max-width: 90em) {
-    :root {
-        --fs-conthead: 1.7rem;
-        --fs-conttext: 1.1rem;
-    }
-}
-
-@media(max-width: 70em) {
-    :root {
-        --fs-conthead: 1.2rem;
-        --fs-conttext: 0.9rem;
-    }
-}
-
-@media(max-width: 60em) {
-    :root {
-        --fs-conthead: 1.8rem;
-        --fs-conttext: 1.1rem;
-    }
-}
-
-@media(max-width: 40em) {
-    :root {
-        --fs-conthead: 1.4rem;
-        --fs-conttext: 0.9rem;
-    }
-}
-
-
-
 
 #projectsmain {
     /* border-top: solid 2px; */
     font-family: Quantico, sans-serif;
     color: #bfd7f5;
+    display: flex;
+    flex-direction: column;
 }
 
 #projecttititlebox {
@@ -486,13 +343,12 @@ body {
 
 #pbuttonlist {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     gap: 2em;
     overflow: hidden;
     justify-content: center;
     border-bottom: solid 1px;
     font-size: var(--fs-pbutton);
-    max-width: 100%;
 }
 
 .buttonimg {
@@ -687,50 +543,285 @@ video {
     border-right: solid 1px;
 }
 
-/*Projects Page Media*/
-@media(max-width: 60em) {
-    .studiotag {
-        justify-content: center;
+
+/*Responsive Layout Switches*/
+/*2xl*/
+@media (max-width: 1536px) {
+    :root {
+        --fs-abouttitle: 3rem;
+        --fs-aboutbody: 1.2rem;
+        --fs-stathead: 1.4rem;
+        --fs-statbody: 1rem;
+    }
+
+    #homecontainer {
+        width: 1280px;
+    }
+}
+
+/*xl*/
+@media (max-width: 1280px) {
+    :root {
+        --fs-pdethead: 6.8rem;
+        --fs-pdet: 1.4rem;
+        --ps-gamelogo2: 16rem;
+    }
+
+    #homecontainer {
+        width: 1024px;
+    }
+}
+
+/*lg*/
+@media (max-width: 1024px) {
+    :root {
+        --fs-hometitle: 6.5rem;
+        --fs-homesubtitle: 2.3rem;
+        --fs-intro: 1.5rem;
+        --fs-homebody: 1.3rem;
+        --fs-nav: 1rem;
+
+        --fs-abouttitle: 2.4rem;
+        --fs-aboutbody: 1.1rem;
+        --fs-stathead: 1.2rem;
+        --fs-statbody: 1rem;
+        --fs-skillbody: 1rem;
+
+        --fs-pdethead: 5.6rem;
+        --fs-pdet: 1.1rem;
+        --ps-gamelogo2: 9rem;
+    }
+
+    #homecontainer {
+        width: 768px;
+    }
+
+    #SItemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #statitemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/*md*/
+@media (max-width: 768px) {
+    :root {
+        --fs-hometitle: 5rem;
+        --fs-homesubtitle: 1.9rem;
+        --fs-intro: 1.5rem;
+        --fs-homebody: 1rem;
+        --fs-nav: 1rem;
+
+        --fs-abouttitle: 2.1rem;
+        --fs-aboutbody: 1.1rem;
+        --fs-stathead: 1rem;
+        --fs-statbody: 0.8rem;
+        --fs-skillbody: 0.8rem;
+
+        --fs-pdethead: 6.5rem;
+        --fs-pdet: 2rem;
+        --ps-gamelogo2: 0rem;
+        --fs-rolehead: 1.6rem;
+        --fs-roletext: 1.1rem;
+        --fs-conthead: 1.6rem;
+        --fs-conttext: 1.1rem;
+    }
+
+    #homecontainer {
+        width: 640px;
+    }
+
+    #SItemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #statitemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+
+    #projectsmain {
+        /* border-top: solid 2px; */
+        font-family: Quantico, sans-serif;
+        color: #bfd7f5;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #projecttititlebox {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    #projecttititlebox h1 {
+        font-size: 2.5rem;
+    }
+    
+    #projecttititlebox p {
+        font-size: var(--fs-ptext)
+    }
+    
+    #pbuttonlist {
+        display: flex;
         width: 100%;
-        height: 5.5rem;
+        gap: 2em;
+        overflow: hidden;
+        justify-content: center;
+        border-bottom: solid 1px;
+        font-size: var(--fs-pbutton);
+        max-width: 100%;
+    }
+    
+    .buttonimg {
+        border: solid 1px;
+        width: var(--ps-gamelogo);
+        margin: auto;
+        display: block;
+        cursor: pointer;
     }
 
-    #gamelogo img {
-        width: 0;
-        height: 0;
-    }
 
+
+    #projectdescription {
+        width: 100%;
+    }
+    
+    #pdcontainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #pdlist {
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    #plistitem {}
+    
+    #projectheader {
+        border: solid 1px;
+        text-align: center;
+    }
+    
+    .studiotag {
+        margin-top: 30px;
+        left: 0;
+        height: 4rem;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .studioimg img {
+        width: 100%;
+        height: 100%;
+    }
+    
     #projectdetails {
         text-align: center;
+        margin-right: 0;
+        margin-top: 3rem;
         width: 100%;
-        margin-left: auto;
-        margin-right: auto;
     }
-
+    
+    #projectdetails h2 {
+        font-size: var(--fs-pdethead);
+        margin-bottom: 2rem;
+    }
+    
+    #projectdetails h3 {
+        font-size: var(--fs-pdet);
+    }
+    
+    #gamelogo {
+        margin-top: 0rem;
+    }
+    
+    #gamelogo img {
+        width: 0;
+    }
+    
+    #projectoutline {
+        padding-left: var(--p-outlnmrgn);
+        padding-right: var(--p-outlnmrgn);
+        padding-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    
+    #projectoutline p {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    
+    #projectroles {
+        width: 100%;
+        border: solid 1px;
+        text-align: center;
+    }
+    
+    #projectroles h2 {
+        font-size: 2.5rem;
+    }
+    
     #prcontainer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-
+    
     .roles {
         border: solid 1px;
-        width: 100%;
     }
-
+    
+    #roletitle {
+        font-size: var(--fs-rolehead);
+        font-style: italic;
+    }
+    
+    
+    #rolestext {
+        padding-left: var(--p-rolemrgn);
+        padding-right: var(--p-rolemrgn);
+    }
+    
+    #rolestext p {
+        font-size: var(--fs-roletext);
+    }
+    
     #pccontainer {
         display: flex;
         justify-content: space-evenly;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         row-gap: 5rem;
     }
-
-    /* #projectcontributions {
+    
+    #pccontainerbsc {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 5rem;
+    }
+    
+    #projectcontributions {
         border-top: solid 1px;
         border-right: solid 1px;
         border-left: solid 1px;
         text-align: center;
-    } */
+    }
     
     #projectcontributions h2 {
         font-size: 2.5rem;
@@ -742,61 +833,156 @@ video {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 4rem;
+        gap: 2rem;
     }
     
     #contributionlist li {
-        max-width: 80%;
+        max-width: 90%;
     }
     
     .contribution-media {
         border: solid 1px;
     }
-
-    #m {
-        margin-left: 0;
-        border-bottom: none;
-    }
     
     video {
+        width: 100%;
     }
-}
-
-
-/*Responsive Layout Switches*/
-
-/*2xl*/
-@media (max-width: 1536px) {
-    #homecontainer {
-        width: 1280px;
+    
+    .contribution-text {
+        border: solid 1px;
+        padding-left: var(--p-contmrgn);
+        padding-right: var(--p-contmrgn);
     }
-}
-
-/*xl*/
-@media (max-width: 1280px) {
-    #homecontainer {
-        width: 1024px;
+    
+    .contribution-text h3 {
+        font-size: var(--fs-conthead);
+        font-style: italic;
     }
-}
-
-/*lg*/
-@media (max-width: 1024px) {
-    #homecontainer {
-        width: 768px;
+    
+    .contribution-text p {
+        font-size: var(--fs-conttext);
     }
-}
-
-/*md*/
-@media (max-width: 768px) {
-    #homecontainer {
-        width: 640px;
+    
+    .buffer {
+        height: 20rem;
+        border-left: solid 1px;
+        border-right: solid 1px;
     }
 }
 
 /*sm*/
 @media (max-width: 640px) {
+    :root {
+        --fs-hometitle: 4.5rem;
+        --fs-homesubtitle: 1.5rem;
+        --fs-intro: 1.3rem;
+        --fs-homebody: 1rem;
+        --fs-nav: 1rem;
+
+        --fs-abouttitle: 3rem;
+        --fs-aboutbody: 1.2rem;
+        --fs-stathead: 1.4rem;
+        --fs-statbody: 1rem;
+
+        --fs-ptext: 1.3rem;
+        --fs-pdethead: 5rem;
+        --fs-pdet: 1.5rem;
+        --ps-gamelogo2: 0rem;
+        --fs-rolehead: 1.5rem;
+        --fs-roletext: 1rem;
+        --fs-conthead: 1.5rem;
+        --fs-conttext: 1rem;
+    }
+
     #homecontainer {
         width: 475px;
+    }
+
+    #aboutmemain {
+        color: #bfd7f5;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    #aboutcontainer {
+        width: 100%;
+        flex: 0;
+    }
+    
+    #aboutmetext {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    #abouttitle h1 {
+        text-align: center;
+        font-size: var(--fs-abouttitle);
+    }
+    
+    #aboutmetext p {
+        font-size: var(--fs-aboutbody);
+    }
+    
+    #skillscontainer {
+        flex: 0;
+        width: 100%;
+    }
+    
+    #skillscontainer h1 {
+        text-align: center;
+        font-size: var(--fs-abouttitle);
+        font-family: Quantico, sans-serif;
+    }
+    
+    #SItem {
+        max-width: var(--ds-skills);
+    }
+    
+    #SItemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    #SItemtext h2 {
+        font-family: Quantico, sans-serif;
+        text-align: center;
+    }
+    
+    #SItemtext b {
+        font-family: Quantico, sans-serif;
+    }
+    
+    #stats {
+        display: flex;
+        flex-direction: column;
+        max-width: var(--ds-interests);
+    }
+    
+    #statitem {
+        max-width: 100%;
+        max-height: 100%;
+        border: solid 1px;
+    }
+    
+    #statitemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: var(--stat-padding);
+        padding-right: var(--stat-padding);
+        text-align: center;
+    }
+    
+    #statitemtext h2 {
+        text-align: center;
+        font-size: var(--fs-stathead);
+    }
+    
+    #statitemtext p {
+        font-size: var(--fs-statbody);
     }
 }
 
@@ -808,7 +994,20 @@ video {
         --fs-homesubtitle: 1.4rem;
         --fs-intro: 1.2rem;
         --fs-homebody: 1.1rem;
-        --fs-nav: 1rem
+        --fs-nav: 1rem;
+
+        --fs-abouttitle: 3rem;
+        --fs-aboutbody: 1.2rem;
+        --fs-stathead: 1.4rem;
+        --fs-statbody: 1rem;
+
+        --fs-ptext: 1rem;
+        --fs-pbutton: 0.9rem;
+        --ps-gamelogo: 2.8rem;
+
+        --fs-pdethead: 5rem;
+        --fs-pdet: 1.5rem;
+        --ps-gamelogo2: 0rem;
     }
     
     #home-text {
@@ -842,5 +1041,313 @@ video {
     .navitem:first-child {
         margin-right: 0;
     }
-}
 
+
+    #aboutmemain {
+        color: #bfd7f5;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    
+    #aboutcontainer {
+        width: 100%;
+        flex: 0;
+    }
+    
+    #aboutmetext {
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    #abouttitle h1 {
+        text-align: center;
+        font-size: var(--fs-abouttitle);
+    }
+    
+    #aboutmetext p {
+        font-size: var(--fs-aboutbody);
+    }
+    
+    #skillscontainer {
+        flex: 0;
+        width: 100%;
+    }
+    
+    #skillscontainer h1 {
+        text-align: center;
+        font-size: var(--fs-abouttitle);
+        font-family: Quantico, sans-serif;
+    }
+    
+    #SItem {
+        max-width: var(--ds-skills);
+    }
+    
+    #SItemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    #SItemtext h2 {
+        font-family: Quantico, sans-serif;
+        text-align: center;
+    }
+    
+    #SItemtext b {
+        font-family: Quantico, sans-serif;
+    }
+    
+    #stats {
+        display: flex;
+        flex-direction: column;
+        max-width: var(--ds-interests);
+    }
+    
+    #statitem {
+        max-width: 100%;
+        max-height: 100%;
+        border: solid 1px;
+    }
+    
+    #statitemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: var(--stat-padding);
+        padding-right: var(--stat-padding);
+        text-align: center;
+    }
+    
+    #statitemtext h2 {
+        text-align: center;
+        font-size: var(--fs-stathead);
+    }
+    
+    #statitemtext p {
+        font-size: var(--fs-statbody);
+    }
+
+
+    #projectsmain {
+        /* border-top: solid 2px; */
+        font-family: Quantico, sans-serif;
+        color: #bfd7f5;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #projecttititlebox {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    #projecttititlebox h1 {
+        font-size: 2.5rem;
+    }
+    
+    #projecttititlebox p {
+        font-size: var(--fs-ptext)
+    }
+    
+    #pbuttonlist {
+        display: flex;
+        width: 100%;
+        gap: 2em;
+        overflow: hidden;
+        justify-content: center;
+        border-bottom: solid 1px;
+        font-size: var(--fs-pbutton);
+        max-width: 100%;
+    }
+    
+    .buttonimg {
+        border: solid 1px;
+        width: var(--ps-gamelogo);
+        margin: auto;
+        display: block;
+        cursor: pointer;
+    }
+
+
+
+    #projectdescription {
+        width: 100%;
+    }
+    
+    #pdcontainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    #pdlist {
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    #plistitem {}
+    
+    #projectheader {
+        border: solid 1px;
+        text-align: center;
+    }
+    
+    .studiotag {
+        border: solid 3px;
+        height: 4rem;
+        margin-top: 30px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: grey
+    }
+    
+    .studioimg img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #projectdetails {
+        text-align: center;
+        margin-right: 0;
+        margin-top: 3rem;
+        width: 100%;
+    }
+    
+    #projectdetails h2 {
+        font-size: var(--fs-pdethead);
+        margin-bottom: 2rem;
+    }
+    
+    #projectdetails h3 {
+        font-size: var(--fs-pdet);
+    }
+    
+    #gamelogo {
+        margin-top: 0rem;
+    }
+    
+    #gamelogo img {
+        width: var(--ps-gamelogo2);
+    }
+    
+    #projectoutline {
+        padding-left: var(--p-outlnmrgn);
+        padding-right: var(--p-outlnmrgn);
+        padding-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    
+    #projectoutline p {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    
+    #projectroles {
+        width: 100%;
+        border: solid 1px;
+        text-align: center;
+    }
+    
+    #projectroles h2 {
+        font-size: 2rem;
+    }
+    
+    #prcontainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .roles {
+        border: solid 1px;
+    }
+    
+    #roletitle {
+        font-size: var(--fs-rolehead);
+        font-style: italic;
+    }
+    
+    
+    #rolestext {
+        padding-left: var(--p-rolemrgn);
+        padding-right: var(--p-rolemrgn);
+    }
+    
+    #rolestext p {
+        font-size: var(--fs-roletext);
+    }
+    
+    #pccontainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        row-gap: 5rem;
+    }
+    
+    #pccontainerbsc {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 5rem;
+    }
+    
+    #projectcontributions {
+        border-top: solid 1px;
+        border-right: solid 1px;
+        border-left: solid 1px;
+        text-align: center;
+    }
+    
+    #projectcontributions h2 {
+        font-size: 2.5rem;
+    }
+    
+    #contributionlist {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    #contributionlist li {
+        max-width: 90%;
+    }
+    
+    .contribution-media {
+        border: solid 1px;
+    }
+    
+    video {
+        width: 100%;
+    }
+    
+    .contribution-text {
+        border: solid 1px;
+        padding-left: var(--p-contmrgn);
+        padding-right: var(--p-contmrgn);
+    }
+    
+    .contribution-text h3 {
+        font-size: var(--fs-conthead);
+        font-style: italic;
+    }
+    
+    .contribution-text p {
+        font-size: var(--fs-conttext);
+    }
+    
+    .buffer {
+        height: 20rem;
+        border-left: solid 1px;
+        border-right: solid 1px;
+    }
+}
