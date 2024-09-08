@@ -21,6 +21,10 @@
             $("#spcimg").click(function () {
                 window.location = "projects-spc.html";
             })
+
+            $(".txtimg").click(function() {
+                window.location = "https://lstandsforwinner.studio/";
+            })
         })
     </script>
 </head>
@@ -53,28 +57,61 @@
                     <p>Check out all the things I've been a part of developing!</p>
                 </div>
             </div>
-            <div id="pbuttonlist">
+            <section id="pbuttonlist">
                 <div class="button">
                     <img src="images/p1logo.webp" class="buttonimg" id="p1img">
                     <p>Phoenix One</p>
                 </div>
                 <div class="button" id="bscimg">
                     <img class="buttonimg">
-                    <p>Beachside Campfire</p>
+                    <p>Beachside <br> Campfire</p>
                 </div>
-                <div class="button" id="bscimg">
+                <div class="button" id="antimg">
                     <img src="images/antgame.webp" class="buttonimg">
-                    <p>The Very Hungry Anterpillar</p>
+                    <p>The Very Hungry <br> Anterpillar</p>
                 </div>
-                <div class="button" id="bscimg">
+                <div class="button" id="bseimg">
                     <img src="images/basementgame.webp" class="buttonimg">
                     <p>Basement Game</p>
                 </div>
-                <div class="button" id="bscimg">
+                <div class="button" id="spcimg">
                     <img src="images/personal space.webp" class="buttonimg">
                     <p>Personal Space</p>
                 </div>
-            </div>
+            </section>
+
+            <section id="projectdescription">
+                <ul id="pdlist">
+                    <li id="projectheader" class="plistitem">
+                        <div id="pdcontainer">
+                            <div class="studiotag">
+                                <div class="studioimg"><img id="lswlogo" src="images/LSW-Logo.png"></div>
+                            </div>
+                            <div id="projectdetails">
+                                <h2>Basement Game</h2>
+                                <h3>Developed with: L Stands for Winner</h3>
+                                <h3>Made for the Pirate Software Game Jam 15</h3>
+                                <!-- <div class="txtimg">
+                                    <img id="lswlogo" src="images/LSW-Logo.png">
+                                </div>
+                                <h3> L Stands for Winner</h3> -->
+                                <h3><a href="https://lstandsforwinner.itch.io/basement-game">Play it here!</a></h3>
+                            </div>
+                            <div id="gamelogo">
+                                <img src="images/basementgame.webp">
+                            </div>
+                            <div id="projectoutline">
+                                <p>A 2.5D Automation Game set in the shadows of a basement.</p>
+                                <p>Combine, Produce, Sell and Submit different elements from the periodic table via purchasing and contructing a complex network of small alchemy machines.</p>
+                                <p>In this Game Jam, I was responsible for the creation and texturing of all 3D models other than the actual basement.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <div class="buffer">
+
+                    </div> -->
+                </ul>
+            </section>
         </section>
     </main>
     <div id="footbar"></div>

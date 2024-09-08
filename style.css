@@ -9,8 +9,8 @@
     --fs-intro: 1.5rem;
     --fs-homebody: 1.4rem;
 
-    --ds-abouttext: 65rem;
-    --ds-interests: 75rem;
+    --ds-abouttext: 100%;
+    --ds-interests: 100%;
 
     --ds-skills: 45rem;
 
@@ -29,7 +29,7 @@
 
     --fs-ptext: 1.5rem;
     --fs-pbutton: 1rem;
-    --ps-gamelogo: 4rem;
+    --ps-gamelogo: 8rem;
 
     --p-outlnmrgn: clamp(0rem, 12vw - 2rem, 15rem);
     --fs-pdethead: 8rem;
@@ -258,8 +258,8 @@ body {
 }
 
 #skillscontainer {
-    width: 30%;
     border: solid 1px;
+    width: 30%;
 }
 
 #skillscontainer h1 {
@@ -349,6 +349,10 @@ body {
     justify-content: center;
     border-bottom: solid 1px;
     font-size: var(--fs-pbutton);
+}
+
+.button {
+    text-align: center;
 }
 
 .buttonimg {
@@ -459,6 +463,7 @@ body {
 
 .roles {
     border: solid 1px;
+    max-width: 50%;
 }
 
 #roletitle {
@@ -587,6 +592,8 @@ video {
         --fs-statbody: 1rem;
         --fs-skillbody: 1rem;
 
+
+        --ps-gamelogo: 6.5rem;
         --fs-pdethead: 5.6rem;
         --fs-pdet: 1.1rem;
         --ps-gamelogo2: 9rem;
@@ -624,6 +631,7 @@ video {
         --fs-statbody: 0.8rem;
         --fs-skillbody: 0.8rem;
 
+        --ps-gamelogo: 5rem;
         --fs-pdethead: 6.5rem;
         --fs-pdet: 2rem;
         --ps-gamelogo2: 0rem;
@@ -785,6 +793,7 @@ video {
     
     .roles {
         border: solid 1px;
+        max-width: 100%;
     }
     
     #roletitle {
