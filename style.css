@@ -328,6 +328,10 @@ body {
     flex-direction: column;
 }
 
+/* #projectscontainer {
+    width: 100%;
+} */
+
 #projecttititlebox {
     text-align: center;
     max-width: 100%;
@@ -347,8 +351,13 @@ body {
     gap: 2em;
     overflow: hidden;
     justify-content: center;
+    /* justify-content: center; AAAAAAAAAAA */
     border-bottom: solid 1px;
     font-size: var(--fs-pbutton);
+    /* margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain; */
 }
 
 .button {
@@ -631,7 +640,7 @@ video {
         --fs-statbody: 0.8rem;
         --fs-skillbody: 0.8rem;
 
-        --ps-gamelogo: 5rem;
+        --ps-gamelogo: 7rem;
         --fs-pdethead: 6.5rem;
         --fs-pdet: 2rem;
         --ps-gamelogo2: 0rem;
@@ -666,6 +675,10 @@ video {
         display: flex;
         flex-direction: column;
     }
+
+    #projectscontainer {
+        width: 100%;
+    }
     
     #projecttititlebox {
         text-align: center;
@@ -682,13 +695,14 @@ video {
     
     #pbuttonlist {
         display: flex;
-        width: 100%;
         gap: 2em;
-        overflow: hidden;
-        justify-content: center;
         border-bottom: solid 1px;
         font-size: var(--fs-pbutton);
-        max-width: 100%;
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        justify-content: start;
     }
     
     .buttonimg {
@@ -698,8 +712,6 @@ video {
         display: block;
         cursor: pointer;
     }
-
-
 
     #projectdescription {
         width: 100%;
@@ -893,6 +905,7 @@ video {
         --fs-stathead: 1.4rem;
         --fs-statbody: 1rem;
 
+        --ps-gamelogo: 6rem;
         --fs-ptext: 1.3rem;
         --fs-pdethead: 5rem;
         --fs-pdet: 1.5rem;
@@ -1002,6 +1015,18 @@ video {
     
     #statitemtext p {
         font-size: var(--fs-statbody);
+    }
+
+    #pbuttonlist {
+        display: flex;
+        gap: 2em;
+        border-bottom: solid 1px;
+        font-size: var(--fs-pbutton);
+        max-width: 475px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        justify-content: start;
     }
 }
 
@@ -1171,13 +1196,14 @@ video {
     
     #pbuttonlist {
         display: flex;
-        width: 100%;
         gap: 2em;
-        overflow: hidden;
-        justify-content: center;
         border-bottom: solid 1px;
         font-size: var(--fs-pbutton);
-        max-width: 100%;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow-x: auto;
+        justify-content: start;
     }
     
     .buttonimg {
