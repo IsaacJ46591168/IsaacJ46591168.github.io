@@ -46,15 +46,13 @@
 }
 
 .wrapper {
-    padding-top: 4rem;
-    width: 100%;
     height: 100%;
 }
 
-.container {
+/* .container {
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 
 .overflow {
@@ -69,27 +67,23 @@
 } */
 
 
-
-
 #navcontainer {
     background-color: black;
-    /* border: solid 1px; */
     width: 100%;
     min-height: 3.5rem;
-    position: fixed;
-    top: 0;
+    /* position: fixed;
+    top: 0; */
     z-index: 20;
 }
 
-#footbar {
+/* #footbar {
     background-color: black;
-    /* border: solid 1px; */
     min-width: 100%;
     min-height: 3.5rem;
     position: fixed;
     bottom: 0;
     z-index: 20;
-}
+} */
 
 
 body {
@@ -227,24 +221,42 @@ body {
 
 /*About Me Page */
 
-#aboutmemain {
-    color: #bfd7f5;
+#aboutwrapper {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    height: 100%;
+    justify-content: end;
 }
 
-#aboutcontainer {
-    width: 70%;
+#aboutmemain {
+    flex-grow: 1;
+    color: #bfd7f5;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid 1px;
+    align-content: flex-start;
 }
+
+.aflxi {
+    width: 30rem;
+    max-height: 30rem;
+    border: solid 1px;
+}
+
+/* #aboutcontainer {
+    max-width: 70%;
+} */
 
 #aboutmetext {
     text-align: left;
     padding-left: var(--abt-padding);
     padding-right: var(--abt-padding);
-    max-width: var(--ds-abouttext);
-    max-height: 40rem;
+    /* max-width: var(--ds-abouttext);
+    max-height: 40rem; */
     border: solid 1px;
+    flex-grow: 1;
+    width: 60rem;
 }
 
 #abouttitle h1 {
@@ -257,12 +269,43 @@ body {
     font-size: var(--fs-aboutbody);
 }
 
-#skillscontainer {
+/* #skillscontainer {
     border: solid 1px;
     width: 30%;
+} */
+
+#stats {
+    /* display: flex;
+    justify-content: space-evenly;
+    max-width: var(--ds-interests);
+    border: solid 1px; */
 }
 
-#skillscontainer h1 {
+#statitem {
+
+}
+
+#statitemtext {
+    font-family: Quantico, sans-serif;
+    padding-left: var(--stat-padding);
+    padding-right: var(--stat-padding);
+}
+
+#statitemtext h2 {
+    text-align: center;
+    font-size: var(--fs-stathead);
+}
+
+#statitemtext p {
+    font-size: var(--fs-statbody);
+}
+
+#skills{
+    flex-grow: 1;
+    border: solid 2px;
+}
+
+#skills h1 {
     text-align: center;
     font-size: var(--fs-abouttitle);
     font-family: Quantico, sans-serif;
@@ -289,33 +332,6 @@ body {
 
 #SItemtext p {
     font-size: var(--fs-skillbody);
-}
-
-#stats {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: var(--ds-interests);
-    border: solid 1px;
-}
-
-#statitem {
-    max-width: 25%;
-    max-height: 27.1rem;
-}
-
-#statitemtext {
-    font-family: Quantico, sans-serif;
-    padding-left: var(--stat-padding);
-    padding-right: var(--stat-padding);
-}
-
-#statitemtext h2 {
-    text-align: center;
-    font-size: var(--fs-stathead);
-}
-
-#statitemtext p {
-    font-size: var(--fs-statbody);
 }
 
 /*Projects Page */
@@ -1047,7 +1063,7 @@ video {
 
         --fs-ptext: 1rem;
         --fs-pbutton: 0.9rem;
-        --ps-gamelogo: 2.8rem;
+        --ps-gamelogo: 5rem;
 
         --fs-pdethead: 5rem;
         --fs-pdet: 1.5rem;
