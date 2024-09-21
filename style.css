@@ -16,7 +16,7 @@
 
 
     --fs-abouttitle: 3rem;
-    --fs-aboutbody: 1.3rem;
+    --fs-aboutbody: 1.315rem;
 
     --fs-stathead: 1.7rem;
     --fs-statbody: 1.2rem;
@@ -46,6 +46,7 @@
 }
 
 .wrapper {
+    height: 100%;
     margin-top: 4.1rem;
 }
 
@@ -55,8 +56,8 @@
 } */
 
 
-.overflow {
-    overflow-y: auto;
+.noverflow {
+    overflow-y: hidden;
 }
 
 
@@ -229,7 +230,7 @@ body {
 }
 
 .aflxi {
-    max-height: 30rem;
+    /* max-height: 30rem; */
 }
 
 /* #aboutcontainer {
@@ -242,7 +243,7 @@ body {
     padding-right: var(--abt-padding);
     flex-grow: 1;
     max-height: 30rem;
-    width: 40rem;
+    width: 20rem;
     border-bottom: solid 1px;
 }
 
@@ -269,6 +270,7 @@ body {
     border-bottom: solid 1px;
     border-left: solid 1px;
     width: 30rem;
+    max-height: 30rem;
 }
 
 #statitem {
@@ -290,16 +292,19 @@ body {
     font-size: var(--fs-statbody);
 }
 
-#skills{
+#skillscontainer{
     flex-grow: 1;
+    max-height: 30rem;
+}
 
+#skills{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
 }
 
-#skills h1 {
+#skillscontainer h1 {
     text-align: center;
     font-size: var(--fs-abouttitle);
     font-family: Quantico, sans-serif;
@@ -577,10 +582,16 @@ video {
         --fs-aboutbody: 1.2rem;
         --fs-stathead: 1.4rem;
         --fs-statbody: 1rem;
+        --fs-skillhead: 1.2rem;
+        --fs-skillbody: 1rem;
     }
 
     #homecontainer {
         width: 1280px;
+    }
+    
+    #stats {
+        width: 28rem;
     }
 }
 
@@ -590,10 +601,15 @@ video {
         --fs-pdethead: 6.8rem;
         --fs-pdet: 1.4rem;
         --ps-gamelogo2: 16rem;
+        --fs-aboutbody: 1.15rem;
     }
 
     #homecontainer {
         width: 1024px;
+    }
+
+    #stats {
+        width: 20rem;
     }
 }
 
@@ -619,6 +635,11 @@ video {
         --ps-gamelogo2: 9rem;
     }
 
+    .wrapper {
+        height: 100%;
+        margin-top: 3.5rem;
+    }
+
     #homecontainer {
         width: 768px;
     }
@@ -634,6 +655,10 @@ video {
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    #stats {
+        width: 15rem;
+    }
 }
 
 /*md*/
@@ -645,11 +670,12 @@ video {
         --fs-homebody: 1rem;
         --fs-nav: 1rem;
 
-        --fs-abouttitle: 2.1rem;
+        --fs-abouttitle: 3rem;
         --fs-aboutbody: 1.1rem;
-        --fs-stathead: 1rem;
-        --fs-statbody: 0.8rem;
-        --fs-skillbody: 0.8rem;
+        --fs-stathead: 1.3rem;
+        --fs-statbody: 1.1rem;
+        --fs-skillhead: 1.2rem;
+        --fs-skillbody: 1.1rem;
 
         --ps-gamelogo: 7rem;
         --fs-pdethead: 6.5rem;
@@ -661,21 +687,119 @@ video {
         --fs-conttext: 1.1rem;
     }
 
+    .wrapper {
+        height: 100%;
+        margin-top: 3.5rem;
+    }
+
     #homecontainer {
         width: 640px;
     }
 
-    #SItemtext {
-        font-family: Quantico, sans-serif;
-        padding-left: 10px;
-        padding-right: 10px;
+    #aboutmemain {
+        border: 0;
     }
 
+    #aboutmetext {
+        text-align: left;
+        padding-left: var(--abt-padding);
+        padding-right: var(--abt-padding);
+        flex-grow: 0;
+        max-height: 30rem;
+        width: 100%;
+        border: solid 2px;
+    }
+    
+    #abouttitle h1 {
+        text-align: center;
+        font-size: var(--fs-abouttitle);
+    }
+    
+    #aboutmetext p {
+        font-size: var(--fs-aboutbody);
+    }
+    
+    /* #skillscontainer {
+        border: solid 1px;
+        width: 30%;
+    } */
+    
+    #stats {
+        /* display: flex;
+        justify-content: space-evenly;
+        max-width: var(--ds-interests);
+        border: solid 1px; */
+        border-bottom: solid 2px;
+        border-left: solid 2px;
+        border-right: solid 2px;
+        width: 100%;
+    }
+    
+    #statitem {
+    
+    }
+    
     #statitemtext {
         font-family: Quantico, sans-serif;
-        padding-left: 10px;
-        padding-right: 10px;
         text-align: center;
+        padding-left: var(--stat-padding);
+        padding-right: var(--stat-padding);
+    }
+    
+    #statitemtext h2 {
+        text-align: center;
+        font-size: var(--fs-stathead);
+    }
+    
+    #statitemtext p {
+        font-size: var(--fs-statbody);
+    }
+
+    #skillscontainer {
+        width: 100%;
+        flex-grow: 0;
+        max-height: 100%;
+        border-left: solid 2px;
+        border-right: solid 2px;
+        border-bottom: solid 2px;
+    }
+    
+    #skills{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    #skillscontainer h1 {
+        text-align: center;
+        font-size: var(--fs-abouttitle);
+        font-family: Quantico, sans-serif;
+        width: 100%;
+    }
+    
+    #SItem {
+        max-width: var(--ds-skills);
+    }
+    
+    #SItemtext {
+        font-family: Quantico, sans-serif;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    #SItemtext h2 {
+        font-family: Quantico, sans-serif;
+        text-align: center;
+    }
+    
+    #SItemtext b {
+        font-family: Quantico, sans-serif;
+    }
+    
+    #SItemtext p {
+        font-size: var(--fs-skillbody);
     }
 
 
@@ -940,18 +1064,6 @@ video {
     #homecontainer {
         width: 475px;
     }
-
-    #aboutmemain {
-        color: #bfd7f5;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    
-    #aboutcontainer {
-        width: 100%;
-        flex: 0;
-    }
     
     #aboutmetext {
         text-align: left;
@@ -968,11 +1080,6 @@ video {
     
     #aboutmetext p {
         font-size: var(--fs-aboutbody);
-    }
-    
-    #skillscontainer {
-        flex: 0;
-        width: 100%;
     }
     
     #skillscontainer h1 {
@@ -1096,19 +1203,6 @@ video {
     .navitem:first-child {
         margin-right: 0;
     }
-
-
-    #aboutmemain {
-        color: #bfd7f5;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    
-    #aboutcontainer {
-        width: 100%;
-        flex: 0;
-    }
     
     #aboutmetext {
         text-align: left;
@@ -1123,11 +1217,6 @@ video {
     
     #aboutmetext p {
         font-size: var(--fs-aboutbody);
-    }
-    
-    #skillscontainer {
-        flex: 0;
-        width: 100%;
     }
     
     #skillscontainer h1 {
