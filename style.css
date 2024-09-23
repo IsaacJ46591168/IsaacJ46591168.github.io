@@ -257,24 +257,17 @@ body {
     font-size: var(--fs-aboutbody);
 }
 
-/* #skillscontainer {
-    border: solid 1px;
-    width: 30%;
-} */
-
 #stats {
-    /* display: flex;
-    justify-content: space-evenly;
-    max-width: var(--ds-interests);
-    border: solid 1px; */
     border-bottom: solid 1px;
     border-left: solid 1px;
     width: 30rem;
     max-height: 30rem;
+    cursor: pointer;
 }
 
-#statitem {
-
+.statitem {
+    width: 100%;
+    height: 100%;
 }
 
 #statitemtext {
@@ -472,7 +465,6 @@ body {
 }
 
 #projectroles {
-    width: 100%;
     border: solid 1px;
     text-align: center;
 }
@@ -521,9 +513,7 @@ body {
 }
 
 #projectcontributions {
-    border-top: solid 1px;
-    border-right: solid 1px;
-    border-left: solid 1px;
+    border: solid 1px;
     text-align: center;
 }
 
@@ -1035,7 +1025,7 @@ video {
         --fs-homebody: 1rem;
         --fs-nav: 1rem;
 
-        --fs-abouttitle: 3rem;
+        --fs-abouttitle: 2.7rem;
         --fs-aboutbody: 1.2rem;
         --fs-stathead: 1.4rem;
         --fs-statbody: 1rem;
@@ -1158,7 +1148,7 @@ video {
         --fs-homebody: 1.1rem;
         --fs-nav: 1rem;
 
-        --fs-abouttitle: 3rem;
+        --fs-abouttitle: 2.5rem;
         --fs-aboutbody: 0.8rem;
         --fs-stathead: 1.4rem;
         --fs-statbody: 1rem;

@@ -6,7 +6,46 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function () {
+            let counter = 0;
+            $('#statitem1').show();
+            $('#statitem2').hide();
+            $('#statitem3').hide();
+            $('#statitem4').hide();
+            $('#stats').click(statcycle);
 
+
+            function statcycle()
+            {
+                counter++;
+                if(counter == 0){
+                    $('#statitem1').show();
+                    $('#statitem2').hide();
+                    $('#statitem3').hide();
+                    $('#statitem4').hide();
+                }
+                if(counter == 1){
+                    $('#statitem1').hide();
+                    $('#statitem2').show();
+                    $('#statitem3').hide();
+                    $('#statitem4').hide();
+                }
+                if(counter == 2){
+                    $('#statitem1').hide();
+                    $('#statitem2').hide();
+                    $('#statitem3').show();
+                    $('#statitem4').hide();
+                }
+                if(counter == 3){
+                    $('#statitem1').hide();
+                    $('#statitem2').hide();
+                    $('#statitem3').hide();
+                    $('#statitem4').show();
+                    counter = 4;
+                }
+                if(counter == 4){
+                    counter = -1;
+                }
+            }
         });
     </script>
 </head>
@@ -50,7 +89,7 @@
         </div>
 
         <div class="aflxi" id="stats">
-            <div id="statitem">
+            <div id="statitem1" class="statitem">
                 <div id="statitemtext">
                     <h2>Favourite Games right now:</h2>
                     <p>- The Legend of Zelda: Tears of the Kingdom</p>
@@ -59,30 +98,30 @@
                 </div>
             </div>
 
-            <!-- <div id="statitem">
-                    <div id="statitemtext">
-                        <h2>Games I've played the most:</h2>
-                        <p>- Splatoon 2 (1130 Hours, Shamefully)</p>
-                        <p>- Splatoon (704 Hours)</p>
-                        <p>- Mario Kart 8 Deluxe (620 Hours) </p>
-                    </div>
+            <div id="statitem2" class="statitem">
+                <div id="statitemtext">
+                    <h2>Games I've played the most:</h2>
+                    <p>- Splatoon 2 (1130 Hours, Shamefully)</p>
+                    <p>- Splatoon (704 Hours)</p>
+                    <p>- Mario Kart 8 Deluxe (620 Hours) </p>
                 </div>
+            </div>
 
-                <div id="statitem">
-                    <div id="statitemtext">
-                        <h2>Longest I've ever stayed awake:</h2>
-                        <p>25 Hours</p>
-                        <p>It was for a Uni assignment</p>
-                    </div>
+            <div id="statitem3" class="statitem">
+                <div id="statitemtext">
+                    <h2>Longest I've ever stayed awake:</h2>
+                    <p>25 Hours</p>
+                    <p>It was for a Uni assignment</p>
                 </div>
-    
-                <div id="statitem">
-                    <div id="statitemtext">
-                        <h2>Favourite Football Team:</h2>
-                        <p>Liverpool FC</p>
-                        <p>...was it not obvious?</p>
-                    </div>
-                </div>     -->
+            </div>
+
+            <div id="statitem4" class="statitem">
+                <div id="statitemtext">
+                    <h2>Favourite Football Team:</h2>
+                    <p>Liverpool FC</p>
+                    <p>...was it not obvious?</p>
+                </div>
+            </div>
         </div>
         <div class="aflxi" id="skillscontainer">
             <h1>Skills and Experience</h1>
@@ -93,20 +132,24 @@
                         <p class="regtext">- <b>Unity:</b> 4 years of consistent experience at an intermediate level,
                             creating major university projects, company commissions and various game-jams. </p>
                         <p class="regtext">- <b>Blender:</b> 3 years of on-and-off experience at an intermediate level,
-                            creating both low-poly and moderately-detailed 3D models for afformentioned game-jams, personal
+                            creating both low-poly and moderately-detailed 3D models for afformentioned game-jams,
+                            personal
                             projects and general past-time.</p>
                         <p class="regtext">- <b>Final Cut Pro: </b> 2 years of experience at an intermediate level,
-                            producing video content for personal projects as well as projects for educational institutions.
+                            producing video content for personal projects as well as projects for educational
+                            institutions.
                         </p>
                     </div>
                 </div>
-    
+
                 <div id="SItem">
                     <div id="SItemtext">
                         <h2>Languages:</h2>
-                        <p class="regtext">- <b>C#:</b> 4 years of consistent experience at an intermediate level via the
+                        <p class="regtext">- <b>C#:</b> 4 years of consistent experience at an intermediate level via
+                            the
                             usage of Unity, using the language to construct those projects and commissions.</p>
-                        <p class="regtext">- <b>Java: </b>2 years of on-and-off experience at a beginner/intermediate level
+                        <p class="regtext">- <b>Java: </b>2 years of on-and-off experience at a beginner/intermediate
+                            level
                             via numerous university projects and exercises.</p>
                         <p class="regtext">- <b>Python</b>: 1 year of experience at a novice/beginner level for personal
                             projects and other past-times.</p>
