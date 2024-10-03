@@ -18,8 +18,8 @@
     --fs-abouttitle: 3rem;
     --fs-aboutbody: 1.315rem;
 
-    --fs-stathead: 1.7rem;
-    --fs-statbody: 1.2rem;
+    --fs-stathead: 2.2rem;
+    --fs-statbody: 1.5rem;
     --fs-skillhead: 1.2rem;
     --fs-skillbody: 1.2rem;
 
@@ -272,12 +272,14 @@ body {
 
 #statitemtext {
     font-family: Quantico, sans-serif;
+    text-align: center;
     padding-left: var(--stat-padding);
     padding-right: var(--stat-padding);
 }
 
 #statitemtext h2 {
     text-align: center;
+    margin-bottom: 4.5rem;
     font-size: var(--fs-stathead);
 }
 
@@ -570,8 +572,8 @@ video {
     :root {
         --fs-abouttitle: 3rem;
         --fs-aboutbody: 1.2rem;
-        --fs-stathead: 1.4rem;
-        --fs-statbody: 1rem;
+        --fs-stathead: 2.2rem;
+        --fs-statbody: 1.5rem;
         --fs-skillhead: 1.2rem;
         --fs-skillbody: 1rem;
     }
@@ -614,8 +616,8 @@ video {
 
         --fs-abouttitle: 2.4rem;
         --fs-aboutbody: 1.1rem;
-        --fs-stathead: 1.2rem;
-        --fs-statbody: 1rem;
+        --fs-stathead: 2rem;
+        --fs-statbody: 1.25rem;
         --fs-skillbody: 1rem;
 
 
@@ -662,7 +664,7 @@ video {
 
         --fs-abouttitle: 3rem;
         --fs-aboutbody: 1.1rem;
-        --fs-stathead: 1.3rem;
+        --fs-stathead: 1.6rem;
         --fs-statbody: 1.1rem;
         --fs-skillhead: 1.2rem;
         --fs-skillbody: 1.1rem;
@@ -739,6 +741,7 @@ video {
     #statitemtext h2 {
         text-align: center;
         font-size: var(--fs-stathead);
+        margin-bottom: 1rem;
     }
     
     #statitemtext p {
