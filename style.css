@@ -32,7 +32,7 @@
     --ps-gamelogo: 8rem;
 
     --p-outlnmrgn: clamp(0rem, 12vw - 2rem, 15rem);
-    --fs-pdethead: 8rem;
+    --fs-pdethead: 9rem;
     --fs-pdet: 2rem;
     --ps-gamelogo2: 25rem;
 
@@ -330,7 +330,6 @@ body {
 }
 
 /*Projects Page */
-
 #projectsmain {
     /* border-top: solid 2px; */
     font-family: Quantico, sans-serif;
@@ -419,7 +418,6 @@ body {
 }
 
 .studioimg {
-    height: 6rem;
     width: 100px;
     border: solid 3px;
     border-radius: 5px;
@@ -428,14 +426,17 @@ body {
     cursor: pointer;
 }
 
+#bsclogo {
+    background-color: white;
+}
+
 .studioimg img {
     width: 100%;
 }
 
 #projectdetails {
-    text-align: left;
-    margin-right: 5rem;
-    margin-top: 5rem;
+    text-align: center;
+    margin-top: 3rem;
 }
 
 #projectdetails h2 {
@@ -447,19 +448,19 @@ body {
     font-size: var(--fs-pdet);
 }
 
-#gamelogo {
+/* #gamelogo {
     margin-top: 13rem;
 }
 
 #gamelogo img {
     width: var(--ps-gamelogo2);
-}
+} */
 
 #projectoutline {
     padding-left: var(--p-outlnmrgn);
     padding-right: var(--p-outlnmrgn);
     padding-bottom: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 #projectoutline p {
@@ -590,9 +591,6 @@ video {
 /*xl*/
 @media (max-width: 1280px) {
     :root {
-        --fs-pdethead: 6.8rem;
-        --fs-pdet: 1.4rem;
-        --ps-gamelogo2: 16rem;
         --fs-aboutbody: 1.15rem;
     }
 
@@ -622,9 +620,11 @@ video {
 
 
         --ps-gamelogo: 6.5rem;
-        --fs-pdethead: 5.6rem;
-        --fs-pdet: 1.1rem;
+        --fs-pdethead: 7rem;
         --ps-gamelogo2: 9rem;
+
+        --fs-rolehead: 1.4rem;
+        --fs-roletext: 1.1rem;
     }
 
     .wrapper {
