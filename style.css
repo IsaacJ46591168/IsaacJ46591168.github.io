@@ -361,13 +361,8 @@ body {
     gap: 2em;
     overflow: hidden;
     justify-content: center;
-    /* justify-content: center; AAAAAAAAAAA */
     border-bottom: solid 1px;
     font-size: var(--fs-pbutton);
-    /* margin-left: auto;
-    margin-right: auto;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain; */
 }
 
 .button {
@@ -437,6 +432,22 @@ body {
 #projectdetails {
     text-align: center;
     margin-top: 3rem;
+}
+
+#projectdetails a {
+    text-decoration: none;
+    color: black;
+    border: solid 3px white;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#projectdetails a:hover {
+    text-decoration: none;
+    color: gray;
+    border: solid 3px white;
+    border-radius: 10px;
+    background-color: white;
 }
 
 #projectdetails h2 {
