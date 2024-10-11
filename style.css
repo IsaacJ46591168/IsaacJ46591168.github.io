@@ -578,6 +578,89 @@ video {
 }
 
 
+/*Other Stuff Page */
+#othermain {
+    font-family: Quantico, sans-serif;
+    color: #bfd7f5;
+}
+
+#othertitlebox {
+    text-align: center;
+    max-width: 100%;
+}
+
+#othertitlebox h1 {
+    font-size: 4rem;
+}
+
+#othertitlebox p {
+    font-size: var(--fs-ptext)
+}
+
+#ostuff {
+
+}
+
+#oslist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.oslistitem {
+    border: solid 1px;
+}
+
+#t{
+    margin-left: 2rem;
+}
+
+#oscontent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5em;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.oscitem {
+    border: solid 3px;
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+}
+
+#popupimages{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+#popupimages span{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #bfd7f5;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.puimage {
+    border: solid 5px;
+    border-radius: 70px;
+}
+
+
 /*Responsive Layout Switches*/
 /*2xl*/
 @media (max-width: 1536px) {

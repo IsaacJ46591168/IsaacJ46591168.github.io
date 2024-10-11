@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#popupimages').hide();
+            $('#li1').click(function(){
+                // var a = $('.oscitem').attr("id");
+                // console.log(a);
+                // if(a == "li1"){
+                    
+                // }
+                // if(a == "li2"){
+                //     $('.puimage').attr("src", "/images/p1logo.webp");
+                // }
+                // if(a == "li3"){
+                    
+                // }
+                // if(a == "li4"){
+                //     $('.puimage').attr("src", "/images/gmaillogo.png");
+                // }
+                $('#popupimages').show();
+                // console.log(a);
+                // $('#popupimages').show();
+                // $('.puimage').attr("src", a);
+            });
+
+            $('#li2').click(function(){
+                $('.puimage').attr("src", "/images/p1logo.webp");
+                $('#popupimages').show();
+            });
+
+            $('#li3').click(function(){
+                $('#popupimages').show();
+            });
+
+            $('#li4').click(function(){
+                $('.puimage').attr("src", "/images/gmaillogo.png");
+                $('#popupimages').show();
+            });
+
+            
+
+            $('#popupimages span').click(function(){
+                $('#popupimages').hide();
+            });
+
+            $()
+        })
+    </script>
+</head>
+
+<body class="noverflow">
+    <div id="navcontainer">
+        <nav>
+            <ul id="topnavigation">
+                <li class="navitem"><a id="link" href="index.html">Home</a></li>
+                <li class="navitem"><a id="link" href="projects.html">Projects</a></li>
+                <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
+                <li class="navitem" id="dropdown">Contact
+                    <div class="dropdown-content">
+                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/">LinkedIn</a>
+                        <a class="dropdown-links" href="https://github.com/IsaacJ46591168">GitHub</a>
+                        <a class="dropdown-links" href="https://twitter.com/Squidcicle_12">Twitter</a>
+                        <a class="dropdown-links" href="mailto:isaacjames4580@gmail.com?Subject=Hello%20User">Email</a>
+                    </div>
+                </li>
+                <li class="navitem"><a id="link" href="about-me.html">About Me</a></li>
+        </nav>
+    </div>
+
+
+    <main class="wrapper" id="othermain">
+        <section class="container" id="othercontainer">
+            <div id="othertitlebox">
+                <div>
+                    <h1>Other Stuff</h1>
+                </div>
+                <div>
+                    <p>These are some smaller and independent things I've made</p>
+                </div>
+            </div>
+
+            <section id="ostuff">
+                <ul id="oslist">
+                    <li id="3DArt" class="oslistitem">
+                        <h2 id="t">3D Modelling + Animation</h2>
+                        <div id="oscontent">
+                            <div class="oscitem" id="li1">
+                            </div>
+                            <div class="oscitem" id="li2">
+                                <img src="images/p1logo.webp">
+                            </div>
+                            <div class="oscitem" id="li3">
+
+                            </div>
+                            <div class="oscitem" id="li4">
+                                <img src="images/gmaillogo.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li id="SoloProjects" class="oslistitem">
+                        <h2 id="t">Solo Projects</h2>
+                        <div id="oscontent">
+                            <div class="oscitem">
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <div id="popupimages">
+            <span id="xbutton">&times;</span>
+            <img class="puimage" src="images/p1logo.webp">
+        </div>
+    </main>
+    <div id="footbar"></div>
+</body>
+
+</html>
