@@ -6,7 +6,10 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function () {
+            var picscroll = 0;
+
             $('#popupimages').hide();
+            $('#scrollbuttons').hide();
             $('#li1').click(function(){
                 // var a = $('.oscitem').attr("id");
                 // console.log(a);
@@ -22,6 +25,9 @@
                 // if(a == "li4"){
                 //     $('.puimage').attr("src", "/images/gmaillogo.png");
                 // }
+                $('#popupimages h2').text("Mountainous Valley");
+                $('.puimage').attr("src", "/images/mountains.webp");
+                $('#puidesc').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
                 $('#popupimages').show();
                 // console.log(a);
                 // $('#popupimages').show();
@@ -29,23 +35,97 @@
             });
 
             $('#li2').click(function(){
-                $('.puimage').attr("src", "/images/p1logo.webp");
+                $('#popupimages h2').text("Vaporwave Scene");
+                $('.puimage').attr("src", "/images/vaporwave.webp");
+                $('#puidesc').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
                 $('#popupimages').show();
             });
 
             $('#li3').click(function(){
+                $('#popupimages h2').text("Just a Wii U");
+                $('.puimage').attr("src", "/images/wii u.webp");
+                $('#puidesc').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
                 $('#popupimages').show();
             });
 
             $('#li4').click(function(){
-                $('.puimage').attr("src", "/images/gmaillogo.png");
+                $('#popupimages h2').text("Train Station");
+                $('.puimage').attr("src", "/images/trainstation.webp");
+                $('#puidesc').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
                 $('#popupimages').show();
             });
 
-            
+            $('#li5').click(function(){
+                $('#popupimages h2').text("Thread the Ring");
+                $('#popupimages').show();
+                $('#scrollbuttons').show();
+
+                piccycle();
+            });
+
+            function piccycle()
+            {
+                if(picscroll == 0){
+                    $('.puimage').attr("src", "/images/ttrtitle.webp");
+                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project, which eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
+                }
+
+                if(picscroll == 1){
+                    $('.puimage').attr("src", "/images/ttrgame.webp");
+                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project, which eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
+                }
+
+                if(picscroll == 2){
+                    $('.puimage').attr("src", "/images/fl1.webp");
+                    $('#puidesc').text("All the coding and 3D assets were done by myself, which I still think was a massive achievement, even if I had to keep lighting to a minimum and the modelling style as low-poly due to the constraints of my laptop, which I still think has nightmares about this whole thing.");
+                }
+
+                if(picscroll == 3){
+                    $('.puimage').attr("src", "/images/fl2.webp");
+                }
+
+                if(picscroll == 4){
+                    $('.puimage').attr("src", "/images/fl4.webp");
+                }
+
+                if(picscroll == 5){
+                    $('.puimage').attr("src", "/images/fl5.webp");
+                }
+                
+                if(picscroll == 6){
+                    $('.puimage').attr("src", "/images/plane render.webp");
+                }
+            }
+
+
+            $('#sb1').click(function(){
+                if(picscroll == 0){
+                    picscroll = 6;
+                } else {
+                    picscroll--;
+                }
+                piccycle();
+                console.log(picscroll);
+            });
+
+            $('#sb2').click(function(){
+                if(picscroll == 6){
+                    picscroll = 0;
+                } else {
+                    picscroll++;
+                }
+                piccycle();
+                console.log(picscroll);
+            });
+
+
+
+
 
             $('#popupimages span').click(function(){
                 $('#popupimages').hide();
+                $('#scrollbuttons').hide();
+                picscroll = 0;
             });
 
             $()
@@ -90,32 +170,39 @@
                         <h2 id="t">3D Modelling + Animation</h2>
                         <div id="oscontent">
                             <div class="oscitem" id="li1">
+                                <img src="images/mountains.webp">
                             </div>
                             <div class="oscitem" id="li2">
-                                <img src="images/p1logo.webp">
+                                <img src="images/vaporwave.webp">
                             </div>
                             <div class="oscitem" id="li3">
-
+                                <img src="images/wii u.webp">
                             </div>
                             <div class="oscitem" id="li4">
-                                <img src="images/gmaillogo.png">
+                                <img src="images/trainstation.webp">
                             </div>
                         </div>
                     </li>
                     <li id="SoloProjects" class="oslistitem">
                         <h2 id="t">Solo Projects</h2>
                         <div id="oscontent">
-                            <div class="oscitem">
-
+                            <div class="oscitem" id="li5">
+                                <img src="images/ttrtitle.webp">
                             </div>
                         </div>
                     </li>
                 </ul>
             </section>
-        </section>
+        </section>  
         <div id="popupimages">
             <span id="xbutton">&times;</span>
+            <h2>Insert Header</h2>
+            <div id="scrollbuttons">
+                <div class="scrollbutton" id="sb1"><p><</p></div>
+                <div class="scrollbutton" id="sb2"><p>></p></div>
+            </div>
             <img class="puimage" src="images/p1logo.webp">
+            <figcaption id="puidesc" class="regtext">Insert Description text here</figcaption>
         </div>
     </main>
     <div id="footbar"></div>
