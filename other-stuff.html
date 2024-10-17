@@ -35,21 +35,21 @@
             });
 
             $('#li2').click(function(){
-                $('#popupimages h2').text("Vaporwave Scene");
+                $('#popupimages h2').text("Infinite Vaporwave Road");
                 $('.puimage').attr("src", "/images/vaporwave.webp");
                 $('#puidesc').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
                 $('#popupimages').show();
             });
 
             $('#li3').click(function(){
-                $('#popupimages h2').text("Just a Wii U");
+                $('#popupimages h2').text("Literally Just a Wii U");
                 $('.puimage').attr("src", "/images/wii u.webp");
                 $('#puidesc').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
                 $('#popupimages').show();
             });
 
             $('#li4').click(function(){
-                $('#popupimages h2').text("Train Station");
+                $('#popupimages h2').text("Small Cut of a Train Station");
                 $('.puimage').attr("src", "/images/trainstation.webp");
                 $('#puidesc').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
                 $('#popupimages').show();
@@ -67,12 +67,12 @@
             {
                 if(picscroll == 0){
                     $('.puimage').attr("src", "/images/ttrtitle.webp");
-                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project, which eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
+                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project. It eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
                 }
 
                 if(picscroll == 1){
                     $('.puimage').attr("src", "/images/ttrgame.webp");
-                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project, which eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
+                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project. It eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
                 }
 
                 if(picscroll == 2){
@@ -133,7 +133,7 @@
     </script>
 </head>
 
-<body class="noverflow">
+<body class="overflow">
     <div id="navcontainer">
         <nav>
             <ul id="topnavigation">
@@ -167,7 +167,7 @@
             <section id="ostuff">
                 <ul id="oslist">
                     <li id="3DArt" class="oslistitem">
-                        <h2 id="t">3D Modelling + Animation</h2>
+                        <h2 id="ostitle">3D Modelling + Animation</h2>
                         <div id="oscontent">
                             <div class="oscitem" id="li1">
                                 <img src="images/mountains.webp">
@@ -184,7 +184,7 @@
                         </div>
                     </li>
                     <li id="SoloProjects" class="oslistitem">
-                        <h2 id="t">Solo Projects</h2>
+                        <h2 id="ostitle">Solo Projects</h2>
                         <div id="oscontent">
                             <div class="oscitem" id="li5">
                                 <img src="images/ttrtitle.webp">
@@ -205,7 +205,6 @@
             <figcaption id="puidesc" class="regtext">Insert Description text here</figcaption>
         </div>
     </main>
-    <div id="footbar"></div>
 </body>
 
 </html>
