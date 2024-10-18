@@ -10,6 +10,10 @@
 
             $('#popupimages').hide();
             $('#scrollbuttons').hide();
+            $('.oscitem').click(function(){
+                $('#popupimages').show();
+                $('body').attr("class", "noverflow");
+            })
             $('#li1').click(function(){
                 // var a = $('.oscitem').attr("id");
                 // console.log(a);
@@ -28,7 +32,7 @@
                 $('#popupimages h2').text("Mountainous Valley");
                 $('.puimage').attr("src", "/images/mountains.webp");
                 $('#puidesc').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
-                $('#popupimages').show();
+                
                 // console.log(a);
                 // $('#popupimages').show();
                 // $('.puimage').attr("src", a);
@@ -38,26 +42,25 @@
                 $('#popupimages h2').text("Infinite Vaporwave Road");
                 $('.puimage').attr("src", "/images/vaporwave.webp");
                 $('#puidesc').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
-                $('#popupimages').show();
+                
             });
 
             $('#li3').click(function(){
                 $('#popupimages h2').text("Literally Just a Wii U");
                 $('.puimage').attr("src", "/images/wii u.webp");
                 $('#puidesc').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
-                $('#popupimages').show();
+                
             });
 
             $('#li4').click(function(){
                 $('#popupimages h2').text("Small Cut of a Train Station");
                 $('.puimage').attr("src", "/images/trainstation.webp");
                 $('#puidesc').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
-                $('#popupimages').show();
+                
             });
 
             $('#li5').click(function(){
                 $('#popupimages h2').text("Thread the Ring");
-                $('#popupimages').show();
                 $('#scrollbuttons').show();
 
                 piccycle();
@@ -125,6 +128,7 @@
             $('#popupimages span').click(function(){
                 $('#popupimages').hide();
                 $('#scrollbuttons').hide();
+                $('body').attr("class", "overflow");
                 picscroll = 0;
             });
 
@@ -195,7 +199,7 @@
             </section>
         </section>  
         <div id="popupimages">
-            <span id="xbutton">&times;</span>
+            <span id="xbutton"><p>x</p></span>
             <h2>Insert Header</h2>
             <div id="scrollbuttons">
                 <div class="scrollbutton" id="sb1"><p><</p></div>
