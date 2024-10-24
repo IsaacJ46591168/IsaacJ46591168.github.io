@@ -42,7 +42,7 @@
 
     --p-contmrgn: clamp(0rem, 2vw - 0.5rem, 2rem);
     --fs-conthead: 2rem;
-    --fs-conttext: 1.3rem;
+    --fs-conttext: 1.2rem;
 
     --fs-ostitle: 1.8rem;
     --fs-puiheader: 3.5rem;
@@ -551,19 +551,28 @@ body {
 }
 
 #contributionlist li {
-    max-width: 45%;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 100%;
 }
 
 .contribution-media {
     border: solid 1px;
+    width: 50%;
 }
 
 video {
-    width: 100%;
+    max-width: 50%;
+    height: auto;
 }
 
 .contribution-text {
     border: solid 1px;
+    max-height: 100%;
+    width: 50%;
+}
+
+.ctcon {
     padding-left: var(--p-contmrgn);
     padding-right: var(--p-contmrgn);
 }
@@ -748,6 +757,9 @@ video {
         --fs-statbody: 1.5rem;
         --fs-skillhead: 1.2rem;
         --fs-skillbody: 1rem;
+
+        --fs-conthead: 2rem;
+        --fs-conttext: 1rem;
     }
 
     #homecontainer {
@@ -757,6 +769,17 @@ video {
     #stats {
         width: 28rem;
     }
+
+    /* .contribution-media {
+        border: solid 1px;
+        width: 40%;
+    }
+    
+    .contribution-text {
+        border: solid 1px;
+        max-height: 100%;
+        width: 60%;
+    } */
 }
 
 /*xl*/
@@ -1204,19 +1227,23 @@ video {
     }
     
     #contributionlist li {
-        max-width: 90%;
+        display: block;
+        width: 100%;
     }
     
     .contribution-media {
         border: solid 1px;
+        width: 100%;
     }
     
     video {
         width: 100%;
+        height: auto;
     }
     
     .contribution-text {
         border: solid 1px;
+        width: 100%;
         padding-left: var(--p-contmrgn);
         padding-right: var(--p-contmrgn);
     }
@@ -1732,15 +1759,17 @@ video {
     }
     
     #contributionlist li {
-        max-width: 90%;
+        /* max-width: 90%; */
     }
     
     .contribution-media {
         border: solid 1px;
+        width: 100%;
     }
     
     video {
         width: 100%;
+        height: auto;
     }
     
     .contribution-text {
