@@ -53,25 +53,12 @@
 
 .wrapper {
     height: 100%;
-    margin-top: 4.1rem;
 }
-
-/* .container {
-    margin-left: auto;
-    margin-right: auto;
-} */
 
 
 .noverflow {
     overflow-y: hidden;
 }
-
-
-/* @media (max-width: 376px) {
-    .overflow {
-        overflow-y: scroll;
-    }
-} */
 
 
 #navcontainer {
@@ -184,21 +171,19 @@ body {
 /* Home Page */
 #homemain {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 0;
-}
-
-#homecontainer {
-    width: 1536px;
 }
 
 #home-text {
     font-family: Quantico, sans-serif;
     color: #bfd7f5;
     max-width: 100%;
-    border: solid 1px;
+    text-align: center;
 }
 
 #home-text h1 {
@@ -762,24 +747,13 @@ video {
         --fs-conttext: 1rem;
     }
 
-    #homecontainer {
+    /* #homecontainer {
         width: 1280px;
-    }
+    } */
     
     #stats {
         width: 28rem;
     }
-
-    /* .contribution-media {
-        border: solid 1px;
-        width: 40%;
-    }
-    
-    .contribution-text {
-        border: solid 1px;
-        max-height: 100%;
-        width: 60%;
-    } */
 }
 
 /*xl*/
@@ -788,9 +762,9 @@ video {
         --fs-aboutbody: 1.15rem;
     }
 
-    #homecontainer {
+    /* #homecontainer {
         width: 1024px;
-    }
+    } */
 
     #stats {
         width: 20rem;
@@ -825,12 +799,11 @@ video {
 
     .wrapper {
         height: 100%;
-        margin-top: 3.5rem;
     }
 
-    #homecontainer {
+    /* #homecontainer {
         width: 768px;
-    }
+    } */
 
     #SItemtext {
         font-family: Quantico, sans-serif;
@@ -922,12 +895,11 @@ video {
 
     .wrapper {
         height: 100%;
-        margin-top: 3.5rem;
     }
 
-    #homecontainer {
+    /* #homecontainer {
         width: 640px;
-    }
+    } */
 
     #aboutmemain {
         border: 0;
@@ -1321,10 +1293,6 @@ video {
 
     #topnavigation {
         gap: 1rem;
-    }
-
-    #homecontainer {
-        width: 475px;
     }
     
     #aboutmetext {
