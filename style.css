@@ -173,10 +173,10 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
     justify-content: center;
     align-items: center;
     padding: 0;
+    min-height: 580px;
 }
 
 #home-text {
@@ -214,6 +214,22 @@ body {
 /*About Me Page */
 #aboutmemain {
     color: #bfd7f5;
+    height: 0;
+}
+
+#aboutmetitlebox {
+    text-align: center;
+    max-width: 100%;
+}
+
+#aboutmetitlebox h1 {
+    font-size: 4rem;
+    font-family: Quantico, sans-serif;
+    margin-bottom: 0;
+    margin-top: 4rem;
+}
+
+#aboutcontainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -235,7 +251,8 @@ body {
     flex-grow: 1;
     max-height: 30rem;
     width: 20rem;
-    border-bottom: solid 1px;
+    border-right: solid 2px;
+    border-bottom: solid 2px;
 }
 
 #abouttitle h1 {
@@ -249,11 +266,10 @@ body {
 }
 
 #stats {
-    border-bottom: solid 1px;
-    border-left: solid 1px;
     width: 30rem;
     max-height: 30rem;
     cursor: pointer;
+    border-bottom: solid 2px;
 }
 
 .statitem {
@@ -800,10 +816,15 @@ video {
     .wrapper {
         height: 100%;
     }
+    
 
     /* #homecontainer {
         width: 768px;
     } */
+
+    #aboutmemain{
+        margin-top: 3.5rem;
+    }
 
     #SItemtext {
         font-family: Quantico, sans-serif;
@@ -1469,6 +1490,10 @@ video {
         margin-right: 0;
     }
     
+    #aboutmemain{
+        margin-top: 3rem;
+    }
+
     #aboutmetext {
         text-align: left;
         padding-left: 20px;
@@ -1785,4 +1810,8 @@ video {
         height: 200px;
         width: 350px;
     }
+}
+
+@media (max-height: 580px) {
+    
 }

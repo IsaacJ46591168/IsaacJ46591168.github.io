@@ -10,6 +10,9 @@
             var b = $(window).height();
             console.log(a);
             console.log(b);
+            if(b <= 580) {
+                $('body').attr("class", "overflow");
+            }
         })
     </script>
 </head>
