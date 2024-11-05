@@ -16,10 +16,10 @@
 
 
     --fs-abouttitle: 3rem;
-    --fs-aboutbody: 1.315rem;
+    --fs-aboutbody: 1.4rem;
 
     --fs-stathead: 2.2rem;
-    --fs-statbody: 1.5rem;
+    --fs-statbody: 1.6rem;
     --fs-skillhead: 1.2rem;
     --fs-skillbody: 1.2rem;
 
@@ -58,6 +58,16 @@
 
 .noverflow {
     overflow-y: hidden;
+}
+
+.grow:hover {
+    transform: scale(1.15);
+    transition: 0.2s;
+}
+
+.grow2:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 
 
@@ -249,7 +259,7 @@ body {
     padding-left: var(--abt-padding);
     padding-right: var(--abt-padding);
     flex-grow: 1;
-    max-height: 30rem;
+    min-height: 28em;
     width: 20rem;
     border-right: solid 2px;
     border-bottom: solid 2px;
@@ -259,6 +269,7 @@ body {
     text-align: left;
     font-size: var(--fs-abouttitle);
     font-family: Quantico, sans-serif;
+    margin-top: 0;
 }
 
 #aboutmetext p {
@@ -267,7 +278,7 @@ body {
 
 #stats {
     width: 30rem;
-    max-height: 30rem;
+    min-height: 28rem;
     cursor: pointer;
     border-bottom: solid 2px;
 }
@@ -286,8 +297,8 @@ body {
 
 #statitemtext h2 {
     text-align: center;
-    margin-bottom: 4.5rem;
     font-size: var(--fs-stathead);
+    margin-bottom: 4rem;
 }
 
 #statitemtext p {
@@ -366,7 +377,7 @@ body {
     display: flex;
     max-width: 100%;
     gap: 2em;
-    overflow: hidden;
+    /* overflow: hidden; */
     justify-content: center;
     border-bottom: solid 1px;
     font-size: var(--fs-pbutton);
@@ -753,9 +764,8 @@ video {
 @media (max-width: 1536px) {
     :root {
         --fs-abouttitle: 3rem;
-        --fs-aboutbody: 1.2rem;
+        --fs-aboutbody: 1.3rem;
         --fs-stathead: 2.2rem;
-        --fs-statbody: 1.5rem;
         --fs-skillhead: 1.2rem;
         --fs-skillbody: 1rem;
 
@@ -766,10 +776,6 @@ video {
     /* #homecontainer {
         width: 1280px;
     } */
-    
-    #stats {
-        width: 28rem;
-    }
 }
 
 /*xl*/
@@ -782,8 +788,25 @@ video {
         width: 1024px;
     } */
 
-    #stats {
+    /* #stats {
         width: 20rem;
+    } */
+
+    #contributionlist li {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 100%;
+    }
+
+    .contribution-text {
+        border: solid 1px;
+        max-height: 150px;
+        width: 50%;
+    }
+
+    .ctcon {
+        max-height: 100%;
+        overflow: auto;
     }
 }
 
@@ -818,12 +841,13 @@ video {
     }
     
 
-    /* #homecontainer {
-        width: 768px;
-    } */
 
     #aboutmemain{
         margin-top: 3.5rem;
+    }
+
+    #aboutmetitlebox h1 {
+        margin-top: 0rem;
     }
 
     #SItemtext {
@@ -839,7 +863,7 @@ video {
     }
 
     #stats {
-        width: 15rem;
+        width: 20rem;
     }
 
     .puimage {
@@ -931,6 +955,7 @@ video {
         padding-left: var(--abt-padding);
         padding-right: var(--abt-padding);
         flex-grow: 0;
+        min-height: 0;
         max-height: 30rem;
         width: 100%;
         border: solid 2px;
@@ -958,6 +983,8 @@ video {
         border-bottom: solid 2px;
         border-left: solid 2px;
         border-right: solid 2px;
+        min-height: 0;
+        max-height: 30rem;
         width: 100%;
     }
     
@@ -1008,6 +1035,7 @@ video {
     
     #SItem {
         max-width: var(--ds-skills);
+        
     }
     
     #SItemtext {
@@ -1317,7 +1345,7 @@ video {
     }
     
     #aboutmetext {
-        text-align: left;
+        text-align: center;
         padding-left: 20px;
         padding-right: 20px;
         max-width: 100%;
@@ -1435,7 +1463,7 @@ video {
         --fs-nav: 0.85rem;
 
         --fs-abouttitle: 2.5rem;
-        --fs-aboutbody: 0.8rem;
+        --fs-aboutbody: 1rem;
         --fs-stathead: 1.4rem;
         --fs-statbody: 1rem;
 
@@ -1494,8 +1522,12 @@ video {
         margin-top: 3rem;
     }
 
+    #aboutmetitlebox h1 {
+        font-size: 3rem;
+    }
+
     #aboutmetext {
-        text-align: left;
+        text-align: center;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -1810,8 +1842,4 @@ video {
         height: 200px;
         width: 350px;
     }
-}
-
-@media (max-height: 580px) {
-    
 }
