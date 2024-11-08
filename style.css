@@ -367,10 +367,11 @@ body {
 
 #projecttititlebox h1 {
     font-size: 4rem;
+    margin-bottom: 0;
 }
 
 #projecttititlebox p {
-    font-size: var(--fs-ptext)
+    font-size: var(--fs-ptext);
 }
 
 #pbuttonlist {
@@ -580,7 +581,6 @@ video {
 
 .contribution-text {
     border: solid 1px;
-    max-height: 100%;
     width: 50%;
 }
 
@@ -800,7 +800,7 @@ video {
 
     .contribution-text {
         border: solid 1px;
-        max-height: 150px;
+        max-height: 300px;
         width: 50%;
     }
 
@@ -817,7 +817,7 @@ video {
         --fs-homesubtitle: 2.3rem;
         --fs-intro: 1.5rem;
         --fs-homebody: 1.3rem;
-        --fs-nav: 1rem;
+        /* --fs-nav: 1rem; */
 
         --fs-abouttitle: 2.4rem;
         --fs-aboutbody: 1.1rem;
@@ -917,7 +917,7 @@ video {
         --fs-homesubtitle: 1.9rem;
         --fs-intro: 1.5rem;
         --fs-homebody: 1rem;
-        --fs-nav: 1rem;
+        /* --fs-nav: 1rem; */
 
         --fs-abouttitle: 3rem;
         --fs-aboutbody: 1.1rem;
@@ -927,6 +927,7 @@ video {
         --fs-skillbody: 1.1rem;
 
         --ps-gamelogo: 7rem;
+        --fs-ptext: 1.5rem;
         --fs-pdethead: 6.5rem;
         --fs-pdet: 2rem;
         --ps-gamelogo2: 0rem;
@@ -948,6 +949,16 @@ video {
 
     #aboutmemain {
         border: 0;
+    }
+
+    .grow:hover {
+        transform: scale(1);
+        transition: 0;
+    }
+    
+    .grow2:hover {
+        transform: scale(1);
+        transition: 0;
     }
 
     #aboutmetext {
@@ -983,9 +994,8 @@ video {
         border-bottom: solid 2px;
         border-left: solid 2px;
         border-right: solid 2px;
-        min-height: 0;
-        max-height: 30rem;
         width: 100%;
+        min-height: 13rem;
     }
     
     #statitem {
@@ -1040,6 +1050,7 @@ video {
     
     #SItemtext {
         font-family: Quantico, sans-serif;
+        text-align: center;
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -1075,10 +1086,6 @@ video {
         max-width: 100%;
     }
     
-    #projecttititlebox h1 {
-        font-size: 2.5rem;
-    }
-    
     #projecttititlebox p {
         font-size: var(--fs-ptext)
     }
@@ -1092,6 +1099,7 @@ video {
         margin-left: auto;
         margin-right: auto;
         overflow-x: auto;
+        overflow-y: hidden;
         justify-content: start;
     }
     
@@ -1261,12 +1269,16 @@ video {
         width: 100%;
         height: auto;
     }
+
+    .ctcon {
+        padding-left: var(--p-contmrgn);
+        padding-right: var(--p-contmrgn);
+    }
     
     .contribution-text {
         border: solid 1px;
         width: 100%;
-        padding-left: var(--p-contmrgn);
-        padding-right: var(--p-contmrgn);
+        max-height: 100%;
     }
     
     .contribution-text h3 {
@@ -1308,7 +1320,7 @@ video {
         --fs-homesubtitle: 1.5rem;
         --fs-intro: 1.3rem;
         --fs-homebody: 1rem;
-        --fs-nav: 1rem;
+        --fs-nav: 1.1rem;
 
         --fs-abouttitle: 2.7rem;
         --fs-aboutbody: 1.2rem;
@@ -1316,16 +1328,14 @@ video {
         --fs-statbody: 1rem;
 
         --ps-gamelogo: 6rem;
-        --fs-ptext: 1.3rem;
         --fs-pdethead: 5rem;
         --fs-pdet: 1.5rem;
-        --ps-gamelogo2: 0rem;
         --fs-rolehead: 1.5rem;
         --fs-roletext: 1rem;
         --fs-conthead: 1.5rem;
         --fs-conttext: 1rem;
 
-        --fs-ptext: 1.2;
+        --fs-ptext: 1.2rem;
         --fs-puiheader: 2.2rem;
         --fs-xbutton: 3rem;
     }
@@ -1413,7 +1423,6 @@ video {
     #statitemtext p {
         font-size: var(--fs-statbody);
     }
-
     #pbuttonlist {
         display: flex;
         gap: 2em;
@@ -1609,7 +1618,7 @@ video {
     }
     
     #projecttititlebox h1 {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
     
     #projecttititlebox p {

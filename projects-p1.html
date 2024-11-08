@@ -6,10 +6,12 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function () {
-            var msize = 0;
 
-            msize = $(".cmedia").height();
-            $(".contribution-text").css("max-height", msize);
+            if($(window).width() > 768){
+                var msize = 0;
+                msize = $(".cmedia").height();
+                $(".contribution-text").css("max-height", msize);
+            }
             
             $("#p1img").click(function () {
                 window.location = "projects-p1.html";
@@ -32,10 +34,14 @@
             })
 
             $(window).on('resize', function(){
-                msize = $(".cmedia").height();
-                $(".contribution-text").css("max-height", msize);
+                if($(window).width() > 768){
+                    msize = $(".cmedia").height();
+                    $(".contribution-text").css("max-height", msize);
+                } else {
+                    $(".contribution-text").css("max-height", "100%");
+                }
             })
-        })
+        });
     </script>
 </head>
 
@@ -174,6 +180,10 @@
                                 </li>
 
                                 <li>
+                                    <div class="contribution-media">
+                                        <video src="video/P1 levels demo video.webm" controls autoplay loop
+                                            muted></video>
+                                    </div>
                                     <div class="contribution-text">
                                         <div class="ctcon">
                                             <div class="contribution-header">
@@ -188,10 +198,6 @@
                                                 This helped to create a cohesive and engaging level, of whose elements gelled
                                                 welltogether.</p>
                                         </div>
-                                    </div>
-                                    <div class="contribution-media">
-                                        <video src="video/P1 levels demo video.webm" controls autoplay loop
-                                            muted></video>
                                     </div>
                                 </li>
 
