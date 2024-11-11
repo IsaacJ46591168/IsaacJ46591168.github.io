@@ -45,8 +45,9 @@
     --fs-conttext: 1.2rem;
 
     --fs-ostitle: 1.8rem;
-    --fs-puiheader: 3.5rem;
-    --fs-puidesc: 1.4rem;
+    --fs-hovtext : 1.3rem;
+    --fs-putexth: 3rem;
+    --fs-putextd: 1.3rem;
     --fs-scrollbutton: 2rem;
     --fs-xbutton: 5rem;
 }
@@ -654,7 +655,6 @@ video {
 .oscitem {
     background-position: center;
     background-size: cover;
-    position: relative;
     border: solid 3px;
     height: 200px;
     width: 350px;
@@ -686,6 +686,7 @@ video {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    font-size: var(--fs-hovtextl);
     display: none;
 }
 
@@ -699,7 +700,7 @@ video {
     align-items: center;
 }
 
-#popupimages{
+#popupdesc{
     position: fixed;
     top: 0;
     left: 0;
@@ -712,9 +713,61 @@ video {
     height: 100%;
     width: 100%;
     z-index: 100;
+    overscroll-behavior: contain;
 }
 
-#popupimages span{
+#pudesc {
+    width: 1536px;
+    height: 80%;
+    border: solid 1px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+#putextc {
+    height: 100%;
+    border-right: solid 1px;
+    width: 40%;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: var(--fs-putextd);
+}
+
+#putextc h3 {
+    text-align: center;
+    font-size: var(--fs-putexth);
+    margin-bottom: 0;
+}
+
+#puimagesc {
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#puimagesc h3 {
+    font-size: var(--fs-putexth);
+    margin-bottom: 0;
+}
+
+.gimage {
+    width: 700px;
+    min-height: 400px;
+    border: solid 1px;
+    background-position: center;
+    background-size: cover;
+}
+
+#popupdesc span{
     position: absolute;
     top: 0;
     right: 30px;
@@ -725,30 +778,19 @@ video {
     z-index: 100;
 }
 
-.puimage {
-    border: solid 5px;
-    /* width: 950px;
-    height: 500px; */
-    width: 55rem;
-    height: 30rem;
-
-    /* border-radius: 70px; */
-}
-
-#popupimages h2 {
+/* #popupdesc h2 {
     font-size: var(--fs-puiheader);
     margin: 0;
-}
+} */
 
-#puidesc {
+/* #puidesc {
     width: 60rem;
     font-size: var(--fs-puidesc);
     text-align: center;
     border: solid 1px;
     border-radius: 15px;
     padding: 2rem;
-    /* background-color: rgb(59, 59, 59); */
-}
+} */
 
 #scrollbuttons {
     height: 2rem;
@@ -808,10 +850,6 @@ video {
         --fs-conthead: 2rem;
         --fs-conttext: 1rem;
     }
-
-    /* #homecontainer {
-        width: 1280px;
-    } */
 }
 
 /*xl*/

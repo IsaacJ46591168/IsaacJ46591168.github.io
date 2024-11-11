@@ -8,62 +8,42 @@
         $(document).ready(function () {
             var picscroll = 0;
 
-            $('#popupimages').hide();
+            $('#popupdesc').hide();
             $('#scrollbuttons').hide();
             $('.oscitem').click(function(){
-                $('#popupimages').show();
-                $('body').attr("class", "noverflow");
+                $('#popupdesc').show();
             })
             $('#li1').click(function(){
-                // var a = $('.oscitem').attr("id");
-                // console.log(a);
-                // if(a == "li1"){
-                    
-                // }
-                // if(a == "li2"){
-                //     $('.puimage').attr("src", "/images/p1logo.webp");
-                // }
-                // if(a == "li3"){
-                    
-                // }
-                // if(a == "li4"){
-                //     $('.puimage').attr("src", "/images/gmaillogo.png");
-                // }
-                $('#popupimages h2').text("Mountainous Valley");
-                $('.puimage').attr("src", "/images/mountains.webp");
-                $('#puidesc').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
-                
-                // console.log(a);
-                // $('#popupimages').show();
-                // $('.puimage').attr("src", a);
+                $('#putextc h3').text("Mountainous Valley");
+                $('#img1').attr("style", "background-image: url(/images/mountains.webp);");
+                $('#putextc p').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
             });
 
             $('#li2').click(function(){
-                $('#popupimages h2').text("Infinite Vaporwave Road");
-                $('.puimage').attr("src", "/images/vaporwave.webp");
-                $('#puidesc').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
+                $('#putextc h3').text("Infinite Vaporwave Road");
+                // $('.puimage').attr("src", "/images/vaporwave.webp");
+                $('#putextc p').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
                 
             });
 
             $('#li3').click(function(){
-                $('#popupimages h2').text("Literally Just a Wii U");
-                $('.puimage').attr("src", "/images/wii u.webp");
-                $('#puidesc').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
+                $('#putextc h3').text("Literally Just a Wii U");
+                // $('.puimage').attr("src", "/images/wii u.webp");
+                $('#putextc p').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
                 
             });
 
             $('#li4').click(function(){
-                $('#popupimages h2').text("Small Cut of a Train Station");
-                $('.puimage').attr("src", "/images/trainstation.webp");
-                $('#puidesc').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
+                $('#putextc h3').text("Small Cut of a Train Station");
+                // $('.puimage').attr("src", "/images/trainstation.webp");
+                $('#putextc p').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
                 
             });
 
             $('#li5').click(function(){
-                $('#popupimages h2').text("Thread the Ring");
+                $('#putextc h3').text("Thread the Ring");
                 $('#scrollbuttons').show();
 
-                piccycle();
             });
 
             function piccycle()
@@ -101,35 +81,11 @@
             }
 
 
-            $('#sb1').click(function(){
-                if(picscroll == 0){
-                    picscroll = 6;
-                } else {
-                    picscroll--;
-                }
-                piccycle();
-                console.log(picscroll);
-            });
-
-            $('#sb2').click(function(){
-                if(picscroll == 6){
-                    picscroll = 0;
-                } else {
-                    picscroll++;
-                }
-                piccycle();
-                console.log(picscroll);
-            });
-
-
             $('#popupimages span').click(function(){
                 $('#popupimages').hide();
                 $('#scrollbuttons').hide();
                 $('body').attr("class", "overflow");
-                picscroll = 0;
             });
-
-            $()
         })
     </script>
 </head>
@@ -204,16 +160,27 @@
                     </li>
                 </ul>
             </section>
-        </section>  
-        <div id="popupimages">
+        </section>
+        <div id="popupdesc">
             <span id="xbutton"><p>x</p></span>
-            <h2>Insert Header</h2>
+            <div id="pudesc">
+                <div id="putextc">
+                    <h3>This is a header</h3>
+                    <p class="regtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum assumenda incidunt totam dolores aspernatur ab ut quibusdam iusto at et eveniet dolorem repellat nobis autem, eos vitae architecto impedit labore.</p>
+                </div>
+                <div id="puimagesc">
+                    <h3>Gallery</h3>
+                    <div class="gimage" id="img1"></div>
+                    <div class="gimage" id="img2"></div>
+                </div>
+            </div>
+            <!-- <h2>Insert Header</h2>
             <div id="scrollbuttons">
                 <div class="scrollbutton" id="sb1"><p><</p></div>
                 <div class="scrollbutton" id="sb2"><p>></p></div>
             </div>
             <img class="puimage" src="images/p1logo.webp">
-            <figcaption id="puidesc" class="regtext">Insert Description text here</figcaption>
+            <figcaption id="puidesc" class="regtext">Insert Description text here</figcaption> -->
         </div>
     </main>
 </body>
