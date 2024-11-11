@@ -60,7 +60,7 @@
     overflow-y: hidden;
 }
 
-.grow:hover {
+/* .grow:hover {
     transform: scale(1.15);
     transition: 0.2s;
 }
@@ -68,7 +68,7 @@
 .grow2:hover {
     transform: scale(1.1);
     transition: 0.2s;
-}
+} */
 
 
 #navcontainer {
@@ -652,6 +652,9 @@ video {
 }
 
 .oscitem {
+    background-position: center;
+    background-size: cover;
+    position: relative;
     border: solid 3px;
     height: 200px;
     width: 350px;
@@ -659,9 +662,41 @@ video {
     /* aspect-ratio: 7/4; */
 }
 
-.oscitem img {
+#li1 {
+    background-image: url(images/mountains.webp);
+}
+
+#li2 {
+    background-image: url(images/vaporwave.webp);
+}
+
+#li3 {
+    background-image: url(images/wii\ u.webp);
+}
+
+#li4 {
+    background-image: url(images/trainstation.webp);
+}
+
+#li5 {
+    background-image: url(images/ttrtitle.webp);
+}
+
+.hovertext {
     height: 100%;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.hovertext h3 {
+    margin: 0;
+}
+
+.oscitem:hover .hovertext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #popupimages{
