@@ -1030,9 +1030,14 @@ video {
 }
 
 @media (min-width: 825px) {
+    #putext {
+        overflow-y: auto;
+    }
+
     #puimages {
         overflow-y: auto;
     }
+
 }
 
 /*md*/
