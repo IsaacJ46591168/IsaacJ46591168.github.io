@@ -717,7 +717,7 @@ video {
 }
 
 #pudesc {
-    width: 1536px;
+    max-width: 80%;
     height: 80%;
     border: solid 1px;
     border-radius: 20px;
@@ -725,8 +725,7 @@ video {
     flex-direction: row;
 }
 
-#putextc {
-    height: 100%;
+#putext {
     border-right: solid 1px;
     width: 40%;
     padding-left: 30px;
@@ -734,34 +733,32 @@ video {
     font-size: var(--fs-putextd);
 }
 
-#putextc h3 {
+#putext h3 {
     text-align: center;
     font-size: var(--fs-putexth);
     margin-bottom: 0;
 }
 
-#puimagesc {
+#puimages {
     width: 60%;
-    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3em;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 20px; */
 }
 
-#puimagesc h3 {
+#puimages h3 {
     font-size: var(--fs-putexth);
     margin-bottom: 0;
 }
 
 .gimage {
-    width: 700px;
-    min-height: 400px;
+    width: 80%;
+    aspect-ratio: 7/4;
     border: solid 1px;
     background-position: center;
     background-size: cover;
@@ -777,20 +774,6 @@ video {
     cursor: pointer;
     z-index: 100;
 }
-
-/* #popupdesc h2 {
-    font-size: var(--fs-puiheader);
-    margin: 0;
-} */
-
-/* #puidesc {
-    width: 60rem;
-    font-size: var(--fs-puidesc);
-    text-align: center;
-    border: solid 1px;
-    border-radius: 15px;
-    padding: 2rem;
-} */
 
 #scrollbuttons {
     height: 2rem;
@@ -982,6 +965,71 @@ video {
         height: 314.29px;
         width: 550px;
     }
+
+    #popupdesc{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    #pudesc {
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    #putext {
+        border-right: 0;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: var(--fs-putextd);
+    }
+    
+    #puimagesc {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        margin-left: 0px;
+        margin-right: 0px;
+        overflow: hidden;
+    }
+
+    #puimages {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+
+    #puimages div {
+        width: 80%;
+        border: solid 1px;
+        aspect-ratio: 7/4;
+    }
+
+    .gimage {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    #puimages h3 {
+        font-size: var(--fs-putexth);
+        margin-bottom: 0;
+    }
+
 }
 
 /*md*/

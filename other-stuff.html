@@ -14,34 +14,34 @@
                 $('#popupdesc').show();
             })
             $('#li1').click(function () {
-                $('#putextc h3').text("Mountainous Valley");
+                $('#putext h3').text("Mountainous Valley");
                 $('#img1').attr("style", "background-image: url(/images/mountains.webp);");
                 $('#p1').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
             });
 
             $('#li2').click(function () {
-                $('#putextc h3').text("Infinite Vaporwave Road");
+                $('#putext h3').text("Infinite Vaporwave Road");
                 $('#img1').attr("style", "background-image: url(/images/vaporwave.webp);");
                 $('#p1').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
 
             });
 
             $('#li3').click(function () {
-                $('#putextc h3').text("Literally Just a Wii U");
+                $('#putext h3').text("Wii U Replica");
                 $('#img1').attr("style", "background-image: url(images/wiiu.webp);");
                 $('#p1').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
 
             });
 
             $('#li4').click(function () {
-                $('#putextc h3').text("Small Cut of a Train Station");
+                $('#putext h3').text("Low-Poly Train Station");
                 $('#img1').attr("style", "background-image: url(images/trainstation.webp);");
                 $('#p1').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
 
             });
 
             $('#li5').click(function () {
-                $('#putextc h3').text("Thread the Ring");
+                $('#putext h3').text("Thread the Ring");
                 $('#p1').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project. It eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
                 $('#p2').text("All the coding and 3D assets were done by myself, which I still think was a massive achievement, even if I had to keep lighting to a minimum and the modelling style as low-poly due to the constraints of my laptop, which I still think has nightmares about this whole thing.");
 
@@ -66,7 +66,7 @@
     </script>
 </head>
 
-<body class="overflow">
+<body id="othermain">
     <div id="navcontainer">
         <nav>
             <ul id="topnavigation">
@@ -84,89 +84,78 @@
                 <li class="navitem"><a id="link" href="about-me.html">About Me</a></li>
         </nav>
     </div>
-
-
-    <main class="wrapper" id="othermain">
-        <section class="container" id="othercontainer">
-            <div id="othertitlebox">
-                <div>
-                    <h1>Other Stuff</h1>
-                </div>
-                <div>
-                    <p>These are some smaller and independent things I've made</p>
-                </div>
+    <section class="container" id="othercontainer">
+        <div id="othertitlebox">
+            <div>
+                <h1>Other Stuff</h1>
             </div>
-
-            <section id="ostuff">
-                <ul id="oslist">
-                    <li id="3DArt" class="oslistitem">
-                        <h2 id="ostitle">3D Modelling + Animation</h2>
-                        <div id="oscontent">
-                            <div class="oscitem grow2" id="li1">
-                                <div class="hovertext">
-                                    <h3>Mountainous Valley</h3>
-                                </div>
-                            </div>
-                            <div class="oscitem grow2" id="li2">
-                                <div class="hovertext">
-                                    <h3>Vaporwave</h3>
-                                </div>
-                            </div>
-                            <div class="oscitem grow2" id="li3">
-                                <div class="hovertext">
-                                    <h3>Wii U</h3>
-                                </div>
-                            </div>
-                            <div class="oscitem grow2" id="li4">
-                                <div class="hovertext">
-                                    <h3>Train Station</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="SoloProjects" class="oslistitem">
-                        <h2 id="ostitle">Solo Projects</h2>
-                        <div id="oscontent">
-                            <div class="oscitem grow2" id="li5">
-                                <div class="hovertext">
-                                    <h3>Thread the Ring</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </section>
-        <div id="popupdesc">
-            <span id="xbutton">
-                <p>x</p>
-            </span>
-            <div id="pudesc">
-                <div id="putextc">
-                    <h3>This is a header</h3>
-                    <p id="p1" class="regtext">This is some text</p>
-                    <p id="p2" class="regtext"></p>
-                </div>
-                <div id="puimagesc">
-                    <h3>Gallery</h3>
-                    <div class="gimage" id="img1"></div>
-                    <div class="gimage" id="img2"></div>
-                    <div class="gimage" id="img3"></div>
-                    <div class="gimage" id="img4"></div>
-                    <div class="gimage" id="img5"></div>
-                    <div class="gimage" id="img6"></div>
-                    <div class="gimage" id="img7"></div>
-                </div>
+            <div>
+                <p>These are some smaller and independent things I've made</p>
             </div>
-            <!-- <h2>Insert Header</h2>
-            <div id="scrollbuttons">
-                <div class="scrollbutton" id="sb1"><p><</p></div>
-                <div class="scrollbutton" id="sb2"><p>></p></div>
-            </div>
-            <img class="puimage" src="images/p1logo.webp">
-            <figcaption id="puidesc" class="regtext">Insert Description text here</figcaption> -->
         </div>
-    </main>
+
+        <section id="ostuff">
+            <ul id="oslist">
+                <li id="3DArt" class="oslistitem">
+                    <h2 id="ostitle">3D Modelling + Animation</h2>
+                    <div id="oscontent">
+                        <div class="oscitem grow2" id="li1">
+                            <div class="hovertext">
+                                <h3>Mountainous Valley</h3>
+                            </div>
+                        </div>
+                        <div class="oscitem grow2" id="li2">
+                            <div class="hovertext">
+                                <h3>Vaporwave</h3>
+                            </div>
+                        </div>
+                        <div class="oscitem grow2" id="li3">
+                            <div class="hovertext">
+                                <h3>Wii U</h3>
+                            </div>
+                        </div>
+                        <div class="oscitem grow2" id="li4">
+                            <div class="hovertext">
+                                <h3>Train Station</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="SoloProjects" class="oslistitem">
+                    <h2 id="ostitle">Solo Projects</h2>
+                    <div id="oscontent">
+                        <div class="oscitem grow2" id="li5">
+                            <div class="hovertext">
+                                <h3>Thread the Ring</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <div id="popupdesc">
+        <!-- <span id="xbutton">
+            <p>x</p>
+        </span> -->
+        <div id="pudesc">
+            <div id="putext">
+                <h3>This is a header</h3>
+                <p id="p1" class="regtext"></p>
+                <p id="p2" class="regtext"></p>
+            </div>
+            <div id="puimages">
+                <h3>Gallery</h3>
+                <div class="gimage" id="img1"></div>
+                <div class="gimage" id="img2"></div>
+                <div class="gimage" id="img3"></div>
+                <div class="gimage" id="img4"></div>
+                <div class="gimage" id="img5"></div>
+                <div class="gimage" id="img6"></div>
+                <div class="gimage" id="img7"></div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
