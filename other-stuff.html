@@ -10,81 +10,57 @@
 
             $('#popupdesc').hide();
             $('#scrollbuttons').hide();
-            $('.oscitem').click(function(){
+            $('.oscitem').click(function () {
                 $('#popupdesc').show();
             })
-            $('#li1').click(function(){
+            $('#li1').click(function () {
                 $('#putextc h3').text("Mountainous Valley");
                 $('#img1').attr("style", "background-image: url(/images/mountains.webp);");
-                $('#putextc p').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
+                $('#p1').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
             });
 
-            $('#li2').click(function(){
+            $('#li2').click(function () {
                 $('#putextc h3').text("Infinite Vaporwave Road");
-                // $('.puimage').attr("src", "/images/vaporwave.webp");
-                $('#putextc p').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
-                
+                $('#img1').attr("style", "background-image: url(/images/vaporwave.webp);");
+                $('#p1').text("My first experiment with randomly-generating terrain combined with an interest in the vaporwave aesthetic resulted in this scene, which was also done on my old Macbook Pro. Outside of this picture I also turned this into an animation using by turning the generated mesh into an array and then just moving the camera though everything, and then resetting the camera back to its original point when it got to the end of the array so it looked infinite.");
+
             });
 
-            $('#li3').click(function(){
+            $('#li3').click(function () {
                 $('#putextc h3').text("Literally Just a Wii U");
-                // $('.puimage').attr("src", "/images/wii u.webp");
-                $('#putextc p').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
-                
+                $('#img1').attr("style", "background-image: url(images/wiiu.webp);");
+                $('#p1').text("As my role in L Stands for Winner has gradually shifted to doing more 3D art, I decided that I needed to practice with Blender more after being away from it for a while, and this was the first thing I made, mainly because I just looked around my room and saw it sitting on the edge of my desk and thought it would be a good start. Nothing too complicated but it was fun modelling practice.");
+
             });
 
-            $('#li4').click(function(){
+            $('#li4').click(function () {
                 $('#putextc h3').text("Small Cut of a Train Station");
-                // $('.puimage').attr("src", "/images/trainstation.webp");
-                $('#putextc p').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
-                
+                $('#img1').attr("style", "background-image: url(images/trainstation.webp);");
+                $('#p1').text("A lot of this was made while following a tutorial, but it was still good practice nonetheless. This small project involved a lot of experimentation with modifiers, such as array, mirror, skin, etc, and was also my first time trying out reflective/see-through textures and a return to global lighting for the first time in a while.");
+
             });
 
-            $('#li5').click(function(){
+            $('#li5').click(function () {
                 $('#putextc h3').text("Thread the Ring");
-                $('#scrollbuttons').show();
+                $('#p1').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project. It eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
+                $('#p2').text("All the coding and 3D assets were done by myself, which I still think was a massive achievement, even if I had to keep lighting to a minimum and the modelling style as low-poly due to the constraints of my laptop, which I still think has nightmares about this whole thing.");
 
+
+                $('#img1').attr("style", "background-image: url(images/ttrtitle.webp);");
+                $('#img2').attr("style", "background-image: url(images/ttrgame.webp);");
+                $('#img3').attr("style", "background-image: url(images/fl1.webp);");
+                $('#img4').attr("style", "background-image: url(images/fl2.webp);");
+                $('#img5').attr("style", "background-image: url(images/fl4.webp);");
+                $('#img6').attr("style", "background-image: url(images/fl5.webp);");
+                $('#img7').attr("style", "background-image: url(images/plane.webp);");
             });
 
-            function piccycle()
-            {
-                if(picscroll == 0){
-                    $('.puimage').attr("src", "/images/ttrtitle.webp");
-                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project. It eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
-                }
-
-                if(picscroll == 1){
-                    $('.puimage').attr("src", "/images/ttrgame.webp");
-                    $('#puidesc').text("My first genuine games project was this one that I made for my Year 12 HSC Multimedia Major Work. It was a toss-up between this and a film-based project, but since I wanted to try out coding something big for the first time, which on relfection was a stupid idea given the time-frame and scale, I settled on the game project. It eventually turned into a game similar to pilotwings on the SNES, where the player flies around a stage passing through a course of rings to get to the finish.");
-                }
-
-                if(picscroll == 2){
-                    $('.puimage').attr("src", "/images/fl1.webp");
-                    $('#puidesc').text("All the coding and 3D assets were done by myself, which I still think was a massive achievement, even if I had to keep lighting to a minimum and the modelling style as low-poly due to the constraints of my laptop, which I still think has nightmares about this whole thing.");
-                }
-
-                if(picscroll == 3){
-                    $('.puimage').attr("src", "/images/fl2.webp");
-                }
-
-                if(picscroll == 4){
-                    $('.puimage').attr("src", "/images/fl4.webp");
-                }
-
-                if(picscroll == 5){
-                    $('.puimage').attr("src", "/images/fl5.webp");
-                }
-                
-                if(picscroll == 6){
-                    $('.puimage').attr("src", "/images/plane render.webp");
-                }
-            }
-
-
-            $('#popupimages span').click(function(){
-                $('#popupimages').hide();
-                $('#scrollbuttons').hide();
+            $('#popupdesc span').click(function () {
+                $('#popupdesc').hide();
                 $('body').attr("class", "overflow");
+                $('.gimage').attr("style", "background-image: ;");
+                $('#p1').text("");
+                $('#p2').text("");
             });
         })
     </script>
@@ -162,16 +138,24 @@
             </section>
         </section>
         <div id="popupdesc">
-            <span id="xbutton"><p>x</p></span>
+            <span id="xbutton">
+                <p>x</p>
+            </span>
             <div id="pudesc">
                 <div id="putextc">
                     <h3>This is a header</h3>
-                    <p class="regtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum assumenda incidunt totam dolores aspernatur ab ut quibusdam iusto at et eveniet dolorem repellat nobis autem, eos vitae architecto impedit labore.</p>
+                    <p id="p1" class="regtext">This is some text</p>
+                    <p id="p2" class="regtext"></p>
                 </div>
                 <div id="puimagesc">
                     <h3>Gallery</h3>
                     <div class="gimage" id="img1"></div>
                     <div class="gimage" id="img2"></div>
+                    <div class="gimage" id="img3"></div>
+                    <div class="gimage" id="img4"></div>
+                    <div class="gimage" id="img5"></div>
+                    <div class="gimage" id="img6"></div>
+                    <div class="gimage" id="img7"></div>
                 </div>
             </div>
             <!-- <h2>Insert Header</h2>
