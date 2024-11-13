@@ -731,6 +731,9 @@ video {
     padding-left: 30px;
     padding-right: 30px;
     font-size: var(--fs-putextd);
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 #putext h3 {
@@ -770,44 +773,6 @@ video {
     color: #bfd7f5;
     cursor: pointer;
     z-index: 100;
-}
-
-#scrollbuttons {
-    height: 2rem;
-    display: flex;
-    width: 15rem;
-    /* border-radius: 10px; */
-}
-
-.scrollbutton {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--fs-scrollbutton);
-    cursor: pointer;
-    z-index: 100;
-    border: solid 2px #bfd7f5;
-}
-
-.scrollbutton:hover {
-    background-color: white;
-    color: black;
-}
-
-.scrollbutton p {
-    margin: 0;
-}
-
-#sb1 {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-#sb2 {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 #xbutton p {
@@ -887,7 +852,8 @@ video {
         --fs-rolehead: 1.4rem;
         --fs-roletext: 1.1rem;
 
-        --fs-puidesc: 1.2rem;
+        --fs-putexth: 2.5rem;
+        --fs-putextd: 1.2rem;
     }
 
     .wrapper {
@@ -938,7 +904,7 @@ video {
 }
 
 
-@media (max-width: 825px ){
+@media (max-width: 825px){
     :root {
         --fs-ostitle: 2rem;
         --fs-ptext: 1.3rem;
@@ -986,8 +952,9 @@ video {
     #putext {
         border-right: 0;
         width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin: auto;
         font-size: var(--fs-putextd);
     }
     
