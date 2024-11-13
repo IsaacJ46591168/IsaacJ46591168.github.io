@@ -479,14 +479,6 @@ body {
     font-size: var(--fs-pdet);
 }
 
-/* #gamelogo {
-    margin-top: 13rem;
-}
-
-#gamelogo img {
-    width: var(--ps-gamelogo2);
-} */
-
 #projectoutline {
     padding-left: var(--p-outlnmrgn);
     padding-right: var(--p-outlnmrgn);
@@ -534,17 +526,15 @@ body {
 
 #pccontainer {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    row-gap: 5rem;
+    flex-direction: row;
 }
 
-#pccontainerbsc {
+/* #pccontainerbsc {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     row-gap: 5rem;
-}
+} */
 
 #projectcontributions {
     border: solid 1px;
@@ -555,54 +545,37 @@ body {
     font-size: 2.5rem;
 }
 
-#contributionlist {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-#contributionlist li {
-    display: flex;
-    flex-wrap: nowrap;
-    max-width: 100%;
-}
-
-.contribution-media {
+#contribution-text {
     border: solid 1px;
     width: 50%;
 }
 
-video {
-    max-width: 100%;
-    height: auto;
-}
-
-.contribution-text {
-    border: solid 1px;
-    width: 50%;
-}
-
-.ctcon {
-    padding-left: var(--p-contmrgn);
-    padding-right: var(--p-contmrgn);
-}
-
-.contribution-text h3 {
+#contribution-text h3 {
     font-size: var(--fs-conthead);
     font-style: italic;
 }
 
-.contribution-text p {
+#contribution-text p {
     font-size: var(--fs-conttext);
 }
 
-.buffer {
-    height: 20rem;
-    border-left: solid 1px;
-    border-right: solid 1px;
+#contribution-media {
+    border: solid 1px;
+    width: 50%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contribution-media h3 {
+    margin-bottom: 0;
+    font-size: var(--fs-conthead);
+}
+
+.cmedia {
+    width: 80%;
+    border: solid 1px;
 }
 
 
