@@ -77,6 +77,7 @@
     min-height: 3.5rem;
     position: fixed;
     top: 0;
+    width: 100%;
     z-index: 20;
 }
 
@@ -1211,7 +1212,8 @@ body {
     .studiotag {
         margin-top: 30px;
         height: 4rem;
-        width: 80%;
+        width: 90%;
+        left: 5%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1685,163 +1687,14 @@ body {
         display: block;
         cursor: pointer;
     }
-
-
-
-    #projectdescription {
-        width: 100%;
-    }
-    
-    #pdcontainer {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-    
-    #pdlist {
-        padding-left: 0;
-        list-style: none;
-    }
-    
-    #plistitem {}
-    
-    #projectheader {
-        border: solid 1px;
-        text-align: center;
-    }
-    
-    .studiotag {
-        border: solid 3px;
-        height: 4rem;
-        margin-top: 30px;
-        left: 0;
-        width: 100%;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: grey
-    }
-    
-    .studioimg img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    #projectdetails {
-        text-align: center;
-        margin-right: 0;
-        margin-top: 3rem;
-        width: 100%;
-    }
-    
-    #projectdetails h2 {
-        font-size: var(--fs-pdethead);
-        margin-bottom: 2rem;
-    }
-    
-    #projectdetails h3 {
-        font-size: var(--fs-pdet);
-    }
-    
-    #gamelogo {
-        margin-top: 0rem;
-    }
-    
-    #gamelogo img {
-        width: var(--ps-gamelogo2);
-    }
-    
-    #projectoutline {
-        padding-left: var(--p-outlnmrgn);
-        padding-right: var(--p-outlnmrgn);
-        padding-bottom: 2rem;
-        margin-top: 3rem;
-    }
-    
-    #projectoutline p {
-        font-size: 1.2rem;
-        margin-top: 0;
-    }
-    
-    #projectroles {
-        width: 100%;
-        border: solid 1px;
-        text-align: center;
-    }
     
     #projectroles h2 {
         font-size: 2rem;
     }
     
-    #prcontainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .roles {
-        border: solid 1px;
-    }
-    
-    #roletitle {
-        font-size: var(--fs-rolehead);
-        font-style: italic;
-    }
-    
-    
-    #rolestext {
-        padding-left: var(--p-rolemrgn);
-        padding-right: var(--p-rolemrgn);
-    }
-    
-    #rolestext p {
-        font-size: var(--fs-roletext);
-    }
-    
-    #pccontainer {
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    
-    #projectcontributions {
-        border: solid 1px;
-    }
-    
     #projectcontributions h2 {
         font-size: 2.5rem;
         text-align: center;
-    }
-    
-    #contribution-text {
-        border-bottom: 0;
-        width: 100%;
-    }
-    
-    #contribution-text h3 {
-        font-size: var(--fs-conthead);
-        font-style: italic;
-        text-align: center;
-        margin-bottom: 0;
-    }
-    
-    #contribution-text p {
-        font-size: var(--fs-conttext);
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    #contribution-text hr {
-        width: 80%;
-    }
-    
-    #contribution-media {
-        border-top: 0;
-        width: 100%;
-    }
-    
-    .cmedia {
-        border: solid 1px;
     }
 
     #othertitlebox h1 {
