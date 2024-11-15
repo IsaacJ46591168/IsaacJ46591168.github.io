@@ -6,7 +6,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function () {
-            if($(window).width() > 768){
+            if ($(window).width() > 768) {
                 var msize = 0;
                 msize = $(".cmedia").height();
                 $(".contribution-text").css("max-height", msize);
@@ -31,7 +31,7 @@
                 window.location = "https://unitguides.mq.edu.au/unit_offerings/156343/unit_guide";
             })
 
-            $(window).on('resize', function(){
+            $(window).on('resize', function () {
                 msize = $(".cmedia").height();
                 $(".contribution-text").css("max-height", msize);
             })
@@ -141,30 +141,23 @@
 
                 <li id="projectcontributions" class="plistitem">
                     <h2>My Contributions</h2>
-                    <ul id="contributionlist">
-                        <div id="pccontainerbsc">
-                            <li>
-                                <div class="contribution-media">
-                                    <video src="video/bscsounds.webm" controls autoplay loop muted class="cmedia"></video>
-                                </div>
-                                <div class="contribution-text">
-                                    <div class="ctcon">
-                                        <div class="contribution-header">
-                                            <h3>Calming Sounds</h3>
-                                        </div>
-                                        <p class="regtext">This project was all about getting the user ready for sleep. The
-                                            audio had to be created in a way that allowed the user to feel comfortable and
-                                            relaxed but also prevented them from focusing too much on the noise rather than
-                                            trying to sleep, which meant recording and mixing sounds that both had to be
-                                            quiet and non-intrusive, such as ocean noises without the crashing of waves,
-                                            fire sounds without the peaking and crackling of the fire, subtle narration and
-                                            chatting that allowed the user to feel comforted without feeling distracted,
-                                            etc.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        <div>
-                    </ul>
+                    <div id="pccontainer">
+                        <div id="contribution-text">
+                            <h3>Calming Sounds</h3>
+                            <p class="regtext">This project was all about getting the user ready for sleep. The
+                                audio had to be created in a way that allowed the user to feel comfortable and
+                                relaxed but also prevented them from focusing too much on the noise rather than
+                                trying to sleep, which meant recording and mixing sounds that both had to be
+                                quiet and non-intrusive, such as ocean noises without the crashing of waves,
+                                fire sounds without the peaking and crackling of the fire, subtle narration and
+                                chatting that allowed the user to feel comforted without feeling distracted,
+                                etc.</p>
+                                <hr>
+                        </div>
+                        <div id="contribution-media">
+                            <video src="video/bscsounds.webm" controls autoplay loop muted class="cmedia"></video>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </section>
