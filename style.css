@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
 
 /*General */
 :root {
@@ -61,17 +62,6 @@
     overflow-y: hidden;
 }
 
-/* .grow:hover {
-    transform: scale(1.15);
-    transition: 0.2s;
-}
-
-.grow2:hover {
-    transform: scale(1.1);
-    transition: 0.2s;
-} */
-
-
 #navcontainer {
     background-color: black;
     min-height: 3.5rem;
@@ -81,28 +71,12 @@
     z-index: 20;
 }
 
-/* #footbar {
-    background-color: black;
-    min-width: 100%;
-    min-height: 3.5rem;
-    position: fixed;
-    bottom: 0;
-    z-index: 20;
-} */
-
 
 body {
     margin: 0;
     background: rgb(13, 23, 45);
     background: linear-gradient(90deg, rgba(13, 23, 60, 1) 0%, rgba(13, 23, 45, 1) 10%, rgba(13, 23, 45, 1) 90%, rgba(13, 22, 60, 1) 100%);
 }
-
-/* .container {
-    display: grid;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    min-height: 80%;
-} */
 
 
 .regtext {
@@ -181,63 +155,72 @@ body {
 
 /* Home Page */
 #homemain {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    justify-content: center;
-    align-items: center;
     padding: 0;
-    min-height: 580px;
+    height: 100%;
+    color: #bfd7f5;
 }
 
 #home-text {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#home-text div {
     font-family: Quantico, sans-serif;
     color: #bfd7f5;
     max-width: 100%;
     text-align: center;
 }
 
-#home-text h1 {
+#home-text div h1 {
     font-size: var(--fs-hometitle);
     max-height: 350px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#home-text h3 {
+#home-text div h3 {
     font-size: var(--fs-intro);
 }
 
-#home-text h2 {
+#home-text div h2 {
     font-style: italic;
     font-size: var(--fs-homesubtitle);
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#home-text p {
+#home-text div p {
     font-size: 1.4rem;
     font-size: var(--fs-homebody);
     max-height: 100px;
 }
 
-
-/*About Me Page */
-#aboutmemain {
-    color: #bfd7f5;
-    height: 0;
-}
-
-#aboutmetitlebox {
-    text-align: center;
-    max-width: 100%;
-}
-
-#aboutmetitlebox h1 {
-    font-size: 4rem;
+#downclick {
     font-family: Quantico, sans-serif;
+    height: 80px;
+    font-size: 3rem;
+    width: 100%;
+    font-weight: 900;
     margin-bottom: 0;
-    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#downclick a {
+    margin: 0;
+    text-decoration: none;
+}
+
+#downclick a:visited {
+    color: #bfd7f5;
 }
 
 #aboutcontainer {
@@ -250,10 +233,6 @@ body {
 .aflxi {
     /* max-height: 30rem; */
 }
-
-/* #aboutcontainer {
-    max-width: 70%;
-} */
 
 #aboutmetext {
     text-align: left;
@@ -410,12 +389,11 @@ body {
 #pdlist {
     padding-left: 0;
     list-style: none;
+    margin-bottom: 0;
+    border: solid 2px;
 }
 
-#plistitem {}
-
 #projectheader {
-    border: solid 1px;
     text-align: center;
 }
 
@@ -491,8 +469,8 @@ body {
 }
 
 #projectroles {
-    border: solid 1px;
     text-align: center;
+    border-top: solid 2px;
 }
 
 #projectroles h2 {
@@ -505,7 +483,6 @@ body {
 }
 
 .roles {
-    border: solid 1px;
     max-width: 50%;
 }
 
@@ -527,6 +504,7 @@ body {
 #pccontainer {
     display: flex;
     flex-direction: row;
+    border-top: solid 2px;
 }
 
 /* #pccontainerbsc {
@@ -537,7 +515,7 @@ body {
 } */
 
 #projectcontributions {
-    border: solid 1px;
+    border-top: solid 2px;
 }
 
 #projectcontributions h2 {
@@ -546,9 +524,9 @@ body {
 }
 
 #contribution-text {
-    border: solid 1px;
     width: 50%;
     overflow-y: auto;
+    border-right: solid 2px;
 }
 
 #contribution-text h3 {
@@ -569,7 +547,6 @@ body {
 }
 
 #contribution-media {
-    border: solid 1px;
     width: 50%;
     display: flex;
     gap: 2em;
@@ -610,7 +587,7 @@ body {
 }
 
 #ostuff {
-
+    border: solid 2px;
 }
 
 #oslist {
@@ -619,8 +596,8 @@ body {
     padding: 0;
 }
 
-.oslistitem {
-    border: solid 1px;
+#SoloProjects {
+    border-top: solid 2px;
 }
 
 #ostitle{
@@ -639,9 +616,9 @@ body {
 .oscitem {
     background-position: center;
     background-size: cover;
-    border: solid 3px;
     height: 200px;
     width: 350px;
+    border: solid 2px;
     cursor: pointer;
     /* aspect-ratio: 7/4; */
 }
@@ -926,8 +903,8 @@ body {
     #putext {
         border-right: 0;
         width: 100%;
-        padding-left: 2em;
-        padding-right: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
         margin: auto;
         font-size: var(--fs-putextd);
     }
@@ -1038,14 +1015,13 @@ body {
     }
 
     #aboutmetext {
-        text-align: left;
+        text-align: center;
         padding-left: var(--abt-padding);
         padding-right: var(--abt-padding);
         flex-grow: 0;
         min-height: 0;
         max-height: 30rem;
         width: 100%;
-        border: solid 2px;
     }
     
     #abouttitle h1 {
@@ -1067,9 +1043,6 @@ body {
         justify-content: space-evenly;
         max-width: var(--ds-interests);
         border: solid 1px; */
-        border-bottom: solid 2px;
-        border-left: solid 2px;
-        border-right: solid 2px;
         width: 100%;
         min-height: 13rem;
     }
@@ -1099,9 +1072,6 @@ body {
         width: 100%;
         flex-grow: 0;
         max-height: 100%;
-        border-left: solid 2px;
-        border-right: solid 2px;
-        border-bottom: solid 2px;
     }
     
     #skills{
@@ -1196,14 +1166,7 @@ body {
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
-    
-    #pdlist {
-        padding-left: 0;
-        list-style: none;
-    }
-    
-    #plistitem {}
-    
+
     #projectheader {
         border: 0;
         text-align: center;
@@ -1218,10 +1181,9 @@ body {
         justify-content: center;
         align-items: center;
     }
-    
-    .studioimg img {
-        width: 100%;
-        height: 100%;
+
+    .studioimg {
+        margin: 0;
     }
     
     #projectdetails {
@@ -1231,37 +1193,12 @@ body {
         width: 100%;
     }
     
-    #projectdetails h2 {
-        font-size: var(--fs-pdethead);
-        margin-bottom: 2rem;
-    }
-    
-    #projectdetails h3 {
-        font-size: var(--fs-pdet);
-    }
-    
-    #gamelogo {
-        margin-top: 0rem;
-    }
-    
-    #gamelogo img {
-        width: 0;
-    }
-    
-    #projectoutline {
-        padding-left: var(--p-outlnmrgn);
-        padding-right: var(--p-outlnmrgn);
-        padding-bottom: 2rem;
-        margin-top: 3rem;
-    }
-    
     #projectoutline p {
         font-size: 1.2rem;
         margin-top: 0;
     }
     
     #projectroles {
-        border: 0;
         text-align: center;
     }
     
@@ -1279,28 +1216,9 @@ body {
         max-width: 100%;
     }
     
-    #roletitle {
-        font-size: var(--fs-rolehead);
-        font-style: italic;
-    }
-    
-    
-    #rolestext {
-        padding-left: var(--p-rolemrgn);
-        padding-right: var(--p-rolemrgn);
-    }
-    
-    #rolestext p {
-        font-size: var(--fs-roletext);
-    }
-    
     #pccontainer {
         flex-direction: column;
         flex-wrap: nowrap;
-    }
-    
-    #projectcontributions {
-        border: 0;
     }
     
     #projectcontributions h2 {
@@ -1313,46 +1231,9 @@ body {
         width: 100%;
     }
     
-    #contribution-text h3 {
-        font-size: var(--fs-conthead);
-        font-style: italic;
-        text-align: center;
-        margin-bottom: 0;
-    }
-    
-    #contribution-text p {
-        font-size: var(--fs-conttext);
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    #contribution-text hr {
-        width: 80%;
-    }
-    
     #contribution-media {
         border: 0;
         width: 100%;
-    }
-    
-    .cmedia {
-        border: solid 1px;
-    }
-
-    .puimage {
-        border: solid 5px;
-        width: 35rem;
-        height: 20rem;
-    }
-
-    #puidesc {
-        width: 36rem;
-        font-size: var(--fs-puidesc);
-        text-align: center;
-        border: solid 1px;
-        border-radius: 15px;
-        padding: 2rem;
-        /* background-color: rgb(59, 59, 59); */
     }
 }
 
@@ -1482,22 +1363,6 @@ body {
         font-size: 3.5rem;
     }
 
-    .puimage {
-        border: solid 5px;
-        width: 30rem;
-        height: 15rem;
-    }
-
-    #puidesc {
-        width: 26rem;
-        font-size: var(--fs-puidesc);
-        text-align: center;
-        border: solid 1px;
-        border-radius: 15px;
-        padding: 2rem;
-        /* background-color: rgb(59, 59, 59); */
-    }
-
     .oscitem {
         height: 257.14px;
         width: 450px;
@@ -1528,8 +1393,9 @@ body {
         --ps-gamelogo2: 0rem;
 
         --fs-ostitle: 1.6rem;
-        --fs-puiheader: 1.3rem;
-        --fs-puidesc: 1.1rem;
+
+        --fs-putexth: 2.2rem;
+        --fs-putextd: 1.05rem;
         --fs-xbutton: 2rem;
     }
     
@@ -1699,22 +1565,6 @@ body {
 
     #othertitlebox h1 {
         font-size: 3rem;
-    }
-
-    .puimage {
-        border: solid 5px;
-        width: 20rem;
-        height: 10rem;
-    }
-
-    #puidesc {
-        width: 15rem;
-        font-size: var(--fs-puidesc);
-        text-align: center;
-        border: solid 1px;
-        border-radius: 15px;
-        padding: 1rem;
-        /* background-color: rgb(59, 59, 59); */
     }
 
     .oscitem {
