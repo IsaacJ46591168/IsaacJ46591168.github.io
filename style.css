@@ -221,6 +221,10 @@ body {
     text-decoration: none;
 }
 
+#downclick a:active {
+    color: #bfd7f5;
+}
+
 #downclick a:visited {
     color: #bfd7f5;
 }
