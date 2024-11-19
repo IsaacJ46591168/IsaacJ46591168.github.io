@@ -130,6 +130,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 10;
     background-color: #f9f9f9;
     min-width: 160px;
     z-index: 1;
@@ -169,6 +170,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
+    min-height: 580px;
 }
 
 #home-text div {
@@ -767,6 +769,8 @@ body {
 
         --fs-conthead: 2.3rem;
         --fs-conttext: 1.15rem;
+
+        --fs-putexth: 2.5rem;
     }
 
     /* #homecontainer {
@@ -803,7 +807,7 @@ body {
         --fs-conthead: 2rem;
         --fs-conttext: 1rem;
 
-        --fs-putexth: 2.5rem;
+        --fs-putexth: 2.1rem;
         --fs-putextd: 1.2rem;
     }
 
@@ -1244,7 +1248,6 @@ body {
         --fs-homesubtitle: 1.5rem;
         --fs-intro: 1.3rem;
         --fs-homebody: 1rem;
-        --fs-nav: 1.1rem;
 
         --fs-abouttitle: 2.7rem;
         --fs-aboutbody: 1.2rem;
@@ -1274,10 +1277,6 @@ body {
         z-index: 20;
     }
 
-    #topnavigation {
-        gap: 1rem;
-    }
-    
     #aboutmetext {
         text-align: center;
         padding-left: 20px;
@@ -1388,7 +1387,7 @@ body {
         --fs-pbutton: 0.9rem;
         --ps-gamelogo: 5rem;
 
-        --fs-pdethead: 5rem;
+        --fs-pdethead: 4.5rem;
         --fs-pdet: 1.5rem;
         --ps-gamelogo2: 0rem;
 
@@ -1434,6 +1433,15 @@ body {
 
     .navitem:first-child {
         margin-right: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 10;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        z-index: 1;
     }
     
     #aboutmemain{
