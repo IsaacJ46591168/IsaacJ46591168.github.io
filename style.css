@@ -232,6 +232,7 @@ body {
 #downclick a {
     margin: 0;
     text-decoration: none;
+    color: #bfd7f5;
 }
 
 #downclick a:hover {
