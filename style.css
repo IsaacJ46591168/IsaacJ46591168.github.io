@@ -115,6 +115,7 @@ body {
 #link {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 #link:hover {
@@ -127,6 +128,22 @@ body {
     color: white;
 }
 
+#link2 {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#link2:hover {
+    background-color: black;
+    color: white;
+    text-decoration: underline;
+}
+
+#link2:visited {
+    color: white;
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -134,10 +151,6 @@ body {
     background-color: #f9f9f9;
     min-width: 160px;
     z-index: 1;
-}
-
-#dropdown:hover .dropdown-content {
-    display: block;
 }
 
 .dropdown-links {

@@ -6,6 +6,26 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function () {
+            $('.dropdown-content').hide();
+            $('#link2').on('click', function(){
+                if($('#link2').hasClass('active')){
+                    $('.dropdown-content').hide();
+                    $('#link2').removeClass('active');
+                } else {
+                    $('.dropdown-content').show();
+                    $('#link2').addClass('active');
+                }
+            });
+
+            $('#topnavigation').on('mouseleave', function(){
+                $('.dropdown-content').hide();
+                $('#link2').removeClass('active');
+            });
+            $('.dropdown-content').on('mouseleave', function(){
+                $('.dropdown-content').hide();
+                $('#link2').removeClass('active');
+            });
+
             $("#p1img").click(function () {
                 window.location = "projects-p1.html";
             })
@@ -34,7 +54,7 @@
                 <li class="navitem"><a id="link" href="index.html">Home</a></li>
                 <li class="navitem"><a id="link" href="projects.html">Projects</a></li>
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
-                <li class="navitem" id="dropdown">Contact
+                <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
                         <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/">LinkedIn</a>
                         <a class="dropdown-links" href="https://github.com/IsaacJ46591168">GitHub</a>

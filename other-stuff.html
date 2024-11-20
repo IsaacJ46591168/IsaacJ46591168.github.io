@@ -12,7 +12,28 @@
             $('.oscitem').click(function () {
                 $('#popupdesc').show();
                 $('body').attr("class", "noverflow");
-            })
+            });
+
+            $('.dropdown-content').hide();
+            $('#link2').on('click', function(){
+                if($('#link2').hasClass('active')){
+                    $('.dropdown-content').hide();
+                    $('#link2').removeClass('active');
+                } else {
+                    $('.dropdown-content').show();
+                    $('#link2').addClass('active');
+                }
+            });
+
+            $('#topnavigation').on('mouseleave', function(){
+                $('.dropdown-content').hide();
+                $('#link2').removeClass('active');
+            });
+            $('.dropdown-content').on('mouseleave', function(){
+                $('.dropdown-content').hide();
+                $('#link2').removeClass('active');
+            });
+            
             $('#li1').click(function () {
                 $('#putext h3').text("Mountainous Valley");
                 $('#p1').text("This was the first 3D Project that I managed to finish completely. Unfortunately, due to this being made a very long time ago, I don't remember much of the modelling process, nor do I have any other actual renders other than the first image due to the materials going missing, but I do know that the 2014 Macbook Pro I was using was on its hands and knees trying to render it, which may explain the grainy-ness of the picture.");
@@ -97,7 +118,7 @@
                 <li class="navitem"><a id="link" href="index.html">Home</a></li>
                 <li class="navitem"><a id="link" href="projects.html">Projects</a></li>
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
-                <li class="navitem" id="dropdown">Contact
+                <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
                         <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/">LinkedIn</a>
                         <a class="dropdown-links" href="https://github.com/IsaacJ46591168">GitHub</a>
