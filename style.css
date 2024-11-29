@@ -314,11 +314,6 @@ body {
     max-height: 30rem;
 }
 
-#stats:hover {
-    background-color: rgb(255, 255, 255, 0.1);
-    transition: 100ms;
-}
-
 #skills{
     display: flex;
     flex-direction: row;
@@ -1001,6 +996,11 @@ body {
         height: 700px;
     }
 
+    #stats:hover {
+        background-color: rgb(255, 255, 255, 0.1);
+        transition: 100ms;
+    }
+
     .buttonimg:hover {
         transform: scale(1.15);
         transition: 200ms;
@@ -1060,16 +1060,6 @@ body {
         border: 0;
     }
 
-    .grow:hover {
-        transform: scale(1);
-        transition: 0;
-    }
-    
-    .grow2:hover {
-        transform: scale(1);
-        transition: 0;
-    }
-
     #aboutmetext {
         text-align: center;
         padding-left: var(--abt-padding);
@@ -1078,6 +1068,7 @@ body {
         min-height: 0;
         max-height: 30rem;
         width: 100%;
+        border-right: 0;
     }
     
     #abouttitle h1 {
@@ -1423,7 +1414,7 @@ body {
         --fs-hometitle: 3.5rem;
         --fs-homesubtitle: 1.4rem;
         --fs-intro: 1.2rem;
-        --fs-homebody: 1.1rem;
+        --fs-homebody: 1rem;
         --fs-nav: 0.85rem;
 
         --fs-abouttitle: 2.5rem;
@@ -1444,11 +1435,6 @@ body {
         --fs-putexth: 2.2rem;
         --fs-putextd: 1.05rem;
         --fs-xbutton: 2rem;
-    }
-    
-    #home-text {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
     }
 
     #navcontainer {
