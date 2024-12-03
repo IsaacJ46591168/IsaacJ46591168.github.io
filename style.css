@@ -612,6 +612,7 @@ body {
 
 #othertitlebox h1 {
     font-size: 4rem;
+    margin-bottom: 0;
 }
 
 #othertitlebox p {
