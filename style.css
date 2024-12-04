@@ -416,12 +416,39 @@ body {
 }
 
 .buttonimg {
+    background-position: center;
+    background-size: cover;
     width: var(--ps-gamelogo);
     margin: auto;
     height: 89.25px;
     width: 110px;
     display: block;
     cursor: pointer;
+    border-radius: 15px;
+}
+
+.active {
+    border: solid 2px white;
+}
+
+#p1 {
+    background-image: url(images/p1logo.webp);
+}
+
+#bsc {
+    background-image: url(images/bsc.webp);
+}
+
+#ant {
+    background-image: url(images/antgame.webp);
+}
+
+#bse {
+    background-image: url(images/basementgame.webp);
+}
+
+#spc {
+    background-image: url(images/personal\ space.webp);
 }
 
 #projectdescription {
@@ -677,6 +704,7 @@ body {
     width: 350px;
     border: solid 2px;
     cursor: pointer;
+    border-radius: 10px;
     /* aspect-ratio: 7/4; */
 }
 
@@ -1105,22 +1133,9 @@ body {
         font-size: var(--fs-aboutbody);
     }
     
-    /* #skillscontainer {
-        border: solid 1px;
-        width: 30%;
-    } */
-    
     #stats {
-        /* display: flex;
-        justify-content: space-evenly;
-        max-width: var(--ds-interests);
-        border: solid 1px; */
         width: 100%;
         min-height: 13rem;
-    }
-    
-    #statitem {
-    
     }
     
     #statitemtext {
@@ -1220,13 +1235,18 @@ body {
         overflow-y: hidden;
         justify-content: start;
     }
+
+    .button{
+        min-width: 100px;
+    }
+
+    .imgcontainer {
+        height: 50%;
+    }
     
     .buttonimg {
-        border: solid 1px;
-        width: var(--ps-gamelogo);
-        margin: auto;
-        display: block;
-        cursor: pointer;
+        height: 65px;
+        width: 80px;
     }
 
     #projectdescription {
@@ -1414,6 +1434,7 @@ body {
     #statitemtext p {
         font-size: var(--fs-statbody);
     }
+
     #pbuttonlist {
         display: flex;
         gap: 2em;
@@ -1424,6 +1445,16 @@ body {
         margin-right: auto;
         overflow-x: auto;
         justify-content: start;
+    }
+
+    .buttonimg {
+        height: 65px;
+        width: 80px;
+    }
+
+    .imgcontainer {
+        height: 50%;
+        width: 90%;
     }
 
     .oscitem {
@@ -1502,23 +1533,7 @@ body {
     }
 
     #pbuttonlist {
-        display: flex;
-        gap: 2em;
-        border-bottom: solid 1px;
-        font-size: var(--fs-pbutton);
         max-width: 380px;
-        margin-left: auto;
-        margin-right: auto;
-        overflow-x: auto;
-        justify-content: start;
-    }
-    
-    .buttonimg {
-        border: solid 1px;
-        width: var(--ps-gamelogo);
-        margin: auto;
-        display: block;
-        cursor: pointer;
     }
     
     #projectroles h2 {
