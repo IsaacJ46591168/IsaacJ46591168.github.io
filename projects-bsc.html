@@ -8,22 +8,22 @@
         $(document).ready(function () {
             $('.dropdown-content').hide();
             $('#link2').on('click', function(){
-                if($('#link2').hasClass('active')){
+                if($('#link2').hasClass('pressed')){
                     $('.dropdown-content').hide();
-                    $('#link2').removeClass('active');
+                    $('#link2').removeClass('pressed');
                 } else {
                     $('.dropdown-content').show();
-                    $('#link2').addClass('active');
+                    $('#link2').addClass('pressed');
                 }
             });
 
             $('#topnavigation').on('mouseleave', function(){
                 $('.dropdown-content').hide();
-                $('#link2').removeClass('active');
+                $('#link2').removeClass('pressed');
             });
             $('.dropdown-content').on('mouseleave', function(){
                 $('.dropdown-content').hide();
-                $('#link2').removeClass('active');
+                $('#link2').removeClass('pressed');
             });
 
             $("#p1img").click(function () {
@@ -43,7 +43,7 @@
             })
 
             $(".studiotag").click(function () {
-                window.location = "https://unitguides.mq.edu.au/unit_offerings/156343/unit_guide";
+                window.open("https://unitguides.mq.edu.au/unit_offerings/156343/unit_guide", '_blank');
             })
 
             $(window).on('resize', function () {
@@ -63,9 +63,9 @@
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
                 <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
-                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/">LinkedIn</a>
-                        <a class="dropdown-links" href="https://github.com/IsaacJ46591168">GitHub</a>
-                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social">Bluesky</a>
+                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/" target="_blank">LinkedIn</a>
+                        <a class="dropdown-links" href="https://github.com/IsaacJ46591168" target="_blank">GitHub</a>
+                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social" target="_blank">Bluesky</a>
                         <a class="dropdown-links" href="mailto:isaacjames4580@gmail.com?Subject=Hello%20User">Email</a>
                     </div>
                 </li>
@@ -85,34 +85,35 @@
             <div id="pbuttonlist">
                 <div class="button" id="p1img">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="p1"></div>
+                        <div class="buttonimg" id="p1button"></div>
                     </div>
                     <p>Phoenix One</p>
                 </div>
                 <div class="button active" id="bscimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="bsc"></div>
+                        <div class="buttonimg" id="bscbutton"></div>
                     </div>
                     <p>Beachside Campfire</p>
                 </div>
                 <div class="button" id="antimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="ant"></div>
+                        <div class="buttonimg" id="antbutton"></div>
                     </div>
                     <p>The Very Hungry Anterpillar</p>
                 </div>
                 <div class="button" id="bseimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="bse"></div>
+                        <div class="buttonimg" id="bsebutton"></div>
                     </div>
                     <p>Basement Game</p>
                 </div>
                 <div class="button" id="spcimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="spc"></div>
+                        <div class="buttonimg" id="spcbutton"></div>
                     </div>
                     <p>Personal Space</p>
                 </div>
+            </div>
         </section>
 
         <section id="projectdescription">
@@ -128,12 +129,12 @@
                             <h3>Developed with: G27</h3>
                             <h3>Released: 2023</h3>
                             <h3>Experience it with the <a
-                                    href="https://www.meta.com/en-gb/experiences/liminal-relax-unwind-engage-explore/3158342884265828/">Liminal
+                                    href="https://www.meta.com/en-gb/experiences/liminal-relax-unwind-engage-explore/3158342884265828/" target="_blank">Liminal
                                     VR App</a> on MetaQuest!</h3>
                         </div>
                         <div id="projectoutline">
-                            <p>A unique VR experience designed to assist a user in getting ready for sleep.</p>
-                            <p>Relax and doze off as you "watch" the comforting lightshow of a beach-side campfire in
+                            <p class="regtext">A unique VR experience designed to assist a user in getting ready for sleep.</p>
+                            <p class="regtext">Relax and doze off as you "watch" the comforting lightshow of a beach-side campfire in
                                 front of you, listening to a carefully constructed sleep-inducing soundscape.</p>
                         </div>
                     </div>

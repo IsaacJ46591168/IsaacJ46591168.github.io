@@ -78,9 +78,12 @@ body {
     background: linear-gradient(90deg, rgba(13, 23, 60, 1) 0%, rgba(13, 23, 45, 1) 10%, rgba(13, 23, 45, 1) 90%, rgba(13, 22, 60, 1) 100%);
 }
 
-
 .regtext {
     font-family: Roboto, sans-serif;
+}
+
+.active {
+    border: solid 2px white;
 }
 
 /* Navigation Menu */
@@ -254,10 +257,6 @@ body {
     border: solid 2px;
 }
 
-.aflxi {
-    /* max-height: 30rem; */
-}
-
 #aboutmetext {
     text-align: left;
     padding-left: var(--abt-padding);
@@ -427,27 +426,23 @@ body {
     border-radius: 15px;
 }
 
-.active {
-    border: solid 2px white;
-}
-
-#p1 {
+#p1button {
     background-image: url(images/p1logo.webp);
 }
 
-#bsc {
+#bscbutton {
     background-image: url(images/bsc.webp);
 }
 
-#ant {
+#antbutton {
     background-image: url(images/antgame.webp);
 }
 
-#bse {
+#bsebutton {
     background-image: url(images/basementgame.webp);
 }
 
-#spc {
+#spcbutton {
     background-image: url(images/personal\ space.webp);
 }
 
@@ -734,6 +729,7 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     font-size: var(--fs-hovtextl);
     display: none;
+    border-radius: 10px;
 }
 
 .hovertext h3 {

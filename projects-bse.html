@@ -8,22 +8,22 @@
         $(document).ready(function () {
             $('.dropdown-content').hide();
             $('#link2').on('click', function(){
-                if($('#link2').hasClass('active')){
+                if($('#link2').hasClass('pressed')){
                     $('.dropdown-content').hide();
-                    $('#link2').removeClass('active');
+                    $('#link2').removeClass('pressed');
                 } else {
                     $('.dropdown-content').show();
-                    $('#link2').addClass('active');
+                    $('#link2').addClass('pressed');
                 }
             });
 
             $('#topnavigation').on('mouseleave', function(){
                 $('.dropdown-content').hide();
-                $('#link2').removeClass('active');
+                $('#link2').removeClass('pressed');
             });
             $('.dropdown-content').on('mouseleave', function(){
                 $('.dropdown-content').hide();
-                $('#link2').removeClass('active');
+                $('#link2').removeClass('pressed');
             });
 
             $("#p1img").click(function () {
@@ -42,9 +42,9 @@
                 window.location = "projects-spc.html";
             })
 
-            $(".studiotag").click(function() {
-                window.location = "https://lstandsforwinner.studio/";
-            })
+            $(".studiotag").click(function () {
+                window.open("https://lstandsforwinner.studio/", '_blank');
+            });
         })
     </script>
 </head>
@@ -58,9 +58,9 @@
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
                 <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
-                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/">LinkedIn</a>
-                        <a class="dropdown-links" href="https://github.com/IsaacJ46591168">GitHub</a>
-                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social">Bluesky</a>
+                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/" target="_blank">LinkedIn</a>
+                        <a class="dropdown-links" href="https://github.com/IsaacJ46591168" target="_blank">GitHub</a>
+                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social" target="_blank">Bluesky</a>
                         <a class="dropdown-links" href="mailto:isaacjames4580@gmail.com?Subject=Hello%20User">Email</a>
                     </div>
                 </li>
@@ -80,34 +80,35 @@
             <div id="pbuttonlist">
                 <div class="button" id="p1img">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="p1"></div>
+                        <div class="buttonimg" id="p1button"></div>
                     </div>
                     <p>Phoenix One</p>
                 </div>
                 <div class="button" id="bscimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="bsc"></div>
+                        <div class="buttonimg" id="bscbutton"></div>
                     </div>
                     <p>Beachside Campfire</p>
                 </div>
                 <div class="button" id="antimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="ant"></div>
+                        <div class="buttonimg" id="antbutton"></div>
                     </div>
                     <p>The Very Hungry Anterpillar</p>
                 </div>
                 <div class="button active" id="bseimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="bse"></div>
+                        <div class="buttonimg" id="bsebutton"></div>
                     </div>
                     <p>Basement Game</p>
                 </div>
                 <div class="button" id="spcimg">
                     <div class="imgcontainer">
-                        <div class="buttonimg" id="spc"></div>
+                        <div class="buttonimg" id="spcbutton"></div>
                     </div>
                     <p>Personal Space</p>
                 </div>
+            </div>
         </section>
 
             <section id="projectdescription">
@@ -125,15 +126,15 @@
                                     <img id="lswlogo" src="images/LSW-Logo.png">
                                 </div>
                                 <h3> L Stands for Winner</h3> -->
-                                <h3><a href="https://lstandsforwinner.itch.io/basement-game">Play it here!</a></h3>
+                                <h3><a href="https://lstandsforwinner.itch.io/basement-game" target="_blank">Play it here!</a></h3>
                             </div>
                             <!-- <div id="gamelogo">
                                 <img src="images/basementgame.webp">
                             </div> -->
                             <div id="projectoutline">
-                                <p>A 2.5D Automation Game set in the shadows of a basement.</p>
-                                <p>Combine, Produce, Sell and Submit different elements from the periodic table via purchasing and contructing a complex network of small alchemy machines.</p>
-                                <p>In this Game Jam, I was responsible for the creation and texturing of all 3D models other than the actual basement.</p>
+                                <p class="regtext">A 2.5D Automation Game set in the shadows of a basement.</p>
+                                <p class="regtext">Combine, Produce, Sell and Submit different elements from the periodic table via purchasing and contructing a complex network of small alchemy machines.</p>
+                                <p class="regtext">In this Game Jam, I was responsible for the creation and texturing of all 3D models other than the actual basement.</p>
                             </div>
                         </div>
                     </li>
