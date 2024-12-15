@@ -50,7 +50,7 @@
     --fs-putexth: 3rem;
     --fs-putextd: 1.3rem;
     --fs-scrollbutton: 2rem;
-    --fs-xbutton: 5rem;
+    --fs-xbutton: 4.5rem;
 }
 
 .wrapper {
@@ -218,6 +218,11 @@ body {
     font-size: 1.4rem;
     font-size: var(--fs-homebody);
     max-height: 100px;
+}
+
+#lastupdated {
+    font-family: Quantico, sans-serif;
+    color: rgb(212, 212, 212);
 }
 
 #downclick {
@@ -751,7 +756,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1em;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(24, 24, 24, 0.9);
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -772,6 +777,8 @@ body {
     width: 40%;
     padding-left: 30px;
     padding-right: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     font-size: var(--fs-putextd);
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
@@ -791,6 +798,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 3em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #puimages h3 {
@@ -810,7 +819,6 @@ body {
     position: absolute;
     top: 0;
     right: 30px;
-    font-size: 60px;
     font-weight: bolder;
     color: #bfd7f5;
     cursor: pointer;
@@ -820,6 +828,11 @@ body {
 #xbutton p {
     font-size: var(--fs-xbutton);
     margin: 0;
+}
+
+#popupdesc span:hover{
+    transform: scale(1.3);
+    transition: 200ms;
 }
 
 
