@@ -7,6 +7,10 @@
     <script>
         $(document).ready(function () {
             let counter = 0;
+
+            let pbar1width = 25;
+            $("#pbar1").css('width', pbar1width);
+
             $('#statitem1').show();
             $('#statitem2').hide();
             $('#statitem3').hide();
@@ -171,6 +175,15 @@
                         <p>Liverpool FC</p>
                         <p>...was it not obvious?</p>
                     </div>
+                </div>
+
+                <div id="progressbars">
+                    <div class="pbars">
+                        <div id="pbar1"></div>
+                    </div>
+                    <div class="pbars"></div>
+                    <div class="pbars"></div>
+                    <div class="pbars"></div>
                 </div>
             </div>
             <div class="aflxi" id="skillscontainer">
