@@ -7,8 +7,8 @@
     <script>
         $(document).ready(function () {
             $('.dropdown-content').hide();
-            $('#link2').on('click', function(){
-                if($('#link2').hasClass('pressed')){
+            $('#link2').on('click', function () {
+                if ($('#link2').hasClass('pressed')) {
                     $('.dropdown-content').hide();
                     $('#link2').removeClass('pressed');
                 } else {
@@ -17,11 +17,11 @@
                 }
             });
 
-            $('#topnavigation').on('mouseleave', function(){
+            $('#topnavigation').on('mouseleave', function () {
                 $('.dropdown-content').hide();
                 $('#link2').removeClass('pressed');
             });
-            $('.dropdown-content').on('mouseleave', function(){
+            $('.dropdown-content').on('mouseleave', function () {
                 $('.dropdown-content').hide();
                 $('#link2').removeClass('pressed');
             });
@@ -58,9 +58,11 @@
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
                 <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
-                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/" target="_blank">LinkedIn</a>
+                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/"
+                            target="_blank">LinkedIn</a>
                         <a class="dropdown-links" href="https://github.com/IsaacJ46591168" target="_blank">GitHub</a>
-                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social" target="_blank">Bluesky</a>
+                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social"
+                            target="_blank">Bluesky</a>
                         <a class="dropdown-links" href="mailto:isaacjames4580@gmail.com?Subject=Hello%20User">Email</a>
                     </div>
                 </li>
@@ -111,28 +113,62 @@
             </div>
         </section>
 
-            <section id="projectdescription">
-                <ul id="pdlist">
-                    <li id="projectheader" class="plistitem">
-                        <div id="pdcontainer">
-                            <div class="studiotag">
-                                <div class="studioimg" id="lswtag"><img id="lswlogo" src="images/LSW-Logo.png"></div>
-                            </div>
-                            <div id="projectdetails">
-                                <h2>Personal Space</h2>
-                                <h3>Developed with: L Stands for Winner</h3>
-                                <h3>Made for the MQ RE-ENTRY Game Jam</h3>
-                                <h3><a href="https://lstandsforwinner.itch.io/personal-space" target="_blank">Play it here!</a></h3>
-                            </div>
-                            <div id="projectoutline">
-                                <p class="regtext">A 3D Top-Down Game combining situational awareness and tight movement.</p>
-                                <p class="regtext">Fly around in the depths of space while avoiding the spaceships trying to "re-enter" your atmosphere and avoid "re-entering" all the other planets while you're at it.</p>
-                                <p class="regtext">In this Game Jam, I was responsible for the creation and texturing of the spaceship and the asteroid models.</p>
+        <section id="projectdescription">
+            <ul id="pdlist">
+                <li id="projectheader" class="plistitem">
+                    <div id="pdcontainer">
+                        <div class="studiotag">
+                            <div class="studioimg" id="lswtag"><img id="lswlogo" src="images/LSW-Logo.png"></div>
+                        </div>
+                        <div id="projectdetails">
+                            <h2>Personal Space</h2>
+                            <h3>Developed with: L Stands for Winner</h3>
+                            <h3>Made for the MQ RE-ENTRY Game Jam</h3>
+                            <h3><a href="https://lstandsforwinner.itch.io/personal-space" target="_blank">Play it
+                                    here!</a></h3>
+                        </div>
+                        <div id="projectoutline">
+                            <p class="regtext">A 3D Top-Down Game combining situational awareness and tight movement.
+                            </p>
+                            <p class="regtext">Fly around in the depths of space while avoiding the spaceships trying to
+                                "re-enter" your atmosphere and avoid "re-entering" all the other planets while you're at
+                                it.</p>
+                        </div>
+                    </div>
+                </li>
+                <li id="projectroles" class="plistitem">
+                    <h2>My Responsibilities</h2>
+                    <div id="prcontainer">
+                        <div id="r1" class="roles">
+                            <h3 id="roletitle">3D Artist</h3>
+                            <div id="rolestext" class="regtext">
+                                <p>In this Game Jam, I was responsible for the creation and texturing of the spaceship
+                                    and the asteroid models.</p>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </section>
+                    </div>
+                </li>
+
+                <li id="projectcontributions" class="plistitem">
+                    <h2>My Contributions</h2>
+                    <div id="pccontainer">
+                        <div id="contribution-text">
+                            <h3>Spaceships and Asteroids</h3>
+                            <p class="regtext">Since the models for this Game Jam were objects required to be avoided,
+                                not much detailling was given to them as the player wouldn't really be paying much more
+                                attention to them other than registering that they needed to be avoided, so the
+                                modelling and design was pretty basic. I did, however, take much inspiration from the
+                                Space Shuttle for the spaceship's design. </p>
+                            <hr>
+                        </div>
+                        <div id="contribution-media">
+                            <video src="video/P1 movement demo vid.webm" controls autoplay loop muted
+                                class="cmedia"></video>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
         </section>
     </main>
 </body>

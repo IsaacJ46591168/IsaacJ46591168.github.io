@@ -7,8 +7,8 @@
     <script>
         $(document).ready(function () {
             $('.dropdown-content').hide();
-            $('#link2').on('click', function(){
-                if($('#link2').hasClass('pressed')){
+            $('#link2').on('click', function () {
+                if ($('#link2').hasClass('pressed')) {
                     $('.dropdown-content').hide();
                     $('#link2').removeClass('pressed');
                 } else {
@@ -17,11 +17,11 @@
                 }
             });
 
-            $('#topnavigation').on('mouseleave', function(){
+            $('#topnavigation').on('mouseleave', function () {
                 $('.dropdown-content').hide();
                 $('#link2').removeClass('pressed');
             });
-            $('.dropdown-content').on('mouseleave', function(){
+            $('.dropdown-content').on('mouseleave', function () {
                 $('.dropdown-content').hide();
                 $('#link2').removeClass('pressed');
             });
@@ -58,9 +58,11 @@
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
                 <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
-                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/" target="_blank">LinkedIn</a>
+                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/"
+                            target="_blank">LinkedIn</a>
                         <a class="dropdown-links" href="https://github.com/IsaacJ46591168" target="_blank">GitHub</a>
-                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social" target="_blank">Bluesky</a>
+                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social"
+                            target="_blank">Bluesky</a>
                         <a class="dropdown-links" href="mailto:isaacjames4580@gmail.com?Subject=Hello%20User">Email</a>
                     </div>
                 </li>
@@ -111,35 +113,68 @@
             </div>
         </section>
 
-            <section id="projectdescription">
-                <ul id="pdlist">
-                    <li id="projectheader" class="plistitem">
-                        <div id="pdcontainer">
-                            <div class="studiotag">
-                                <div class="studioimg" id="lswtag"><img id="lswlogo" src="images/LSW-Logo.png"></div>
-                            </div>
-                            <div id="projectdetails">
-                                <h2>Basement Game</h2>
-                                <h3>Developed with: L Stands for Winner</h3>
-                                <h3>Made for the Pirate Software Game Jam 15</h3>
-                                <!-- <div class="txtimg">
+        <section id="projectdescription">
+            <ul id="pdlist">
+                <li id="projectheader" class="plistitem">
+                    <div id="pdcontainer">
+                        <div class="studiotag">
+                            <div class="studioimg" id="lswtag"><img id="lswlogo" src="images/LSW-Logo.png"></div>
+                        </div>
+                        <div id="projectdetails">
+                            <h2>Basement Game</h2>
+                            <h3>Developed with: L Stands for Winner</h3>
+                            <h3>Made for the Pirate Software Game Jam 15</h3>
+                            <!-- <div class="txtimg">
                                     <img id="lswlogo" src="images/LSW-Logo.png">
                                 </div>
                                 <h3> L Stands for Winner</h3> -->
-                                <h3><a href="https://lstandsforwinner.itch.io/basement-game" target="_blank">Play it here!</a></h3>
-                            </div>
-                            <!-- <div id="gamelogo">
+                            <h3><a href="https://lstandsforwinner.itch.io/basement-game" target="_blank">Play it
+                                    here!</a></h3>
+                        </div>
+                        <!-- <div id="gamelogo">
                                 <img src="images/basementgame.webp">
                             </div> -->
-                            <div id="projectoutline">
-                                <p class="regtext">A 2.5D Automation Game set in the shadows of a basement.</p>
-                                <p class="regtext">Combine, Produce, Sell and Submit different elements from the periodic table via purchasing and contructing a complex network of small alchemy machines.</p>
-                                <p class="regtext">In this Game Jam, I was responsible for the creation and texturing of all 3D models other than the actual basement.</p>
+                        <div id="projectoutline">
+                            <p class="regtext">A 2.5D Automation Game set in the shadows of a basement.</p>
+                            <p class="regtext">Combine, Produce, Sell and Submit different elements from the periodic
+                                table via purchasing and contructing a complex network of small alchemy machines.</p>
+                        </div>
+                    </div>
+                </li>
+                <li id="projectroles" class="plistitem">
+                    <h2>My Responsibilities</h2>
+                    <div id="prcontainer">
+                        <div id="r1" class="roles">
+                            <h3 id="roletitle">3D Artist</h3>
+                            <div id="rolestext" class="regtext">
+                                <p>In this Game Jam, I was responsible for the creation and texturing of all 3D models
+                                    other than the actual basement.</p>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </section>
+                    </div>
+                </li>
+
+                <li id="projectcontributions" class="plistitem">
+                    <h2>My Contributions</h2>
+                    <div id="pccontainer">
+                        <div id="contribution-text">
+                            <h3>Small Rickety Machines</h3>
+                            <p class="regtext">As this was a 2.5D automation game, all the models had to be quite small
+                                in order to make sure that, in the inevitable situation where there were many models on
+                                the screen at once, they weren't too obstructive. </p>
+                            <p class="regtext">To match the theme of this game, which was all about pretending to be an
+                                alchemist by using rickety, old, discount, do-it-yourself machines, I tried to replicate
+                                this using basic objects and designs to make them look "primitive".</p>
+                            <hr>
+                        </div>
+                        <div id="contribution-media">
+                            <video src="video/P1 movement demo vid.webm" controls autoplay loop muted
+                                class="cmedia"></video>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
         </section>
     </main>
     <div id="footbar"></div>

@@ -7,8 +7,8 @@
     <script>
         $(document).ready(function () {
             $('.dropdown-content').hide();
-            $('#link2').on('click', function(){
-                if($('#link2').hasClass('pressed')){
+            $('#link2').on('click', function () {
+                if ($('#link2').hasClass('pressed')) {
                     $('.dropdown-content').hide();
                     $('#link2').removeClass('pressed');
                 } else {
@@ -17,11 +17,11 @@
                 }
             });
 
-            $('#topnavigation').on('mouseleave', function(){
+            $('#topnavigation').on('mouseleave', function () {
                 $('.dropdown-content').hide();
                 $('#link2').removeClass('pressed');
             });
-            $('.dropdown-content').on('mouseleave', function(){
+            $('.dropdown-content').on('mouseleave', function () {
                 $('.dropdown-content').hide();
                 $('#link2').removeClass('pressed');
             });
@@ -58,9 +58,11 @@
                 <li class="navitem"><a id="link" href="other-stuff.html">Other Stuff</a></li>
                 <li class="navitem" id="dropdown"><a id="link2">Contact</a>
                     <div class="dropdown-content">
-                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/" target="_blank">LinkedIn</a>
+                        <a class="dropdown-links" href="https://www.linkedin.com/in/isaac-james-932553297/"
+                            target="_blank">LinkedIn</a>
                         <a class="dropdown-links" href="https://github.com/IsaacJ46591168" target="_blank">GitHub</a>
-                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social" target="_blank">Bluesky</a>
+                        <a class="dropdown-links" href="https://bsky.app/profile/squidcicle12.bsky.social"
+                            target="_blank">Bluesky</a>
                         <a class="dropdown-links" href="mailto:isaacjames4580@gmail.com?Subject=Hello%20User">Email</a>
                     </div>
                 </li>
@@ -111,28 +113,61 @@
             </div>
         </section>
 
-            <section id="projectdescription">
-                <ul id="pdlist">
-                    <li id="projectheader" class="plistitem">
-                        <div id="pdcontainer">
-                            <div class="studiotag">
-                                <div class="studioimg" id="lswtag"><img id="lswlogo" src="images/LSW-Logo.png"></div>
-                            </div>
-                            <div id="projectdetails">
-                                <h2>The Very Hungry Anterpillar</h2>
-                                <h3>Developed with: L Stands for Winner</h3>
-                                <h3>Made for the GMTK Game Jam 2024</h3>
-                                <h3><a href="https://lstandsforwinner.itch.io/the-very-hungry-anterpillar" target="_blank">Play it here!</a></h3>
-                            </div>
-                            <div id="projectoutline">
-                                <p class="regtext">A 2.5D Game at a small scale!</p>
-                                <p class="regtext">Crawl and Weave your way through numerous obstacles and collect as much bread as you can to avoid running out of energy, and avoid getting squashed by the boot!</p>
-                                <p class="regtext">In this Game Jam, I was responsible for the creation and texturing of the 3D models such as the Ant and other obstacles that weren't outsourced from elsewhere.</p>
+        <section id="projectdescription">
+            <ul id="pdlist">
+                <li id="projectheader" class="plistitem">
+                    <div id="pdcontainer">
+                        <div class="studiotag">
+                            <div class="studioimg" id="lswtag"><img id="lswlogo" src="images/LSW-Logo.png"></div>
+                        </div>
+                        <div id="projectdetails">
+                            <h2>The Very Hungry Anterpillar</h2>
+                            <h3>Developed with: L Stands for Winner</h3>
+                            <h3>Made for the GMTK Game Jam 2024</h3>
+                            <h3><a href="https://lstandsforwinner.itch.io/the-very-hungry-anterpillar"
+                                    target="_blank">Play it here!</a></h3>
+                        </div>
+                        <div id="projectoutline">
+                            <p class="regtext">A 2.5D Game at a small scale!</p>
+                            <p class="regtext">Crawl and Weave your way through numerous obstacles and collect as much
+                                bread as you can to avoid running out of energy, and avoid getting squashed by the boot!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li id="projectroles" class="plistitem">
+                    <h2>My Responsibilities</h2>
+                    <div id="prcontainer">
+                        <div id="r1" class="roles">
+                            <h3 id="roletitle">3D Artist</h3>
+                            <div id="rolestext" class="regtext">
+                                <p>In this Game Jam, I was responsible for the creation and texturing of the 3D models
+                                    such as the Ant and other obstacles that weren't outsourced from elsewhere.</p>
                             </div>
                         </div>
-                    </li>
-                </ul>
-            </section>
+                    </div>
+                </li>
+
+                <li id="projectcontributions" class="plistitem">
+                    <h2>My Contributions</h2>
+                    <div id="pccontainer">
+                        <div id="contribution-text">
+                            <h3>Everyday objects</h3>
+                            <p class="regtext">The theme of this Game Jam was something along the lines of "drawn to
+                                scale", and so we decided to make a game from the perspective of an ant, hence making
+                                the scale of the in-game environment very small. Naturally this meant designing and
+                                modelling the 3D objects to match how they might appear to something or someone of that
+                                size, with tall and imposing profiles, exaggerated detail, etc.</p>
+                            <hr>
+                        </div>
+                        <div id="contribution-media">
+                            <video src="video/P1 movement demo vid.webm" controls autoplay loop muted
+                                class="cmedia"></video>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
         </section>
     </main>
     <div id="footbar"></div>
