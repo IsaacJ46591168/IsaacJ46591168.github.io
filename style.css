@@ -53,6 +53,25 @@
     --fs-xbutton: 4.5rem;
 }
 
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(146, 146, 146);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(86, 86, 86);
+}
+
+@supports (scrollbar-color: red blue ) {
+    * {
+        scrollbar-color: rgb(86, 86, 86) rgb(146, 146, 146);
+        scrollbar-width: thin;
+    }
+}
+
 .wrapper {
     height: 100%;
 }
@@ -332,8 +351,8 @@ body {
     border-radius: 10px;
 }
 
-#pbar1{
-    background-color: greenyellow;
+.innerbar{
+    background-color: #bfd7f5;
     height: 100%;
     border-radius: 10px;
 }

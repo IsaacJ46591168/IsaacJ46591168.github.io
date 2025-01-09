@@ -8,14 +8,62 @@
         $(document).ready(function () {
             let counter = 0;
 
-            let pbar1width = 25;
-            $("#pbar1").css('width', pbar1width);
+            let pbar1width = 0;
+            let pbar2width = 0;
+            let pbar3width = 0;
+            let pbar4width = 0;
+
+            setInterval(numIncrease, 50);
+
+            function numIncrease(){
+                if(pbar1width < 96) {
+                    counter = 0;
+                    statcycle();
+                    pbar1width += 1;
+
+                    if(counter > 0){
+                        pbar1width = 96;
+                    }
+
+                } else if (pbar2width < 96) {
+                    counter = 1;
+                    statcycle();
+                    pbar2width += 1;
+
+                    if(counter > 1){
+                        pbar2width = 96;
+                    }
+                } else if (pbar3width < 96) {
+                    counter = 2;
+                    statcycle();
+                    pbar3width += 1;
+
+                    if(counter > 2){
+                        pbar3width = 96;
+                    }
+                } else if (pbar4width < 96) {
+                    counter = 3;
+                    statcycle();
+                    pbar4width += 1;
+                } else {
+                    pbar1width = 0;
+                    pbar2width = 0;
+                    pbar3width = 0;
+                    pbar4width = 0;
+                }
+
+                $("#pbar1").css('width', pbar1width);
+                $("#pbar2").css('width', pbar2width);
+                $("#pbar3").css('width', pbar3width);
+                $("#pbar4").css('width', pbar4width);
+            }
+
 
             $('#statitem1').show();
             $('#statitem2').hide();
             $('#statitem3').hide();
             $('#statitem4').hide();
-            $('#stats').click(statcycle);
+            $('#stats').click(statcountinc);
 
             $('.dropdown-content').hide();
             $('#link2').on('click', function(){
@@ -37,8 +85,13 @@
                 $('#link2').removeClass('pressed');
             });
 
+            // function statcountinc() {
+            //     console.log(counter);
+            //     counter += 1;
+            //     statcycle();
+            // }
+
             function statcycle() {
-                counter++;
                 if (counter == 0) {
                     $('#statitem1').show();
                     $('#statitem2').hide();
@@ -117,7 +170,7 @@
                     in
                     programming, level design and narrative design.</p>
                 <p class="regtext">Check out some of my stuff, or contact me if you want to chat!</p>
-                <p class="regtext" id="lastupdated">Last Updated: 20/12/2024</p>
+                <p class="regtext" id="lastupdated">Last Updated: 09/01/2025</p>
                 <div id="anchor"></div>
             </div>
         </section>
@@ -179,11 +232,17 @@
 
                 <div id="progressbars">
                     <div class="pbars">
-                        <div id="pbar1"></div>
+                        <div class="innerbar" id="pbar1"></div>
                     </div>
-                    <div class="pbars"></div>
-                    <div class="pbars"></div>
-                    <div class="pbars"></div>
+                    <div class="pbars">
+                        <div class="innerbar" id="pbar2"></div>
+                    </div>
+                    <div class="pbars">
+                        <div class="innerbar" id="pbar3"></div>
+                    </div>
+                    <div class="pbars">
+                        <div class="innerbar" id="pbar4"></div>
+                    </div>
                 </div>
             </div>
             <div class="aflxi" id="skillscontainer">
