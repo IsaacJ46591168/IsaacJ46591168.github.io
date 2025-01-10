@@ -16,42 +16,45 @@
             setInterval(numIncrease, 50);
 
             function numIncrease(){
-                if(pbar1width < 96) {
-                    counter = 0;
-                    statcycle();
-                    pbar1width += 1;
-
-                    if(counter > 0){
-                        pbar1width = 96;
+                if(counter == 0) {
+                    if(pbar1width < 96) {
+                        statcycle();
+                        pbar1width += 1;
+                    } else {
+                        counter = 1;
                     }
-
-                } else if (pbar2width < 96) {
-                    counter = 1;
-                    statcycle();
-                    pbar2width += 1;
-
-                    if(counter > 1){
-                        pbar2width = 96;
-                    }
-                } else if (pbar3width < 96) {
-                    counter = 2;
-                    statcycle();
-                    pbar3width += 1;
-
-                    if(counter > 2){
-                        pbar3width = 96;
-                    }
-                } else if (pbar4width < 96) {
-                    counter = 3;
-                    statcycle();
-                    pbar4width += 1;
-                } else {
-                    pbar1width = 0;
-                    pbar2width = 0;
-                    pbar3width = 0;
-                    pbar4width = 0;
                 }
 
+                if(counter == 1) {
+                    if(pbar2width < 96) {
+                        statcycle();
+                        pbar2width += 1;
+                    } else {
+                        counter = 2;
+                    }
+                }
+
+                if(counter == 2) {
+                    if(pbar3width < 96) {
+                        statcycle();
+                        pbar3width += 1;
+                    } else {
+                        counter = 3;
+                    }
+                }
+
+                if(counter == 3) {
+                    if(pbar4width < 96) {
+                        statcycle();
+                        pbar4width += 1;
+                    } else {
+                        counter = 0;
+                        pbar1width = 0;
+                        pbar2width = 0;
+                        pbar3width = 0;
+                        pbar4width = 0;
+                    }
+                }
                 $("#pbar1").css('width', pbar1width);
                 $("#pbar2").css('width', pbar2width);
                 $("#pbar3").css('width', pbar3width);
@@ -85,11 +88,31 @@
                 $('#link2').removeClass('pressed');
             });
 
-            // function statcountinc() {
-            //     console.log(counter);
-            //     counter += 1;
-            //     statcycle();
-            // }
+            function statcountinc() {
+                console.log(counter);
+
+                if(counter == 0) {
+                    pbar1width = 96;
+                }
+
+                if(counter == 1) {
+                    pbar2width = 96;
+                }
+
+                if(counter == 2) {
+                    pbar3width = 96;
+                }
+
+                if (counter == 3) {
+                    counter = -1;
+                    pbar1width = 0;
+                    pbar2width = 0;
+                    pbar3width = 0;
+                    pbar4width = 0;
+                }
+                counter += 1;
+                statcycle();
+            }
 
             function statcycle() {
                 if (counter == 0) {
@@ -115,10 +138,6 @@
                     $('#statitem2').hide();
                     $('#statitem3').hide();
                     $('#statitem4').show();
-                    counter = 4;
-                }
-                if (counter == 4) {
-                    counter = -1;
                 }
             }
 
