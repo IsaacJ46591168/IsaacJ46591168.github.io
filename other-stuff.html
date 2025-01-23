@@ -8,6 +8,7 @@
         $(document).ready(function () {
 
             $('#popupdesc').hide();
+            $('.gvideo').hide();
             $('#scrollbuttons').hide();
             $('.oscitem').click(function () {
                 $('#popupdesc').fadeIn(100);
@@ -96,6 +97,21 @@
             });
 
             $('#li5').click(function () {
+                $('#putext h3').text("A Moving Cube");
+                $('#putext').css('background-color', 'rgb(59, 59, 59)');
+                $('#puimages').css('background-color', 'rgb(42, 65, 46)');
+                $('#p1').text("My first attempt at combining 3D animation with simulation. I'm not sure what exactly made my mind settle on creating this exact animation, but I do know that my reasons behind making an animation in general were more or less to de-rust and just start making more things. Whilst not really expecting much, I was rather happy with how it turned out.");
+                $('#p2').text("It was my first time really trying to get to grips with Blender's animation tab, which included everything from the dope sheet to the action tab to the graph editor as I tried to make the propellor on the Cube have a start-animation before going into the looping spinning animation, which I ultimately couldn't figure out and will probably tackle some other time, but the looping propellor spin was good enough, and the movement and turning of the cube turned out to be pretty straightforward.");
+                $('.gvideo').show();
+                $('#img2').attr("style", "background-image: url(images/cubepic1.webp);");
+                $('#img3').attr("style", "background-image: url(images/cubepic2.webp);");
+                $('#img4').attr("style", "background-image: url(images/cubepic3.webp);");
+                $('#img5').attr("style", "background-image: url(images/cubepic4.webp);");
+                $('#img6').attr("style", "background-image: url(images/cubepic5.webp);");
+                $('#img7').attr("style", "background-image: url(images/cubepic6.webp);");
+            });
+
+            $('#li6').click(function () {
                 $('#putext h3').text("Thread the Ring");
                 $('#putext').css('background-color', 'rgb(179, 188, 205)');
                 $('#putext h3').css('color', 'black');
@@ -114,6 +130,7 @@
 
             $('#popupdesc span').click(function () {
                 $('#popupdesc').hide();
+                $('.gvideo').hide();
                 $('body').attr("class", "overflow");
                 $('.gimage').attr("style", "background-image: ;");
                 $('#p1').text("");
@@ -177,12 +194,17 @@
                                 <h3>Train Station</h3>
                             </div>
                         </div>
+                        <div class="oscitem" id="li5">
+                            <div class="hovertext">
+                                <h3>Moving Cube</h3>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li id="SoloProjects" class="oslistitem">
                     <h2 id="ostitle">Solo Projects</h2>
                     <div id="oscontent">
-                        <div class="oscitem" id="li5">
+                        <div class="oscitem" id="li6">
                             <div class="hovertext">
                                 <h3>Thread the Ring</h3>
                             </div>
@@ -204,7 +226,10 @@
             </div>
             <div id="puimages">
                 <h3>Gallery</h3>
-                <div class="gimage" id="img1"></div>
+                <div class="gimage" id="img1">
+                    <video src="video/cube.webm" controls autoplay loop
+                        muted class="gvideo"></video>
+                </div>
                 <div class="gimage" id="img2"></div>
                 <div class="gimage" id="img3"></div>
                 <div class="gimage" id="img4"></div>
