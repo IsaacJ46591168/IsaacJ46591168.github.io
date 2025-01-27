@@ -17,7 +17,7 @@
 
             function numIncrease(){
                 if(counter == 0) {
-                    if(pbar1width < 96) {
+                    if(pbar1width < 100) {
                         statcycle();
                         pbar1width += 1;
                     } else {
@@ -26,7 +26,7 @@
                 }
 
                 if(counter == 1) {
-                    if(pbar2width < 96) {
+                    if(pbar2width < 100) {
                         statcycle();
                         pbar2width += 1;
                     } else {
@@ -35,7 +35,7 @@
                 }
 
                 if(counter == 2) {
-                    if(pbar3width < 96) {
+                    if(pbar3width < 100) {
                         statcycle();
                         pbar3width += 1;
                     } else {
@@ -44,7 +44,7 @@
                 }
 
                 if(counter == 3) {
-                    if(pbar4width < 96) {
+                    if(pbar4width < 100) {
                         statcycle();
                         pbar4width += 1;
                     } else {
@@ -55,10 +55,10 @@
                         pbar4width = 0;
                     }
                 }
-                $("#pbar1").css('width', pbar1width);
-                $("#pbar2").css('width', pbar2width);
-                $("#pbar3").css('width', pbar3width);
-                $("#pbar4").css('width', pbar4width);
+                $("#pbar1").css('width', pbar1width + '%');
+                $("#pbar2").css('width', pbar2width + '%');
+                $("#pbar3").css('width', pbar3width + '%');
+                $("#pbar4").css('width', pbar4width + '%');
             }
 
 
@@ -92,15 +92,15 @@
                 console.log(counter);
 
                 if(counter == 0) {
-                    pbar1width = 96;
+                    pbar1width = 100;
                 }
 
                 if(counter == 1) {
-                    pbar2width = 96;
+                    pbar2width = 100;
                 }
 
                 if(counter == 2) {
-                    pbar3width = 96;
+                    pbar3width = 100;
                 }
 
                 if (counter == 3) {
@@ -189,7 +189,7 @@
                     in
                     programming, level design and narrative design.</p>
                 <p class="regtext">Check out some of my stuff, or contact me if you want to chat!</p>
-                <p class="regtext" id="lastupdated">Last Updated: 23/01/2025</p>
+                <p class="regtext" id="lastupdated">Last Updated: 27/01/2025</p>
                 <div id="anchor"></div>
             </div>
         </section>
