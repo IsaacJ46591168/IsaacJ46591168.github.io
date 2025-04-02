@@ -785,6 +785,11 @@ body {
 }
 
 #li6 {
+    background-image: url(images/boardthumbnail.webp);
+    animation: fadeIn 0.5s ease-in;
+}
+
+#li7 {
     background-image: url(images/ttrtitle.webp);
     animation: fadeIn 0.5s ease-in;
 }

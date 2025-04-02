@@ -114,6 +114,23 @@
             });
 
             $('#li6').click(function () {
+                $('#putext h3').text("A Scrolling Departure Board");
+                $('#putext').css('background-color', 'rgb(35, 28, 30)');
+                $('#puimages').css('background-color', 'rgb(144, 144, 161)');
+                $('#puimages').css('color', 'black');
+                $('#p1').text("This is my second go at animating a 3D object, and my first attempt with geometry nodes. As I have a small replica of one of these things in my house, I thought it would be cool to try and see if I could replicate a similar thing in Blender. I had some initial ideas on how to do it, but some sort researching later showed that geometry nodes were the way to go. Very complicated, but very interesting.");
+                $('#p2').text("Funnily enough, this project was only supposed to be the board itself, but after finishing it, I thought it would be nice to give it its own scene to make the whole render look better, and so that's where the rest of the station and the grey morning sky comes from. While I couldn't completely replicate it, the scene is based on a real station that exists somewhere!");
+                $('.gvideo').attr("src", "video/board.webm");
+                $('.gvideo').show();
+                $('#img2').attr({"style":"background-image: url(images/board1.webp);", "title":"A view of the geometry node setup used to generate the grid of small spheres used for the dot matrix."});
+                $('#img3').attr({"style":"background-image: url(images/board2.webp);", "title":"An image highlighting the finished node setup and the use of 4 instances to fill out the spaces in the main board."});
+                $('#img4').attr({"style":"background-image: url(images/board3.webp);", "title":"A view of the finished board (in modelling terms) and the beginnings of the station scene around it, featuring a roof, roof support and board attachment to the roof support."});
+                $('#img5').attr({"style":"background-image: url(images/board4.webp);", "title":"A view of the dope sheet of the animation of the text scrolling across the middle display of the board."});
+                $('#img6').attr({"style":"background-image: url(images/board5.webp);", "title":"A different view of the station scene, this time illustrating the additions such as windows, basic spotlights, more roof supports, rain pipes, extra signs and metal tube roof supports in a x shape."});
+                $('#img7').attr({"style":"background-image: url(images/board6.webp);", "title":"A final cycles render of the scene."});
+            });
+
+            $('#li7').click(function () {
                 $('#putext h3').text("Thread the Ring");
                 $('#putext').css('background-color', 'rgb(179, 188, 205)');
                 $('#putext h3').css('color', 'black');
@@ -139,6 +156,7 @@
                 $('#p2').text("");
                 $('#putext h3').css('color', '#bfd7f5');
                 $('#putext p').css('color', '#bfd7f5');
+                $('#puimages').css('color', '#bfd7f5');
             });
         })
     </script>
@@ -201,12 +219,17 @@
                                 <h3>Moving Cube</h3>
                             </div>
                         </div>
+                        <div class="oscitem" id="li6">
+                            <div class="hovertext">
+                                <h3>Departure Board</h3>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li id="SoloProjects" class="oslistitem">
                     <h2 id="ostitle">Solo Projects</h2>
                     <div id="oscontent">
-                        <div class="oscitem" id="li6">
+                        <div class="oscitem" id="li7">
                             <div class="hovertext">
                                 <h3>Thread the Ring</h3>
                             </div>
